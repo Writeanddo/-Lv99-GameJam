@@ -1,0 +1,1669 @@
+fileFormatVersion: 2
+guid: f9c9e420ade059242b7f444bc7265212
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 32
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 0
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 0
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  multiSpriteImportData:
+  - name: monsterGas_Frame_0
+    originalName: 
+    pivot: {x: 0.20689656, y: 0.5316456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 244
+      y: 180
+      width: 58
+      height: 79
+    spriteID: 09224c521498f5545a103fc61f56bde6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 244, y: 180}
+  - name: monsterGas_Frame_1
+    originalName: 
+    pivot: {x: 0.21666665, y: 0.52500004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 534
+      width: 60
+      height: 80
+    spriteID: f7d7ef9a66f1ae1419a673cdb5d15f84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 534}
+  - name: monsterGas_Frame_2
+    originalName: 
+    pivot: {x: 0.22033899, y: 0.5243903}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 358
+      width: 59
+      height: 82
+    spriteID: 1df3be37af34c6942aca0d57b5904993
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 358}
+  - name: monsterGas_Frame_3
+    originalName: 
+    pivot: {x: 0.2333333, y: 0.5243903}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 178
+      width: 60
+      height: 82
+    spriteID: 99603668040966c4f959eedab1816898
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 178}
+  - name: monsterGas_Frame_4
+    originalName: 
+    pivot: {x: 0.24590164, y: 0.5180723}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 244
+      y: 4
+      width: 61
+      height: 83
+    spriteID: 8adff1446e9e8f84b95bbfc7086961ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 244, y: 4}
+  - name: monsterGas_Frame_5
+    originalName: 
+    pivot: {x: 0.2580645, y: 0.5176471}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 431
+      width: 62
+      height: 85
+    spriteID: 3b5cdb0b8ca11e845980e45fa2504470
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 431}
+  - name: monsterGas_Frame_6
+    originalName: 
+    pivot: {x: 0.26984125, y: 0.5176471}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 726
+      width: 63
+      height: 85
+    spriteID: 6bd5d89dd9c295f448d7ec32f30ce479
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 726}
+  - name: monsterGas_Frame_7
+    originalName: 
+    pivot: {x: 0.26984125, y: 0.5116279}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 541
+      width: 63
+      height: 86
+    spriteID: d934fd29600bcee45a2a56d3fea59abe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 541}
+  - name: monsterGas_Frame_8
+    originalName: 
+    pivot: {x: 0.28125, y: 0.51724136}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 95
+      width: 64
+      height: 87
+    spriteID: eac62ac8c0dc5aa4e952628ae7efbead
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 95}
+  - name: monsterGas_Frame_9
+    originalName: 
+    pivot: {x: 0.2923077, y: 0.5113636}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 757
+      width: 65
+      height: 88
+    spriteID: 8791b115c1615cd48bb49297e7ef2041
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 757}
+  - name: monsterGas_Frame_10
+    originalName: 
+    pivot: {x: 0.30303028, y: 0.505618}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 387
+      width: 66
+      height: 89
+    spriteID: ad8edc10002388540a097f9bc78f2235
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 387}
+  - name: monsterGas_Frame_11
+    originalName: 
+    pivot: {x: 0.31343284, y: 0.51111114}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 195
+      width: 67
+      height: 90
+    spriteID: e8ebf8797c1461f4d924c7dc9a67658d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 195}
+  - name: monsterGas_Frame_12
+    originalName: 
+    pivot: {x: 0.31343284, y: 0.54761904}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 853
+      width: 67
+      height: 84
+    spriteID: 5ecf3492918473042b34209328f34e97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 853}
+  - name: monsterGas_Frame_13
+    originalName: 
+    pivot: {x: 0.3188406, y: 0.5411765}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 484
+      width: 69
+      height: 85
+    spriteID: f318e50d8f5bf1a49abee124ccbe7a34
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 484}
+  - name: monsterGas_Frame_14
+    originalName: 
+    pivot: {x: 0.3285714, y: 0.53488374}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 293
+      width: 70
+      height: 86
+    spriteID: dfb805e4ff107eb49b4bd83813af651f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 293}
+  - name: monsterGas_Frame_15
+    originalName: 
+    pivot: {x: 0.34285715, y: 0.54022986}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 100
+      width: 70
+      height: 87
+    spriteID: 46622c252bbfefd4c970b51556c76c26
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 100}
+  - name: monsterGas_Frame_16
+    originalName: 
+    pivot: {x: 0.3380282, y: 0.5340909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 71
+      height: 88
+    spriteID: 8630f5b858bff324bbbb53c1fb706887
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: monsterGas_Frame_17
+    originalName: 
+    pivot: {x: 0.35211268, y: 0.474359}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 190
+      width: 71
+      height: 78
+    spriteID: b76e38b8beffedf4a902a15f544c215f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 190}
+  - name: monsterGas_Frame_18
+    originalName: 
+    pivot: {x: 0.36111107, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 170
+      width: 72
+      height: 74
+    spriteID: 05863790880d708439dad5c9efee0241
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 170}
+  - name: monsterGas_Frame_19
+    originalName: 
+    pivot: {x: 0.369863, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 88
+      width: 73
+      height: 74
+    spriteID: 7ee8dbd6689b23f45a444b980bcac5e1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 88}
+  - name: monsterGas_Frame_20
+    originalName: 
+    pivot: {x: 0.369863, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 4
+      width: 73
+      height: 76
+    spriteID: 64e1c94aa50c1ba46bf2052f3139db93
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 4}
+  - name: monsterGas_Frame_21
+    originalName: 
+    pivot: {x: 0.19298248, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 244
+      y: 600
+      width: 57
+      height: 76
+    spriteID: 49bb1f48213e87a46aeee4f3e1d8817f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 244, y: 600}
+  - name: monsterGas_Frame_22
+    originalName: 
+    pivot: {x: 0.1896552, y: 0.4935065}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 244
+      y: 350
+      width: 58
+      height: 77
+    spriteID: cb34c0ab0eee245478b89586e264dbdb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 244, y: 350}
+  - name: monsterGas_Frame_23
+    originalName: 
+    pivot: {x: 0.20689656, y: 0.53424656}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 244
+      y: 684
+      width: 58
+      height: 73
+    spriteID: 3c9838eeb049f014fabf9e2da976cd73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 244, y: 684}
+  - name: monsterGas_Frame_24
+    originalName: 
+    pivot: {x: 0.21666665, y: 0.527027}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 244
+      y: 435
+      width: 60
+      height: 74
+    spriteID: 76b28cfe660c3c14fbbd086a37396d05
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 244, y: 435}
+  - name: monsterGas_Frame_25
+    originalName: 
+    pivot: {x: 0.22033899, y: 0.52}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 244
+      y: 517
+      width: 59
+      height: 75
+    spriteID: 358dfca3e54fd2e498214fa80711ee94
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 244, y: 517}
+  - name: monsterGas_Frame_26
+    originalName: 
+    pivot: {x: 0.2333333, y: 0.52}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 244
+      y: 267
+      width: 60
+      height: 75
+    spriteID: 759f1d87728cdb74f8fc8221d957e2dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 244, y: 267}
+  - name: monsterGas_Frame_27
+    originalName: 
+    pivot: {x: 0.2333333, y: 0.5194805}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 244
+      y: 95
+      width: 60
+      height: 77
+    spriteID: bf0af9c4e79275143a3cb0f64f6f7db7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 244, y: 95}
+  - name: monsterGas_Frame_28
+    originalName: 
+    pivot: {x: 0.24590164, y: 0.51282054}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 622
+      width: 61
+      height: 78
+    spriteID: a9d9b972f3cca964d805665529d0a3a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 622}
+  - name: monsterGas_Frame_29
+    originalName: 
+    pivot: {x: 0.2580645, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 791
+      width: 62
+      height: 76
+    spriteID: ec3c5914dfa39b24e9714a0825ff0009
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 791}
+  - name: monsterGas_Frame_30
+    originalName: 
+    pivot: {x: 0.2580645, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 448
+      width: 62
+      height: 78
+    spriteID: e995718c853fb5b4789615af6ff2b311
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 448}
+  - name: monsterGas_Frame_31
+    originalName: 
+    pivot: {x: 0.26562497, y: 0.49367085}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 4
+      width: 64
+      height: 79
+    spriteID: 96e4f357057abb44386992798de11a10
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 4}
+  - name: monsterGas_Frame_32
+    originalName: 
+    pivot: {x: 0.26984125, y: 0.49367085}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 91
+      width: 63
+      height: 79
+    spriteID: 7df858ba3f7ab7145a64951c7d69285d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 91}
+  - name: monsterGas_Frame_33
+    originalName: 
+    pivot: {x: 0.2769231, y: 0.48749998}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 610
+      width: 65
+      height: 80
+    spriteID: 69520c6e09a2fd34d936f14bc3af4a84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 610}
+  - name: monsterGas_Frame_34
+    originalName: 
+    pivot: {x: 0.2923077, y: 0.4878049}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 819
+      width: 65
+      height: 82
+    spriteID: 369fc279fac8d6544a2aac16f1173092
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 819}
+  - name: monsterGas_Frame_35
+    originalName: 
+    pivot: {x: 0.2923077, y: 0.48192772}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 635
+      width: 65
+      height: 83
+    spriteID: b685055ff7e72db4e8dbd67594cb827b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 635}
+  - name: monsterGas_Frame_36
+    originalName: 
+    pivot: {x: 0.30303028, y: 0.4871795}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 698
+      width: 66
+      height: 78
+    spriteID: 91edfe02b9d083445a0aafa78600e82e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 698}
+  - name: monsterGas_Frame_37
+    originalName: 
+    pivot: {x: 0.2923077, y: 0.46341464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 909
+      width: 65
+      height: 82
+    spriteID: 1f81663ae072af34681e1b2fea507f2c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 909}
+  - name: monsterGas_Frame_38
+    originalName: 
+    pivot: {x: 0.2923077, y: 0.48101264}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 784
+      width: 65
+      height: 79
+    spriteID: 1b473a1916bf5cb4796fd10ec92f0b75
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 784}
+  - name: monsterGas_Frame_39
+    originalName: 
+    pivot: {x: 0.29850742, y: 0.48148146}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 452
+      width: 67
+      height: 81
+    spriteID: ec6a33c6735bc2f4a90b93cd940340ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 452}
+  - name: monsterGas_Frame_40
+    originalName: 
+    pivot: {x: 0.2333333, y: 0.47560975}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 268
+      width: 60
+      height: 82
+    spriteID: 3a4856c91780da0429af78ed5323c9f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 268}
+  - name: monsterGas_Frame_41
+    originalName: 
+    pivot: {x: 0.24193549, y: 0.53333336}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 875
+      width: 62
+      height: 75
+    spriteID: 2b1b0dd34aa1ee846a3f827e331a59a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 875}
+  - name: monsterGas_Frame_42
+    originalName: 
+    pivot: {x: 0.25396824, y: 0.47619048}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 339
+      width: 63
+      height: 84
+    spriteID: 77a4f6af26504cc4986d0fc01d23802c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 339}
+  - name: monsterGas_Frame_43
+    originalName: 
+    pivot: {x: 0.26984125, y: 0.5479452}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 385
+      y: 89
+      width: 63
+      height: 73
+    spriteID: 1fbce010f0b6e914eb63ec646e75c03c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 385, y: 89}
+  - name: monsterGas_Frame_44
+    originalName: 
+    pivot: {x: 0.26984125, y: 0.5466667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 708
+      width: 63
+      height: 75
+    spriteID: 7cb49407abba2e54aa06ba71d7380a3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 708}
+  - name: monsterGas_Frame_45
+    originalName: 
+    pivot: {x: 0.28125, y: 0.5466667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 945
+      width: 64
+      height: 75
+    spriteID: cf85b9924dec1b94fa65e312f034e22c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 945}
+  - name: monsterGas_Frame_46
+    originalName: 
+    pivot: {x: 0.2923077, y: 0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 385
+      y: 4
+      width: 65
+      height: 77
+    spriteID: 903424b1461108640ba7a1feab03d83e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 385, y: 4}
+  - name: monsterGas_Frame_47
+    originalName: 
+    pivot: {x: 0.30303028, y: 0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 871
+      width: 66
+      height: 77
+    spriteID: f302f0e61ce25f4449e96533ba610926
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 871}
+  - name: monsterGas_Frame_48
+    originalName: 
+    pivot: {x: 0.31343284, y: 0.53846157}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 524
+      width: 67
+      height: 78
+    spriteID: 3f53659b79ca62a4ca48f838f9c815f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 524}
+  - name: monsterGas_Frame_49
+    originalName: 
+    pivot: {x: 0.31343284, y: 0.5443038}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 252
+      width: 67
+      height: 79
+    spriteID: 716a41bfa879d5e42b63179c51aac672
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 252}
+  - name: monsterGas_Frame_50
+    originalName: 
+    pivot: {x: 0.3235294, y: 0.5375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 364
+      width: 68
+      height: 80
+    spriteID: 544081be603c7d042be6f94d74681c7a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 364}
+  - name: monsterGas_Frame_51
+    originalName: 
+    pivot: {x: 0.3333333, y: 0.5375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 276
+      width: 69
+      height: 80
+    spriteID: 69577d18e60cb9f47b41254022cea924
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 276}
+  - name: monsterGas_Frame_52
+    originalName: 
+    pivot: {x: 0.34285715, y: 0.5365854}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 577
+      width: 70
+      height: 82
+    spriteID: 578c539985740fb499fef157323de33b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 577}
+  - name: monsterGas_Frame_53
+    originalName: 
+    pivot: {x: 0.34285715, y: 0.5365854}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 667
+      width: 70
+      height: 82
+    spriteID: 1b8092e21f42d3943ad6c76521981a61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 667}
+  - name: monsterGas_Frame_54
+    originalName: 
+    pivot: {x: 0.3472222, y: 0.5301205}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 4
+      width: 72
+      height: 83
+    spriteID: b062cc3b878efdd41b7ab52bcc651fd9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 4}
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1673676981
+    name: monsterGas
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: monsterGas_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 38
+        y: 8
+        width: 58
+        height: 79
+      spriteId: 09224c521498f5545a103fc61f56bde6
+    - name: monsterGas_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 37
+        y: 8
+        width: 60
+        height: 80
+      spriteId: f7d7ef9a66f1ae1419a673cdb5d15f84
+    - name: monsterGas_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 37
+        y: 7
+        width: 59
+        height: 82
+      spriteId: 1df3be37af34c6942aca0d57b5904993
+    - name: monsterGas_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 36
+        y: 7
+        width: 60
+        height: 82
+      spriteId: 99603668040966c4f959eedab1816898
+    - name: monsterGas_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 35
+        y: 7
+        width: 61
+        height: 83
+      spriteId: 8adff1446e9e8f84b95bbfc7086961ea
+    - name: monsterGas_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 34
+        y: 6
+        width: 62
+        height: 85
+      spriteId: 3b5cdb0b8ca11e845980e45fa2504470
+    - name: monsterGas_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 33
+        y: 6
+        width: 63
+        height: 85
+      spriteId: 6bd5d89dd9c295f448d7ec32f30ce479
+    - name: monsterGas_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 33
+        y: 6
+        width: 63
+        height: 86
+      spriteId: d934fd29600bcee45a2a56d3fea59abe
+    - name: monsterGas_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 32
+        y: 5
+        width: 64
+        height: 87
+      spriteId: eac62ac8c0dc5aa4e952628ae7efbead
+    - name: monsterGas_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 31
+        y: 5
+        width: 65
+        height: 88
+      spriteId: 8791b115c1615cd48bb49297e7ef2041
+    - name: monsterGas_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 30
+        y: 5
+        width: 66
+        height: 89
+      spriteId: ad8edc10002388540a097f9bc78f2235
+    - name: monsterGas_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 29
+        y: 4
+        width: 67
+        height: 90
+      spriteId: e8ebf8797c1461f4d924c7dc9a67658d
+    - name: monsterGas_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 29
+        y: 4
+        width: 67
+        height: 84
+      spriteId: 5ecf3492918473042b34209328f34e97
+    - name: monsterGas_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 28
+        y: 4
+        width: 69
+        height: 85
+      spriteId: f318e50d8f5bf1a49abee124ccbe7a34
+    - name: monsterGas_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 27
+        y: 4
+        width: 70
+        height: 86
+      spriteId: dfb805e4ff107eb49b4bd83813af651f
+    - name: monsterGas_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 26
+        y: 3
+        width: 70
+        height: 87
+      spriteId: 46622c252bbfefd4c970b51556c76c26
+    - name: monsterGas_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 26
+        y: 3
+        width: 71
+        height: 88
+      spriteId: 8630f5b858bff324bbbb53c1fb706887
+    - name: monsterGas_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 25
+        y: 13
+        width: 71
+        height: 78
+      spriteId: b76e38b8beffedf4a902a15f544c215f
+    - name: monsterGas_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 24
+        y: 13
+        width: 72
+        height: 74
+      spriteId: 05863790880d708439dad5c9efee0241
+    - name: monsterGas_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 23
+        y: 13
+        width: 73
+        height: 74
+      spriteId: 7ee8dbd6689b23f45a444b980bcac5e1
+    - name: monsterGas_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 23
+        y: 12
+        width: 73
+        height: 76
+      spriteId: 64e1c94aa50c1ba46bf2052f3139db93
+    - name: monsterGas_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 39
+        y: 12
+        width: 57
+        height: 76
+      spriteId: 49bb1f48213e87a46aeee4f3e1d8817f
+    - name: monsterGas_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 39
+        y: 12
+        width: 58
+        height: 77
+      spriteId: cb34c0ab0eee245478b89586e264dbdb
+    - name: monsterGas_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 38
+        y: 11
+        width: 58
+        height: 73
+      spriteId: 3c9838eeb049f014fabf9e2da976cd73
+    - name: monsterGas_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 37
+        y: 11
+        width: 60
+        height: 74
+      spriteId: 76b28cfe660c3c14fbbd086a37396d05
+    - name: monsterGas_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 37
+        y: 11
+        width: 59
+        height: 75
+      spriteId: 358dfca3e54fd2e498214fa80711ee94
+    - name: monsterGas_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 36
+        y: 11
+        width: 60
+        height: 75
+      spriteId: 759f1d87728cdb74f8fc8221d957e2dd
+    - name: monsterGas_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 36
+        y: 10
+        width: 60
+        height: 77
+      spriteId: bf0af9c4e79275143a3cb0f64f6f7db7
+    - name: monsterGas_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 35
+        y: 10
+        width: 61
+        height: 78
+      spriteId: a9d9b972f3cca964d805665529d0a3a7
+    - name: monsterGas_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 34
+        y: 12
+        width: 62
+        height: 76
+      spriteId: ec3c5914dfa39b24e9714a0825ff0009
+    - name: monsterGas_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 34
+        y: 11
+        width: 62
+        height: 78
+      spriteId: e995718c853fb5b4789615af6ff2b311
+    - name: monsterGas_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 33
+        y: 11
+        width: 64
+        height: 79
+      spriteId: 96e4f357057abb44386992798de11a10
+    - name: monsterGas_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 33
+        y: 11
+        width: 63
+        height: 79
+      spriteId: 7df858ba3f7ab7145a64951c7d69285d
+    - name: monsterGas_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 32
+        y: 11
+        width: 65
+        height: 80
+      spriteId: 69520c6e09a2fd34d936f14bc3af4a84
+    - name: monsterGas_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 31
+        y: 10
+        width: 65
+        height: 82
+      spriteId: 369fc279fac8d6544a2aac16f1173092
+    - name: monsterGas_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 31
+        y: 10
+        width: 65
+        height: 83
+      spriteId: b685055ff7e72db4e8dbd67594cb827b
+    - name: monsterGas_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 30
+        y: 12
+        width: 66
+        height: 78
+      spriteId: 91edfe02b9d083445a0aafa78600e82e
+    - name: monsterGas_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 31
+        y: 12
+        width: 65
+        height: 82
+      spriteId: 1f81663ae072af34681e1b2fea507f2c
+    - name: monsterGas_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 31
+        y: 12
+        width: 65
+        height: 79
+      spriteId: 1b473a1916bf5cb4796fd10ec92f0b75
+    - name: monsterGas_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 30
+        y: 11
+        width: 67
+        height: 81
+      spriteId: ec6a33c6735bc2f4a90b93cd940340ea
+    - name: monsterGas_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 36
+        y: 11
+        width: 60
+        height: 82
+      spriteId: 3a4856c91780da0429af78ed5323c9f6
+    - name: monsterGas_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 35
+        y: 10
+        width: 62
+        height: 75
+      spriteId: 2b1b0dd34aa1ee846a3f827e331a59a3
+    - name: monsterGas_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 34
+        y: 10
+        width: 63
+        height: 84
+      spriteId: 77a4f6af26504cc4986d0fc01d23802c
+    - name: monsterGas_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 33
+        y: 10
+        width: 63
+        height: 73
+      spriteId: 1fbce010f0b6e914eb63ec646e75c03c
+    - name: monsterGas_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 33
+        y: 9
+        width: 63
+        height: 75
+      spriteId: 7cb49407abba2e54aa06ba71d7380a3d
+    - name: monsterGas_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 32
+        y: 9
+        width: 64
+        height: 75
+      spriteId: cf85b9924dec1b94fa65e312f034e22c
+    - name: monsterGas_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 31
+        y: 8
+        width: 65
+        height: 77
+      spriteId: 903424b1461108640ba7a1feab03d83e
+    - name: monsterGas_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 30
+        y: 8
+        width: 66
+        height: 77
+      spriteId: f302f0e61ce25f4449e96533ba610926
+    - name: monsterGas_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 29
+        y: 8
+        width: 67
+        height: 78
+      spriteId: 3f53659b79ca62a4ca48f838f9c815f2
+    - name: monsterGas_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 29
+        y: 7
+        width: 67
+        height: 79
+      spriteId: 716a41bfa879d5e42b63179c51aac672
+    - name: monsterGas_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 28
+        y: 7
+        width: 68
+        height: 80
+      spriteId: 544081be603c7d042be6f94d74681c7a
+    - name: monsterGas_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 27
+        y: 7
+        width: 69
+        height: 80
+      spriteId: 69577d18e60cb9f47b41254022cea924
+    - name: monsterGas_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 26
+        y: 6
+        width: 70
+        height: 82
+      spriteId: 578c539985740fb499fef157323de33b
+    - name: monsterGas_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 26
+        y: 6
+        width: 70
+        height: 82
+      spriteId: 1b8092e21f42d3943ad6c76521981a61
+    - name: monsterGas_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 25
+        y: 6
+        width: 72
+        height: 83
+      spriteId: b062cc3b878efdd41b7ab52bcc651fd9
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 100, y: 100}
