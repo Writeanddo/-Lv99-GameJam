@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d702e529ed4052049965fb8a8cd4b7ec
+guid: 62bb81dd4b8b80d41b99d474543a0926
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: escada_0
+      name: andarzinho_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b40f5d8100c1d145b29c3d1f8be7b7f
-      internalID: -1307660768
+      spriteID: 682cc109821f53144878e0cf24068ec9
+      internalID: 1882456160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: escada_1
+      name: andarzinho_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 0
-        width: 96
-        height: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94d2773d203fabe4bb22087f35d0a256
-      internalID: -1357876893
+      spriteID: c75a07dd21e44dc489d38e9c1e05376e
+      internalID: -1606232537
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      escada_0: -1307660768
-      escada_1: -1357876893
+      andarzinho_0: 1882456160
+      andarzinho_1: -1606232537
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
