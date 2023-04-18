@@ -108,10 +108,10 @@ TextureImporter:
       name: moveis_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 68
-        width: 32
-        height: 31
+        x: 75
+        y: 107
+        width: 52
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfbe0dd7b9a527649ab7929bc5be4ba5
-      internalID: 1813774341
+      spriteID: c9f16c29b40194f4686781e5381a6789
+      internalID: 613077082
       vertices: []
       indices: 
       edges: []
@@ -129,10 +129,10 @@ TextureImporter:
       name: moveis_1
       rect:
         serializedVersion: 2
-        x: 71
-        y: 68
-        width: 31
-        height: 49
+        x: 167
+        y: 104
+        width: 50
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2436df3ecfebd0a41bfafe52aafaf936
-      internalID: -593777799
+      spriteID: 5acd56d850d44d34aad4919ce4395264
+      internalID: -192566936
       vertices: []
       indices: 
       edges: []
@@ -150,10 +150,10 @@ TextureImporter:
       name: moveis_2
       rect:
         serializedVersion: 2
-        x: 10
-        y: 22
-        width: 38
-        height: 34
+        x: 2
+        y: 81
+        width: 58
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbf60fa9f70f5734bb067c446bcab997
-      internalID: 1523970505
+      spriteID: b9192ec301da4184c8508b2c14d8fc98
+      internalID: 1904011010
       vertices: []
       indices: 
       edges: []
@@ -171,10 +171,10 @@ TextureImporter:
       name: moveis_3
       rect:
         serializedVersion: 2
-        x: 68
-        y: 21
-        width: 8
-        height: 23
+        x: 91
+        y: 72
+        width: 33
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6399116809a44e84f90885bc48d35749
-      internalID: 1742883121
+      spriteID: 014458547ee9f9a419bff6ebe781d791
+      internalID: -409575828
       vertices: []
       indices: 
       edges: []
@@ -192,10 +192,10 @@ TextureImporter:
       name: moveis_4
       rect:
         serializedVersion: 2
-        x: 86
-        y: 20
-        width: 9
-        height: 34
+        x: 166
+        y: 88
+        width: 62
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +203,239 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fc9b0eed7b6e064cab50256a9641f04
-      internalID: 1292717744
+      spriteID: 2103b175a762ee44c8a2ae0f0a08a172
+      internalID: 121958284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 66
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93b38c34824866498e9ff2dda6e0a1d
+      internalID: -1498469158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis_6
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 72
+        width: 94
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9896487e4eaddef43852542dfb90af12
+      internalID: -1962511751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 36
+        width: 58
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2622ba8ee3c35df4cbe15dea0ea0023f
+      internalID: -1314564280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis_8
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 36
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058253a29fd613a49b182540d0c38ad0
+      internalID: -1124786959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis_9
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 7
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c0a1c9359ce524fab916e4f92d3e07
+      internalID: -1560572720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis_10
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1
+        width: 34
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9805e3b7d6b64346ac965b4a50b0765
+      internalID: -1895403807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1
+        width: 34
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec71a3bff7a2ff40b181108bbf13ac1
+      internalID: 1729414798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis_12
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 36
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847dcdd5111de924cb052a8635569f71
+      internalID: -107215274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis_13
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 7
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94bc2b2fdc9b9174b9c0bc18f6a491c5
+      internalID: -880585784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis_14
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 100
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc60ca19feb2fb4eb24c3187230fad2
+      internalID: 1978753572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis_15
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 5
+        width: 45
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799192430aa8a8e4ba5cb506eb5e7a60
+      internalID: -857180822
       vertices: []
       indices: 
       edges: []
@@ -220,11 +451,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      moveis_0: 1813774341
-      moveis_1: -593777799
-      moveis_2: 1523970505
-      moveis_3: 1742883121
-      moveis_4: 1292717744
+      moveis_0: 613077082
+      moveis_1: -192566936
+      moveis_10: -1895403807
+      moveis_11: 1729414798
+      moveis_12: -107215274
+      moveis_13: -880585784
+      moveis_14: 1978753572
+      moveis_15: -857180822
+      moveis_2: 1904011010
+      moveis_3: -409575828
+      moveis_4: 121958284
+      moveis_5: -1498469158
+      moveis_6: -1962511751
+      moveis_7: -1314564280
+      moveis_8: -1124786959
+      moveis_9: -1560572720
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

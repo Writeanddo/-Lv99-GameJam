@@ -1,0 +1,1003 @@
+fileFormatVersion: 2
+guid: 3a336e31e051f704f88edcb098b31693
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_0"
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 56
+        width: 17
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e6473ff7f0faf429877138b45729db
+      internalID: 2080181751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_1"
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 92
+        width: 42
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785bc77c84cd4ee47b1d53898f5073fa
+      internalID: -2075478472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_2"
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 104
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e639c01b8c13c46b98ebea7695fbfa
+      internalID: -2037489378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_3"
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 78
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58ae4a551fcb314e8000a0f5457768b
+      internalID: -1419913708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_4"
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 82
+        width: 54
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe3eb4ccbab6364789d58a9dfba8fca
+      internalID: -1319752927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_5"
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 75
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd806fe36827f304fa4d4e2a1f35db15
+      internalID: 284669075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_6"
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 85
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93683549f71f2cd49924ea07f3f81796
+      internalID: 433379568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_7"
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 85
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615f43810b9133c4494b6ab08214947b
+      internalID: 1690412146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_8"
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 85
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9401c735ab0b6f24296b8cf6e7309a21
+      internalID: -1215513885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_9"
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 85
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68bc70c26e2553a4997957188ade9cf9
+      internalID: -1839537035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_10"
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 85
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3a1b2d9e74aeb4c9be269bf5fb6b5a
+      internalID: 562518450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_11"
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 85
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a38e9f317acfc44a62be81f2f8dc94
+      internalID: 1769736822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_12"
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 96
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dbec9844a1ae9341bf6eff788bb3b78
+      internalID: -1483895531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_13"
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 88
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c13e0d67ea47b45a937885b3bd5c90
+      internalID: -966610548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_14"
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 76
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218583a9a52cf7f448b2bb34deb16fb8
+      internalID: -1325098487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_15"
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 64
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802777e04f3be8141b695ec4651560a0
+      internalID: 1513330031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_16"
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 82
+        width: 15
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5230968581f79149b83e1c94c4d6ecd
+      internalID: 871569922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_17"
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 70
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71d29733cd4421499748a1ecca43381
+      internalID: -948667239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_18"
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 75
+        width: 15
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944b2f873d03d2b459fc23362be8d2f6
+      internalID: 508875725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_19"
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 43
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d954f72d8b7a734e985fde2dabb1057
+      internalID: 1504264017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_20"
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 43
+        width: 11
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795840eb23b7f7b4fa12cf6f15e68f97
+      internalID: 1898979635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_21"
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 43
+        width: 11
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3855eb9ab8e034b885c52106aa4038
+      internalID: -1502877459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_22"
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 68
+        width: 15
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fe67e064e3b8b4d9e0b85caf576665
+      internalID: -666352471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_23"
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 48
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329dd35bb0555e548aef4a67cda7e274
+      internalID: -1159373256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_24"
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 48
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408cac871112468438d47d72001875fb
+      internalID: -1413031302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_25"
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 49
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f725cf276aa7c54983eef098b9ec5e0
+      internalID: -411467026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_26"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 53
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af99e0c6f0753ee4dac369cc55989261
+      internalID: -1364704655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_27"
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 14
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ddda88e92cd26c4eaaedddd1bbc62dc
+      internalID: 1469111754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_28"
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 45
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab9b1cd913aba94f8f0785d78b9a074
+      internalID: 850893413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_29"
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 41
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed592c84f84416b4f94d45475ff671c5
+      internalID: 1271687895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_30"
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 23
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cabb6852c32580c48ad93f8b0487649a
+      internalID: -977195448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_31"
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 23
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6a84f49edcda747a7543ee61e07ff7
+      internalID: -2138566838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_32"
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 23
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c079eeaa3be4bac42bb3d53290bca7e8
+      internalID: -789570924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_33"
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 13
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7b502d3707dc84793aeeb0dfb8c64e
+      internalID: -1058510515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_34"
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 14
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe221ee61bb3fa4894baf4092bafbbe
+      internalID: -547346442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_35"
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 17
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389e8a6232f2e724c86baefdc0b8ae71
+      internalID: -788849836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_36"
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 4
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d652614489521ff4b8a9522585cd9844
+      internalID: 12604934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_37"
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 2
+        width: 11
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f7cc1800db1f8747bff4b0a0a0e1e52
+      internalID: -531437567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_38"
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 2
+        width: 11
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2806937b70d8ca8478a777083f65f46d
+      internalID: 341636117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "decora\xE7\xF5es_39"
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 2
+        width: 11
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7df35b81b089a4cad6276fe3651901
+      internalID: -896581791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "decora\xE7\xF5es_0": 2080181751
+      "decora\xE7\xF5es_1": -2075478472
+      "decora\xE7\xF5es_10": 562518450
+      "decora\xE7\xF5es_11": 1769736822
+      "decora\xE7\xF5es_12": -1483895531
+      "decora\xE7\xF5es_13": -966610548
+      "decora\xE7\xF5es_14": -1325098487
+      "decora\xE7\xF5es_15": 1513330031
+      "decora\xE7\xF5es_16": 871569922
+      "decora\xE7\xF5es_17": -948667239
+      "decora\xE7\xF5es_18": 508875725
+      "decora\xE7\xF5es_19": 1504264017
+      "decora\xE7\xF5es_2": -2037489378
+      "decora\xE7\xF5es_20": 1898979635
+      "decora\xE7\xF5es_21": -1502877459
+      "decora\xE7\xF5es_22": -666352471
+      "decora\xE7\xF5es_23": -1159373256
+      "decora\xE7\xF5es_24": -1413031302
+      "decora\xE7\xF5es_25": -411467026
+      "decora\xE7\xF5es_26": -1364704655
+      "decora\xE7\xF5es_27": 1469111754
+      "decora\xE7\xF5es_28": 850893413
+      "decora\xE7\xF5es_29": 1271687895
+      "decora\xE7\xF5es_3": -1419913708
+      "decora\xE7\xF5es_30": -977195448
+      "decora\xE7\xF5es_31": -2138566838
+      "decora\xE7\xF5es_32": -789570924
+      "decora\xE7\xF5es_33": -1058510515
+      "decora\xE7\xF5es_34": -547346442
+      "decora\xE7\xF5es_35": -788849836
+      "decora\xE7\xF5es_36": 12604934
+      "decora\xE7\xF5es_37": -531437567
+      "decora\xE7\xF5es_38": 341636117
+      "decora\xE7\xF5es_39": -896581791
+      "decora\xE7\xF5es_4": -1319752927
+      "decora\xE7\xF5es_5": 284669075
+      "decora\xE7\xF5es_6": 433379568
+      "decora\xE7\xF5es_7": 1690412146
+      "decora\xE7\xF5es_8": -1215513885
+      "decora\xE7\xF5es_9": -1839537035
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
