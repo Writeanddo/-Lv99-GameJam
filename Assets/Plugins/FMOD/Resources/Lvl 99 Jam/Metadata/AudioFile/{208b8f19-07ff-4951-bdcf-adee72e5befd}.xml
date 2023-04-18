@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{208b8f19-07ff-4951-bdcf-adee72e5befd}">
+		<property name="assetPath">
+			<value>Cello-028.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.1250113378684805</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{24523e36-5092-4310-b5d0-d337f4add574}</destination>
+		</relationship>
+	</object>
+</objects>

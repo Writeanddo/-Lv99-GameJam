@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c27ddcb1-e63c-492f-8198-e23acadc5732}">
+		<property name="assetPath">
+			<value>Descending Synth B3.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{24523e36-5092-4310-b5d0-d337f4add574}</destination>
+		</relationship>
+	</object>
+</objects>
