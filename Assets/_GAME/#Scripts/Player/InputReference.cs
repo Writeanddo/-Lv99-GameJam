@@ -41,7 +41,7 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
     {
         var input = context.ReadValue<Vector2>();
 
-        Movement = new Vector2(input.x,0).normalized;
+        Movement = new Vector2(input.x,input.y).normalized;
     }
 
     public void OnJump(InputAction.CallbackContext context)
