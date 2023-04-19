@@ -10,18 +10,29 @@ public class bullet : MonoBehaviour
     Rigidbody2D rb;
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D > ();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Start()
     {
-       
 
         Vector2 direction = (targetObject.position - transform.position).normalized;
-        print(direction);
-
 
         rb.velocity = direction * moveSpeed;
 
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+
+        }
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(this);
     }
 }
