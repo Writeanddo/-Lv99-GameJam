@@ -50,6 +50,8 @@ MonoBehaviour:
   ocilacaoSpeed: 1
   ocilacaoDistance: 0.5
   patrolTime: 4
+  hitInfo: []
+  isFollow: 0
 --- !u!114 &1580801658833175198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +67,7 @@ MonoBehaviour:
   visionRange: 1.39
   hitMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   hitBox: {fileID: 3806201294615337461}
 --- !u!1 &8493891568024548440
 GameObject:
