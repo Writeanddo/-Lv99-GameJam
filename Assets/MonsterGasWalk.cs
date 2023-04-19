@@ -17,8 +17,13 @@ public class MonsterGasWalk : MonoBehaviour
     public float patrolTime = 3f;
     private bool isLookLeft = false;
 
+    private IAVisionCircle m_IaVisionCircle;
+    public Collider2D[] hitInfo;
+    public bool isFollow;
+
     void Start()
     {
+        m_IaVisionCircle = GetComponent<IAVisionCircle>();
         positionX = transform.position.x;
         positionY = transform.position.y;
         floatOffset = Random.Range(0, 2 * Mathf.PI);
@@ -27,32 +32,63 @@ public class MonsterGasWalk : MonoBehaviour
 
     void Update()
     {
-
-        if (moveSpeed < 0 && isLookLeft == false)
+        if (m_IaVisionCircle != null)
         {
 
+            hitInfo = Physics2D.OverlapCircleAll(m_IaVisionCircle.hitBox.position, m_IaVisionCircle.visionRange, m_IaVisionCircle.hitMask);
+            foreach (var hit in hitInfo)
+            {
+                isFollow = Check(hit);
+
+            }
+
+        }
+
+        if (moveSpeed < 0 && isLookLeft == false && !isFollow)
+        {
 
             Flip();
         }
-        else if (moveSpeed > 0 && isLookLeft == true)
+        else if (moveSpeed > 0 && isLookLeft == true && !isFollow)
         {
 
             Flip();
         }
 
-        transform.Translate(new Vector2(moveSpeed * Time.deltaTime, 0));
-
-        float y = positionY + ocilacaoDistance * Mathf.Sin((Time.time + floatOffset) * ocilacaoSpeed);
-        transform.position = new Vector2(transform.position.x, y);
-
-        // Contagem do tempo de patrulha
-        timer += Time.deltaTime;
-        if (timer >= patrolTime)
+        if (isFollow && hitInfo !=null)
         {
-            // Mudança de direção
-            moveSpeed *= -1;
-            timer = 0f;
+            transform.position = Vector3.MoveTowards(transform.position, hitInfo[0].transform.position, moveSpeed * Time.deltaTime);
+            if (hitInfo[0].transform.position.x > transform.position.x && isLookLeft)
+            {
+                Flip();
+            }
+            else if (hitInfo[0].transform.position.x < transform.position.x && !isLookLeft)
+            {
+                Flip();
+            }
         }
+
+        if (!isFollow)
+        {
+            transform.Translate(new Vector2(moveSpeed * Time.deltaTime, 0));
+            float y = positionY + ocilacaoDistance * Mathf.Sin((Time.time + floatOffset) * ocilacaoSpeed);
+            transform.position = new Vector2(transform.position.x, y);
+
+            timer += Time.deltaTime;
+            if (timer >= patrolTime)
+            {
+                moveSpeed *= -1;
+                timer = 0f;
+            }
+        }
+
+    }
+
+    private bool Check(Collider2D colPlayer)
+    {
+
+        return m_IaVisionCircle.IsVisible(colPlayer);
+
     }
 
     public void Flip()

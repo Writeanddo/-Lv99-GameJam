@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3806201294615337461}
   - component: {fileID: 3806201294615337460}
+  - component: {fileID: 1580801658833175198}
   m_Layer: 0
   m_Name: MonsterGas
   m_TagString: Untagged
@@ -49,6 +50,23 @@ MonoBehaviour:
   ocilacaoSpeed: 1
   ocilacaoDistance: 0.5
   patrolTime: 4
+--- !u!114 &1580801658833175198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806201294615337463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3d929c418b80a4aa73b0d9a0e01a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visionRange: 1.39
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 0
+  hitBox: {fileID: 3806201294615337461}
 --- !u!1 &8493891568024548440
 GameObject:
   m_ObjectHideFlags: 0

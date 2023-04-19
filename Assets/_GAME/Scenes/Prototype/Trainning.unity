@@ -1744,13 +1744,21 @@ PrefabInstance:
       propertyPath: slopesCheckDistance
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 2817897727124944846, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6616464568432106851, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
       propertyPath: m_Name
       value: PLAYER
       objectReference: {fileID: 0}
     - target: {fileID: 6616464568432106851, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616464568432106851, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6616464568432106853, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
       propertyPath: m_Size.x
@@ -4082,13 +4090,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1580801658833175198, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
+      propertyPath: visionRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580801658833175198, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
+      propertyPath: hitMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 3806201294615337461, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3806201294615337461, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.077
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: 3806201294615337461, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
       propertyPath: m_LocalPosition.y
