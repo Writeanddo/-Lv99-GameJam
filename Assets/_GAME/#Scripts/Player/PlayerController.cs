@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
 
             JUMP();
         }
-        else
+        else if(!isGrounded && isJumping)
         {
             CANCELJUMP();
         }
@@ -229,11 +229,11 @@ public class PlayerController : MonoBehaviour
     public void CANCELJUMP()
     {
         isJumping = false;
-        if (_rigidbody2D.velocity.y > 0)
-        {
-            StartCoroutine("delayJump");
+        //if (_rigidbody2D.velocity.y > 0)
+        //{
+        //    StartCoroutine("delayJump");
 
-        }
+        //}
     }
 
     IEnumerator delayJump()

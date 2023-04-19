@@ -7,6 +7,7 @@ public class bullet : MonoBehaviour
     public Transform targetObject;
     public float moveSpeed = 5f;
     public float distanceFromTarget = 1f;
+    [SerializeField] private float damage = 1f;
     Rigidbody2D rb;
     private void Awake()
     {
@@ -27,12 +28,17 @@ public class bullet : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            if (collision.gameObject.TryGetComponent(out IDamageable damageable) && collision.gameObject.CompareTag("Player"))
+            {
+                damageable.TakeDamage(transform.position, damage);
+                Destroy(gameObject);
 
+            }
         }
     }
 
     private void OnBecameInvisible()
     {
-        Destroy(this);
+        Destroy(gameObject);
     }
 }

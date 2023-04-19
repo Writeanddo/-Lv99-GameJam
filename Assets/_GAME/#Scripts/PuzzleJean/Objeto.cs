@@ -35,8 +35,12 @@ public class Objeto : MonoBehaviour
             if (m_PointsOrderPuzzle.currentObjectIndex == objectId)
             {
                 isCorret = true;
-                spriteRenderer.sprite = spriteChange[1];
+                spriteRenderer.sprite = spriteChange[1];              
                 m_PointsOrderPuzzle.currentObjectIndex++;
+                if(m_PointsOrderPuzzle.currentObjectIndex == m_PointsOrderPuzzle.listObjeto.Count)
+                {
+                    print("Você ganhou");
+                }
             }
             else
             {
