@@ -7,21 +7,38 @@ public class bullet : MonoBehaviour
     public Transform targetObject;
     public float moveSpeed = 5f;
     public float distanceFromTarget = 1f;
+    [SerializeField] private float damage = 1f;
     Rigidbody2D rb;
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D > ();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Start()
     {
-       
 
         Vector2 direction = (targetObject.position - transform.position).normalized;
-        print(direction);
-
 
         rb.velocity = direction * moveSpeed;
 
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if (collision.gameObject.TryGetComponent(out IDamageable damageable) && collision.gameObject.CompareTag("Player"))
+            {
+                damageable.TakeDamage(transform.position, damage);
+                Destroy(gameObject);
+
+            }
+        }
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }
