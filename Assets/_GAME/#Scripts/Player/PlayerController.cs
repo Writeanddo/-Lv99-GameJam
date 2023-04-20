@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour
     [Header("Player Status")]
     public float moveSpeed = 5f;
     public float jumpForce = 124f;
+    public bool isInteraction = false;
+    public bool isPressedPuzzle;
+    public bool isPuzzleStart;
+    public GameObject puzzleCurrent;
+
 
     [Header("Ground")]
     public LayerMask whatIsGround;
@@ -125,16 +130,27 @@ public class PlayerController : MonoBehaviour
 
             JUMP();
         }
-        else if(!isGrounded && isJumping)
+        else if (!isGrounded && isJumping)
         {
             CANCELJUMP();
         }
+
+
+        if (_inputReference.interacaoButton.IsPressed && isInteraction && !isPressedPuzzle)
+        {
+            isPressedPuzzle = true;
+            SetPuzzleStart();
+        }
+
     }
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector2(groundXSize, groundYSize), 0f, whatIsGround);
+        if (!isPuzzleStart)
+        {
+            OnMovimentPlayer();
 
-        OnMovimentPlayer();
+        }
 
         if (isStunned || health.IsDie)
             return;
@@ -165,6 +181,15 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    private void SetPuzzleStart()
+    {
+        isPuzzleStart = true;
+        RectTransform canvasRect = FindObjectOfType<Canvas>().GetComponent<RectTransform>();
+        GameObject newObject = Instantiate(puzzleCurrent);
+        newObject.transform.SetParent(canvasRect, false);
+        newObject.transform.localPosition = Vector3.zero;
+        print("Pausou");
+    }
 
     private void OnMovimentPlayer()
     {

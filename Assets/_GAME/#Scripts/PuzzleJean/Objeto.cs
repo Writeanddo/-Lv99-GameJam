@@ -29,7 +29,7 @@ public class Objeto : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !isCorret)
+        if (collision.CompareTag("puzzle") && !isCorret)
         {
 
             if (m_PointsOrderPuzzle.currentObjectIndex == objectId)

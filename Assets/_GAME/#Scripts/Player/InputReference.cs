@@ -21,6 +21,8 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
     public InputButton PauseButton { get; private set; } = new InputButton();
     public InputButton JumpButton { get; private set; } = new InputButton();
 
+    public InputButton interacaoButton { get; private set; } = new InputButton();
+
     private PlayerInputMap playerInputs;
 
     private void Start()
@@ -64,18 +66,10 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
             button.IsPressed = false;
     }
 
-    public void OnShoot(InputAction.CallbackContext context)
-    {
-        
-    }
 
-    public void OnDash(InputAction.CallbackContext context)
-    {
-        
-    }
 
-    public void OnRecharge(InputAction.CallbackContext context)
+    public void OnInteracao(InputAction.CallbackContext context)
     {
-        
+        interacaoButton.IsPressed = context.ReadValueAsButton();
     }
 }
