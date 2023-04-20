@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e7759406c6b736049ae8e057aff2e7dc
+guid: 0d5b3ae1dd042e34088780028aec32a1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,442 +105,337 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chao_0
+      name: moveis frente_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 174
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 75
+        y: 107
+        width: 52
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 954d25e79a68a1c4396c75904072e8b7
-      internalID: 1779928039
+      spriteID: aaa3c1f7829615a4387090e8397876ac
+      internalID: 2049602206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_1
+      name: moveis frente_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 174
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 167
+        y: 104
+        width: 50
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5942c06320eec7d47b5aea523b3536c5
-      internalID: 1127558003
+      spriteID: 1a638fff16f4ab840aebf37e9920ccdf
+      internalID: -1412830635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_2
+      name: moveis frente_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 81
+        width: 58
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63be36303e54eff46a2c1a970baedc93
+      internalID: 496132387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis frente_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 72
+        width: 33
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5668bcb12e911458ad7a6b8a2e0207
+      internalID: 824185991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis frente_4
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 88
+        width: 62
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3dd85017c1f6384d80ae672672c2ef4
+      internalID: 1192266490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveis frente_5
       rect:
         serializedVersion: 2
         x: 64
-        y: 174
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 66
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9275320e6e8ddc64e8b8a665c84840d3
-      internalID: 1234788105
+      spriteID: d81aea508bbd8d64da4d302b8a27646e
+      internalID: 1967664280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_3
+      name: moveis frente_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 174
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 166
+        y: 72
+        width: 94
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb14bf2ed243af942aa7ec0dff0bb60f
-      internalID: -1571414730
+      spriteID: e348a7ab9f6974e4092e634d8ef169c0
+      internalID: 2122898191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_4
+      name: moveis frente_7
       rect:
         serializedVersion: 2
-        x: 128
-        y: 174
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2
+        y: 36
+        width: 58
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e86396f62d8ef7e4db0795967ed13f38
-      internalID: -818855054
+      spriteID: 18cf46f1c7e64294cb966a08115077a4
+      internalID: 1327314204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_5
+      name: moveis frente_8
       rect:
         serializedVersion: 2
-        x: 160
-        y: 174
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 79
+        y: 36
+        width: 36
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da7c509a675a2754fb8c6315970bd97e
-      internalID: -1111549467
+      spriteID: d1e113e072e65244f8ed5351a8325993
+      internalID: 1902438975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_6
+      name: moveis frente_9
       rect:
         serializedVersion: 2
-        x: 192
-        y: 174
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 124
+        y: 7
+        width: 36
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ba3f1a6f54c93e4ead14a3ec556cae0
-      internalID: 61626549
+      spriteID: b3c08a578f3aba44daef742c3884545e
+      internalID: 541959421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_7
+      name: moveis frente_10
       rect:
         serializedVersion: 2
-        x: 224
-        y: 174
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 169
+        y: 1
+        width: 34
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7eb6e257e4587648812ca52165f34d3
-      internalID: -647200284
+      spriteID: fe137e9604e3344418b7ff4a1edbd290
+      internalID: 536289327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_8
+      name: moveis frente_11
       rect:
         serializedVersion: 2
-        x: 256
-        y: 174
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 208
+        y: 1
+        width: 34
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98f93ecc37fe72b4d8f43d0063d90b92
-      internalID: 1349208401
+      spriteID: fb89e7da92dfe9d489122cfd40650082
+      internalID: 324038470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_9
+      name: moveis frente_12
       rect:
         serializedVersion: 2
-        x: 288
-        y: 174
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 248
+        y: 36
+        width: 36
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a22aab84a4a0a804d9ca3466d5b9d6a3
-      internalID: 631934732
+      spriteID: 93401ea7ff0e8424ab9bce02fe94b0f8
+      internalID: -1264741977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_10
+      name: moveis frente_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 142
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 296
+        y: 7
+        width: 36
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8cf93a12ab822d4d88b19b3bd75e3f2
-      internalID: 375747771
+      spriteID: 6ba90e14c7f74734785ca5387cb81ef3
+      internalID: -843872898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_11
+      name: moveis frente_14
       rect:
         serializedVersion: 2
-        x: 32
-        y: 142
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2
+        y: 3
+        width: 100
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 081190eafd78ae449958fe55be8af2e2
-      internalID: 2126748585
+      spriteID: e3e95e5f5db626f47b0e3e7fa4601a18
+      internalID: -216635478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_12
+      name: moveis frente_15
       rect:
         serializedVersion: 2
-        x: 64
-        y: 142
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 246
+        y: 5
+        width: 45
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c785a04a41bd2c42af33b3e3de00191
-      internalID: 370923239
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chao_13
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 142
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c88a48383be94747b10a4565abec6cf
-      internalID: -1918702562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chao_14
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 142
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b0747878bc438f45a12660c3ac39b2f
-      internalID: 208026703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chao_15
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 142
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad5d8618bc4f3d841bca349484f02c83
-      internalID: 2075882732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chao_16
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 142
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: faae95db93b0e05499e07c719d1de55c
-      internalID: 1900476886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chao_17
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 142
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14190e058790ccf49814e8a048974de6
-      internalID: -1675158948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chao_18
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 142
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82e65663365858044bf950a0be690925
-      internalID: 696570100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chao_19
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 142
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b606494d1f24c5146b89e173fbfd6a73
-      internalID: 143276239
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chao_20
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 142
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10b6376149008254786625a9df951244
-      internalID: -1249013849
+      spriteID: 7c7d8528d3f3b184ebb212e7df7e8e99
+      internalID: 636429165
       vertices: []
       indices: 
       edges: []
@@ -556,28 +451,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chao_0: 1779928039
-      chao_1: 1127558003
-      chao_10: 375747771
-      chao_11: 2126748585
-      chao_12: 370923239
-      chao_13: -1918702562
-      chao_14: 208026703
-      chao_15: 2075882732
-      chao_16: 1900476886
-      chao_17: -1675158948
-      chao_18: 696570100
-      chao_19: 143276239
-      chao_2: 1234788105
-      chao_20: -1249013849
-      chao_21: 76302889
-      chao_3: -1571414730
-      chao_4: -818855054
-      chao_5: -1111549467
-      chao_6: 61626549
-      chao_7: -647200284
-      chao_8: 1349208401
-      chao_9: 631934732
+      moveis frente_0: 2049602206
+      moveis frente_1: -1412830635
+      moveis frente_10: 536289327
+      moveis frente_11: 324038470
+      moveis frente_12: -1264741977
+      moveis frente_13: -843872898
+      moveis frente_14: -216635478
+      moveis frente_15: 636429165
+      moveis frente_2: 496132387
+      moveis frente_3: 824185991
+      moveis frente_4: 1192266490
+      moveis frente_5: 1967664280
+      moveis frente_6: 2122898191
+      moveis frente_7: 1327314204
+      moveis frente_8: 1902438975
+      moveis frente_9: 541959421
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
