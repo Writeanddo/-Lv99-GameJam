@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{091efe5d-c53b-47a2-93ff-3a6c55a6c129}">
+		<property name="assetPath">
+			<value>Breath B-006.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0818541666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c488a745-ae80-481d-9a75-e9afd2128db3}</destination>
+		</relationship>
+	</object>
+</objects>
