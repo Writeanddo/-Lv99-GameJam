@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{de8b151b-9737-4229-9b73-89c8e283dd4c}">
+		<property name="assetPath">
+			<value>Monster Loop 3.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.0666666666666664</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{24523e36-5092-4310-b5d0-d337f4add574}</destination>
+		</relationship>
+	</object>
+</objects>
