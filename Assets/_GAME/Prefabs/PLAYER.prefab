@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2817897727124944846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.423, z: 0}
+  m_LocalPosition: {x: 0, y: -0.371, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,9 +44,9 @@ GameObject:
   - component: {fileID: 6616464568432106852}
   - component: {fileID: 1698741927264819768}
   - component: {fileID: 2776558831280371864}
+  - component: {fileID: 5994579168102822680}
   - component: {fileID: 1700325554}
   - component: {fileID: 285593794499159954}
-  - component: {fileID: 5994579168102822680}
   - component: {fileID: 856890664150359679}
   m_Layer: 6
   m_Name: PLAYER
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.8
-  jumpForce: 100
+  jumpForce: 210
   isInteraction: 0
   isPressedPuzzle: 0
   isPuzzleStart: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   isGrounded: 0
   groundCheck: {fileID: 2817897727124944846}
   groundXSize: 0.2
-  groundYSize: 0.1
+  groundYSize: 0.02
   slopesCheckDistance: 1
   isOnSlope: 0
   noFrictionMaterial: {fileID: 6200000, guid: 1cfd231c30b171746831f9068a1ceaf0, type: 2}
@@ -191,6 +191,22 @@ MonoBehaviour:
   isLookLeft: 0
   stunnedTime: 1
   stunForce: 15
+--- !u!70 &5994579168102822680
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6616464568432106851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.069}
+  m_Size: {x: 0.24970621, y: 0.5638536}
+  m_Direction: 0
 --- !u!50 &1700325554
 Rigidbody2D:
   serializedVersion: 4
@@ -206,7 +222,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.2
   m_Material: {fileID: 6200000, guid: 1cfd231c30b171746831f9068a1ceaf0, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -229,22 +245,6 @@ MonoBehaviour:
   destroyOnDie: 0
   enemyXp: 0
   collider2d: {fileID: 5994579168102822680}
---- !u!70 &5994579168102822680
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6616464568432106851}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.018299848, y: -0.065574475}
-  m_Size: {x: 0.24970621, y: 0.5638536}
-  m_Direction: 0
 --- !u!114 &856890664150359679
 MonoBehaviour:
   m_ObjectHideFlags: 0

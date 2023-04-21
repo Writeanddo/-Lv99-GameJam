@@ -125,16 +125,16 @@ public class PlayerController : MonoBehaviour
         mouseWorldPosition = main.ScreenToWorldPoint(_inputReference.MousePosition);
 
         //tá estranho
-        if (_inputReference.JumpButton.IsPressed && isGrounded && !isJumping)
-        {
 
-            JUMP();
-        }
-        else if (!isGrounded && isJumping)
+        if (isGrounded && isJumping)
         {
             CANCELJUMP();
         }
 
+        if (_inputReference.JumpButton.IsPressed && isGrounded && !isJumping)
+        {
+            JUMP();
+        }
 
         if (_inputReference.interacaoButton.IsPressed && isInteraction && !isPressedPuzzle)
         {
@@ -146,11 +146,13 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector2(groundXSize, groundYSize), 0f, whatIsGround);
-        if (!isPuzzleStart)
-        {
-            OnMovimentPlayer();
 
+        if (isPuzzleStart)
+        {
+            return;
         }
+
+        OnMovimentPlayer();
 
         if (isStunned || health.IsDie)
             return;
@@ -168,8 +170,6 @@ public class PlayerController : MonoBehaviour
         //virar o player
         if (_inputReference.Movement.x < 0 && isLookLeft == false)
         {
-
-
             Flip();
         }
         else if (_inputReference.Movement.x > 0 && isLookLeft == true)
@@ -254,22 +254,7 @@ public class PlayerController : MonoBehaviour
     public void CANCELJUMP()
     {
         isJumping = false;
-        //if (_rigidbody2D.velocity.y > 0)
-        //{
-        //    StartCoroutine("delayJump");
-
-        //}
     }
-
-    IEnumerator delayJump()
-    {
-        yield return new WaitForSeconds(0.05f);
-
-        _rigidbody2D.velocity = Vector2.up * 0.3f;
-
-        StopCoroutine("delayJump");
-    }
-
 
     private void OnDrawGizmosSelected()
     {
