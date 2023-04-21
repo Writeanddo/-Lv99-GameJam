@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
     private IDamageable health;
 
     public Animator player;
+    public float speedY;
 
     [SerializeField] private bool isStunned;
     [SerializeField] private bool isLookLeft = false;
@@ -117,7 +118,7 @@ public class PlayerController : MonoBehaviour
 
         mouseWorldPosition = main.ScreenToWorldPoint(_inputReference.MousePosition);
 
-        //tá estranho
+        //tï¿½ estranho
 
         if (isGrounded && isJumping)
         {
@@ -193,6 +194,8 @@ public class PlayerController : MonoBehaviour
             //Movimentacao SLOP
             _rigidbody2D.velocity = new Vector2(-_inputReference.Movement.x * moveSpeed * perpendicularSpeed.x,
                 -_inputReference.Movement.x * moveSpeed * perpendicularSpeed.y);
+
+                player.SetFloat("speedY", speedY);
         }
         else
         {
