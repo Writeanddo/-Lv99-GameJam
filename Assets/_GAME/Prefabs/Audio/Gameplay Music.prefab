@@ -47,10 +47,10 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 116825506
-      Data2: 1087575831
-      Data3: -1869512781
-      Data4: -1001120116
+      Data1: -1928933803
+      Data2: 1165648112
+      Data3: 1187054217
+      Data4: 2030330294
     Path: event:/Music/Gameplay Music
   Event: 
   PlayEvent: 1
@@ -58,6 +58,7 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
+  AllowNonRigidbodyDoppler: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
