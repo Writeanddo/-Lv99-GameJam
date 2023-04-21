@@ -123,6 +123,64 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &471808461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471808463}
+  - component: {fileID: 471808462}
+  m_Layer: 3
+  m_Name: Chao
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &471808462
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471808461}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.096393585, y: -0.5508222}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.986921, y: 0.39409554}
+  m_EdgeRadius: 0
+--- !u!4 &471808463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471808461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15038213, y: -0.58, z: -0.0074599655}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &599005724
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,8 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88f1386dd63147198d003daff00d37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenResolution: {x: 1532, y: 769}
-  internalResolution: {x: 538, y: 270}
+  screenResolution: {x: 577, y: 324}
+  internalResolution: {x: 481, y: 270}
   upscaledResolution: {x: 0, y: 0}
   smooth: 0
   forceSquarePixels: 0
@@ -337,7 +395,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 479.90485, y: 270}
+  m_ReferenceResolution: {x: 479.83368, y: 270}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -384,7 +442,7 @@ RectTransform:
   - {fileID: 2814896216421204888}
   - {fileID: 8188283549427137121}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -639,6 +697,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1700325554, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776558831280371864, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
+      propertyPath: jumpForce
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5484971085765641374, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.446
+      objectReference: {fileID: 0}
     - target: {fileID: 6616464568432106851, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
       propertyPath: m_Name
       value: PLAYER
@@ -646,11 +716,11 @@ PrefabInstance:
     - target: {fileID: 6616464568432106852, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 43a8f848764c9664399a4e08f9927b1d, type: 2}
+      objectReference: {fileID: 9100000, guid: fa4f304b3187f754897047281786170b, type: 2}
     - target: {fileID: 6616464568432106853, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 668714572, guid: a1db643e251b5fb4fa2300058c155a85, type: 3}
+      objectReference: {fileID: -2038566034, guid: ea661359b42c34f4288a5447efd83df2, type: 3}
     - target: {fileID: 6616464568432106853, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -812,7 +882,7 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _DestinationResolution: {r: 306, g: 172, b: 0, a: 0}
+    - _DestinationResolution: {r: 577, g: 324, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!1 &1998708969
 GameObject:
@@ -2154,6 +2224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3806201294615337463, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4697828947971250808, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
       propertyPath: m_Name
       value: monsterGas

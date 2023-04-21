@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2817897727124944846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.371, z: 0}
+  m_LocalPosition: {x: 0, y: -0.423, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 1700325554}
   - component: {fileID: 285593794499159954}
   - component: {fileID: 5994579168102822680}
-  - component: {fileID: 5632824080261301477}
   m_Layer: 6
   m_Name: PLAYER
   m_TagString: Player
@@ -112,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 668714572, guid: a1db643e251b5fb4fa2300058c155a85, type: 3}
+  m_Sprite: {fileID: -2038566034, guid: ea661359b42c34f4288a5447efd83df2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,7 +132,7 @@ Animator:
   m_GameObject: {fileID: 6616464568432106851}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -5248256821246243682, guid: 320294a9121a3ab468a7ef7ecc1514ac, type: 3}
+  m_Controller: {fileID: 9100000, guid: fa4f304b3187f754897047281786170b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -169,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.8
-  jumpForce: 124
+  jumpForce: 100
   isInteraction: 0
   isPressedPuzzle: 0
   isPuzzleStart: 0
@@ -206,7 +205,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 1cfd231c30b171746831f9068a1ceaf0, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -245,15 +244,3 @@ CapsuleCollider2D:
   m_Offset: {x: -0.018299848, y: -0.065574475}
   m_Size: {x: 0.24970621, y: 0.5638536}
   m_Direction: 0
---- !u!114 &5632824080261301477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6616464568432106851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55224b89dbb026848b682f8e438bd0aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
