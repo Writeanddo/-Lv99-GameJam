@@ -22,16 +22,16 @@ public class FmodPlayer : MonoBehaviour
     void MaterialCheck()
     {
         RaycastHit2D hit;
-        hit = Physics2D.Raycast(transform.position, Vector2.down, distance, 1 << 31);           //Layer
+        hit = Physics2D.Raycast(transform.position, Vector2.down, distance, 1 << 3);           //Layer
 
         if (hit.collider)
 
         {
-            if (hit.collider.tag == "Material: Concrete")
+            if (hit.collider.tag == "ground")
             {
                 Material = 1f;
             }
-            if (hit.collider.tag == "Material: Metal")
+            if (hit.collider.tag == "Escada")
             {
                 Material = 2f;
             }

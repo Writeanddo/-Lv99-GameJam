@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - puzzle
+  - Escada
   layers:
   - Default
   - TransparentFX
