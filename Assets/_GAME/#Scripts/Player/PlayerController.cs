@@ -171,6 +171,7 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
+        player.SetBool("isGrounded", isGrounded);
     }
 
 
