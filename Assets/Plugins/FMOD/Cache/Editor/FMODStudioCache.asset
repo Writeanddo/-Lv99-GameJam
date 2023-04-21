@@ -70,7 +70,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638176313045144340
+  lastModified: 638176311729611914
   FileSizes:
   - Name: Desktop
     Value: 1474
@@ -184,7 +184,7 @@ MonoBehaviour:
   - {fileID: 5790900385381275266}
   StringsBanks:
   - {fileID: -4589343448546314315}
-  cacheTime: 638176313045144340
+  cacheTime: 638176365424092474
   cacheVersion: 131603
 --- !u!114 &297667258141684706
 MonoBehaviour:
@@ -265,7 +265,7 @@ MonoBehaviour:
   - {fileID: 3614466970575730911}
   MinDistance: 1
   MaxDistance: 20
-  Length: 96000
+  Length: 104000
 --- !u!114 &5469829454804506178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,10 +359,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638176313044954457
+  lastModified: 638176365424092474
   FileSizes:
   - Name: Desktop
-    Value: 5136192
+    Value: 5599648
   Exists: 1
 --- !u!114 &8128951938571373492
 MonoBehaviour:
