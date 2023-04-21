@@ -8,6 +8,8 @@ public class FmodPlayer : MonoBehaviour
     private float distance = 0.4f;
     private float Material;
 
+    [SerializeField] private bool debug;
+
     void PlayMeleeEvent(string path)
     {
         FMODUnity.RuntimeManager.PlayOneShot(path, GetComponent<Transform>().position);
@@ -16,7 +18,9 @@ public class FmodPlayer : MonoBehaviour
     void FixedUpdate()
     {
         MaterialCheck();
-        Debug.DrawRay(transform.position, Vector2.down * distance, Color.blue);
+
+        if(debug)
+            Debug.DrawRay(transform.position, Vector2.down * distance, Color.blue);
     }
 
     void MaterialCheck()

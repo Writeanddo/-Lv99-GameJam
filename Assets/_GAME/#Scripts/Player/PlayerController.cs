@@ -29,11 +29,8 @@ public class PlayerController : MonoBehaviour
     public float groundYSize;
 
     [Header("Slopes")]
-    [SerializeField] private float slopesCheckDistance;
-    private Vector2 position;
-    private Vector2 colliderSize;
+    [SerializeField] private float slopesValidadeDistance = 0.4f;
     private Vector2 perpendicularSpeed;
-    private CapsuleCollider2D m_collider;
     private float slopeAngle;
     [SerializeField] private bool isOnSlope;
 
@@ -67,8 +64,6 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         player = GetComponent<Animator>();
         health = GetComponent<IDamageable>();
-        m_collider = GetComponent<CapsuleCollider2D>();
-        colliderSize = m_collider.size;
     }
 
     private void Start()
@@ -103,8 +98,6 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         DetectSlopes();
-
-        position = transform.position - new Vector3(0f, colliderSize.y / 2, 0f);
 
         if (health.IsDie)
             return;
@@ -194,7 +187,7 @@ public class PlayerController : MonoBehaviour
     private void OnMovimentPlayer()
     {
 
-        if (isOnSlope && !isJumping)
+        if (isOnSlope)
         {
             //Movimentacao SLOP
             _rigidbody2D.velocity = new Vector2(-_inputReference.Movement.x * moveSpeed * perpendicularSpeed.x,
@@ -210,7 +203,7 @@ public class PlayerController : MonoBehaviour
 
     public void DetectSlopes()
     {
-        RaycastHit2D hitSlope = Physics2D.Raycast(position, Vector2.down, slopesCheckDistance, whatIsGround);
+        RaycastHit2D hitSlope = Physics2D.Raycast(transform.position, Vector2.down, slopesValidadeDistance, whatIsGround);
 
         if (hitSlope)
         {
@@ -256,10 +249,12 @@ public class PlayerController : MonoBehaviour
         isJumping = false;
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireCube(groundCheck.transform.position, new Vector2(groundXSize, groundYSize));
+
+        Gizmos.DrawRay(transform.position, Vector2.down * slopesValidadeDistance);
 
     }
 
