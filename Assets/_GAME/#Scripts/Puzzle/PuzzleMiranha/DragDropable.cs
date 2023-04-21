@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DragDropable : MonoBehaviour
 {
     public int idPuzzle;
-    public SpriteRenderer icon;
+    public Sprite icon;
     public Image slotBGPivot;
     public Image slotIcon;
     public RectTransform posInit;
@@ -19,6 +19,8 @@ public class DragDropable : MonoBehaviour
     private void Start()
     {
         dadManager = DragAndDropManager.Instance;
+        slotBGPivot.sprite = icon;
+        slotIcon.sprite = icon;
     }
 
     public void DragItem()
@@ -40,24 +42,28 @@ public class DragDropable : MonoBehaviour
             }
         }
         
+        // VERIFICA SE ESTÁ PERTO DO SLOT ALVO
         if (shorterDistance < 50 && dadManager.targetSlots[idTemp].isOccupied == false)
         {
             if(idTarget != idTemp && idTarget != -1)
             {
                 dadManager.targetSlots[idTarget].isOccupied = false;
+                dadManager.RemoveListCells(idPuzzle, idTarget);
             }
             idTarget = idTemp;
             transform.position = dadManager.targetSlots[idTarget].target.transform.position;
             dadManager.targetSlots[idTarget].isOccupied = true;
             isBeingUsed = true;
+            dadManager.AddIdListCells(idPuzzle,idTarget);
         }
-        else
+        else // NÃO ESTÁ PERTO DO SLOT DE RESOLUÇÃO
         {
             transform.position = posInit.position;
             if (isBeingUsed)
             {
                 isBeingUsed = false;
                 dadManager.targetSlots[idTarget].isOccupied = false;
+                dadManager.RemoveListCells(idPuzzle, idTarget);
             }
         }
     }
