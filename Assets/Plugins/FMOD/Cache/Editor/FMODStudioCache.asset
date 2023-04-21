@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638176166812105437
+  lastModified: 638176237953597236
   FileSizes:
   - Name: Desktop
     Value: 1462
@@ -156,7 +156,7 @@ MonoBehaviour:
   - {fileID: 5790900385381275266}
   StringsBanks:
   - {fileID: -4589343448546314315}
-  cacheTime: 638176166812105437
+  cacheTime: 638176237953597236
   cacheVersion: 131603
 --- !u!114 &291730333881273345
 MonoBehaviour:
@@ -359,7 +359,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638176166812085487
+  lastModified: 638176237953597236
   FileSizes:
   - Name: Desktop
     Value: 4964288
