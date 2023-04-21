@@ -188,7 +188,8 @@ public class PlayerController : MonoBehaviour
     private void SetPuzzleStart()
     {
         isPuzzleStart = true;
-        RectTransform canvasRect = FindObjectOfType<Canvas>().GetComponent<RectTransform>();
+        var ui = FindAnyObjectByType<UIGameplay>();
+        RectTransform canvasRect = ui.canvas;
         GameObject newObject = Instantiate(puzzleCurrent);
         newObject.transform.SetParent(canvasRect, false);
         newObject.transform.localPosition = Vector3.zero;
