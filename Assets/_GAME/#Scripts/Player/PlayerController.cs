@@ -135,8 +135,8 @@ public class PlayerController : MonoBehaviour
 
         if(_inputReference.JumpButton.IsPressed == false && isGrounded == false )
         {
-            print("soltando jump");
-            OnDelayJump();
+            //print("soltando jump");
+            //OnDelayJump();
         }
 
         if (_inputReference.interacaoButton.IsPressed && isInteraction && !isPressedPuzzle)
