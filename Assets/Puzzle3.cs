@@ -1,0 +1,93 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+public class Puzzle3 : Singleton<Puzzle3>
+{
+    public GameObject[] itemPrefab;
+    public RectTransform canvasRect;
+    public RectTransform painelRect;
+    public float spawnInterval = 5f;
+
+    public int totalPoints = 0;
+    public TextMeshProUGUI pointsUI;
+
+    [Header("paineis")]
+    public GameObject play;
+    public GameObject tutorial;
+    public GameObject win;
+    public GameObject lose;
+    private void Start()
+    {
+        pointsUI.text = totalPoints.ToString();
+    }
+
+    public IEnumerator SpawnItemsRepeatedly()
+    {
+
+
+        yield return new WaitForSeconds(spawnInterval);
+        SpawnItem();
+
+    }
+
+    private void OnDisable()
+    {
+        tutorial.SetActive(true);
+        play.SetActive(false);
+        win.SetActive(false);
+        lose.SetActive(false);
+
+    }
+
+    public void StarGame()
+    {
+        tutorial.SetActive(false);
+        play.SetActive(true);
+    }
+
+    public void SetRestart()
+    {
+        lose.SetActive(false);
+        play.SetActive(true);
+
+    }
+
+    public void SeExit()
+    {
+        win.SetActive(false);
+        var player = FindAnyObjectByType<PlayerController>();
+        player.isPressedPuzzle = false;
+        player.isPuzzleStart = false;
+        Destroy(gameObject);
+    }
+
+    public void UpdatePoint()
+    {
+        pointsUI.text = totalPoints.ToString();
+    }
+
+    private void SpawnItem()
+    {
+        if (totalPoints <= 2)
+        {
+            int index = Random.Range(0, itemPrefab.Length);
+            GameObject itemObj = Instantiate(itemPrefab[index], canvasRect.transform);
+            float painelWidth = painelRect.rect.width;
+            float painelHeight = painelRect.rect.height;
+
+            float x = Random.Range(painelRect.anchoredPosition.x - painelWidth / 2, painelRect.anchoredPosition.x + painelWidth / 2);
+            float y = Random.Range(painelRect.anchoredPosition.y - painelHeight / 2, painelRect.anchoredPosition.y + painelHeight / 2);
+
+            itemObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(x, y);
+            StartCoroutine(SpawnItemsRepeatedly());
+        }
+        else
+        {
+            win.SetActive(true);
+            play.SetActive(false);
+        }
+
+
+    }
+}

@@ -39,7 +39,8 @@ public class Objeto : MonoBehaviour
                 m_PointsOrderPuzzle.currentObjectIndex++;
                 if(m_PointsOrderPuzzle.currentObjectIndex == m_PointsOrderPuzzle.listObjeto.Count)
                 {
-                    print("Você ganhou");
+                    Puzzle2Controller.Instance.play.SetActive(false);
+                    Puzzle2Controller.Instance.win.SetActive(true);
                 }
             }
             else

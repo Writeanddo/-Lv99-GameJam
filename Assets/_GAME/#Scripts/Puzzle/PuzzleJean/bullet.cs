@@ -28,9 +28,10 @@ public class bullet : MonoBehaviour
     {
         if (collision.CompareTag("puzzle"))
         {
-            if (collision.gameObject.TryGetComponent(out IDamageable damageable) && collision.gameObject.CompareTag("Player"))
+            if (collision.gameObject.TryGetComponent(out PlayerPuzzle damageable) && collision.gameObject.CompareTag("puzzle"))
             {
-                damageable.TakeDamage(transform.position, damage);
+                
+                damageable.Stun();
                 Destroy(gameObject);
 
             }
