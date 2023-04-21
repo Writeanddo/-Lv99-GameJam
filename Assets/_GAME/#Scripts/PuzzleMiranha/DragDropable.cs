@@ -6,10 +6,12 @@ using UnityEngine.InputSystem;
 public class DragDropable : MonoBehaviour
 {
     public RectTransform posInit;
-
+    private DragAndDropManager dadManager;
+    private bool isBeingUsed; // está sendo usado
+    private int idTarget = -1;
     private void Start()
     {
-        
+        dadManager = DragAndDropManager.Instance;
     }
 
     public void DragItem()
@@ -20,25 +22,36 @@ public class DragDropable : MonoBehaviour
     public void EndDragItem()
     {
         float shorterDistance = Mathf.Infinity;
-        int idTarget = -1;
-
+        int idTemp = -1;
         for (int i = 0; i < DragAndDropManager.Instance.targetSlots.Count; i++)
         {
-            float dist = Vector3.Distance(DragAndDropManager.Instance.targetSlots[i].transform.position, transform.position);
+            float dist = Vector3.Distance(DragAndDropManager.Instance.targetSlots[i].target.transform.position, transform.position);
             if (dist < shorterDistance)
             {
                 shorterDistance = dist;
-                idTarget = i;
+                idTemp = i;
             }
         }
-
-        if (shorterDistance < 50)
+        
+        if (shorterDistance < 50 && dadManager.targetSlots[idTemp].isOccupied == false)
         {
-            transform.position = DragAndDropManager.Instance.targetSlots[idTarget].transform.position;
+            if(idTarget != idTemp && idTarget != -1)
+            {
+                dadManager.targetSlots[idTarget].isOccupied = false;
+            }
+            idTarget = idTemp;
+            transform.position = dadManager.targetSlots[idTarget].target.transform.position;
+            dadManager.targetSlots[idTarget].isOccupied = true;
+            isBeingUsed = true;
         }
         else
         {
             transform.position = posInit.position;
+            if (isBeingUsed)
+            {
+                isBeingUsed = false;
+                dadManager.targetSlots[idTarget].isOccupied = false;
+            }
         }
     }
 

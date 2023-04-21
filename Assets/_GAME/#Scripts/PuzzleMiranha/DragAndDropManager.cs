@@ -5,7 +5,7 @@ using UnityEngine;
 public class DragAndDropManager : Singleton<DragAndDropManager>
 {
 
-    public List<GameObject> targetSlots;
+    public List<InfosTargetSlot> targetSlots;
     public InputReference inputReference;
     // Start is called before the first frame update
     void Start()
@@ -18,4 +18,12 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
     {
         
     }
+}
+
+[System.Serializable]
+public class InfosTargetSlot
+{
+    public GameObject target; 
+    public int idCorrect; // ID CORRETO PARA ESTE PUZZLE
+    public bool isOccupied; // ESTÁ OCUPADO
 }
