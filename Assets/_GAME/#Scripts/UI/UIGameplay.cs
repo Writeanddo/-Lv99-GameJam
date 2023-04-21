@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class UIGameplay : MonoBehaviour
 {
+    public RectTransform canvas;
     [SerializeField] private Image playerHealthBar;
     [SerializeField] private Image playerManaBar;
 

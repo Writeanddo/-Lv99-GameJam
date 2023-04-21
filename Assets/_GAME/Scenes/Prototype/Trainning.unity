@@ -1970,7 +1970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88f1386dd63147198d003daff00d37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenResolution: {x: 505, y: 284}
+  screenResolution: {x: 476, y: 268}
   internalResolution: {x: 480, y: 270}
   upscaledResolution: {x: 0, y: 0}
   smooth: 0
@@ -2334,7 +2334,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 480.10565, y: 270}
+  m_ReferenceResolution: {x: 479.55225, y: 270}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -7233,7 +7233,7 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _DestinationResolution: {r: 505, g: 284, b: 0, a: 0}
+    - _DestinationResolution: {r: 476, g: 268, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!1 &1998708969
 GameObject:

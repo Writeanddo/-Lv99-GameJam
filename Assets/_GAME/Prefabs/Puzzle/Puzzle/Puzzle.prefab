@@ -156,8 +156,8 @@ Transform:
   m_GameObject: {fileID: 2417371193125166226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5694281959147732250}
   m_Father: {fileID: 8790783426690156816}
@@ -204,7 +204,7 @@ SpriteRenderer:
   m_SortingLayerID: 1106611285
   m_SortingLayer: 2
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 68e5a78013e33f247822a837e55b0ab4, type: 3}
+  m_Sprite: {fileID: -2137842166911463304, guid: 320294a9121a3ab468a7ef7ecc1514ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -256,7 +256,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2417371193125166226}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -343,7 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468769036065429907}
   - component: {fileID: 2314724012714616166}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PointsOrderList (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 5694281959147732250}
   m_Layer: 7
   m_Name: groundCheck
-  m_TagString: Untagged
+  m_TagString: puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

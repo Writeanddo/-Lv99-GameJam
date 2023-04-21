@@ -937,6 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0546396726d31124ead5ed6cd479604b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 5638610506183394500}
   playerHealthBar: {fileID: 1189068666088556996}
   playerManaBar: {fileID: 2735826040819860127}
   hud: {fileID: 1827575786690350316}
