@@ -109,6 +109,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 700
+--- !u!114 &-7409543081195334995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Foley/Objects/Alarm Light
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Foley/Objects/Alarm Light
+  Guid:
+    Data1: 1886045305
+    Data2: 1145525781
+    Data3: 1443728788
+    Data4: 2065436149
+  Banks:
+  - {fileID: 5790900385381275266}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0.5
+  MaxDistance: 2.5
+  Length: 833
 --- !u!114 &-7142318395239190152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,10 +259,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638177040412798023
+  lastModified: 638177064401128044
   FileSizes:
   - Name: Desktop
-    Value: 2068
+    Value: 2110
   Exists: 1
 --- !u!114 &-3951006427433738410
 MonoBehaviour:
@@ -382,12 +409,13 @@ MonoBehaviour:
   - {fileID: 61324236560892961}
   - {fileID: -8875758535644775047}
   - {fileID: 8447087053528021688}
+  - {fileID: -7409543081195334995}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5790900385381275266}
   StringsBanks:
   - {fileID: -4589343448546314315}
-  cacheTime: 638177040412798023
+  cacheTime: 638177064401128044
   cacheVersion: 131603
 --- !u!114 &61324236560892961
 MonoBehaviour:
@@ -643,10 +671,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638177040412788057
+  lastModified: 638177064401098049
   FileSizes:
   - Name: Desktop
-    Value: 7868064
+    Value: 7882528
   Exists: 1
 --- !u!114 &5846808334422581865
 MonoBehaviour:

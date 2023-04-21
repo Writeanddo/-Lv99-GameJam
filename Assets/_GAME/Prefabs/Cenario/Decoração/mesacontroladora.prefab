@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2781598612108679406}
   - component: {fileID: 6364339204077252567}
   - component: {fileID: 436153907963790708}
+  - component: {fileID: 3515321271923826363}
   m_Layer: 0
   m_Name: mesacontroladora
   m_TagString: Untagged
@@ -138,3 +139,15 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0.5
   OverrideMaxDistance: 2.5
+--- !u!114 &3515321271923826363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7038596386411066076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45767eb6c8a60f84e90f1204271b07b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
