@@ -98,6 +98,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+         player.SetFloat("speedY", _rigidbody2D.velocity.y);
+         
         DetectSlopes();
 
         if (health.IsDie)
@@ -122,12 +124,19 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded && isJumping)
         {
+            
             CANCELJUMP();
         }
 
         if (_inputReference.JumpButton.IsPressed && isGrounded && !isJumping)
         {
             JUMP();
+        }
+
+        if(_inputReference.JumpButton.IsPressed == false && isGrounded == false )
+        {
+            print("soltando jump");
+            OnDelayJump();
         }
 
         if (_inputReference.interacaoButton.IsPressed && isInteraction && !isPressedPuzzle)
@@ -189,13 +198,19 @@ public class PlayerController : MonoBehaviour
     private void OnMovimentPlayer()
     {
 
-        if (isOnSlope)
+      if (isOnSlope)
         {
-            //Movimentacao SLOP
-            _rigidbody2D.velocity = new Vector2(-_inputReference.Movement.x * moveSpeed * perpendicularSpeed.x,
-                -_inputReference.Movement.x * moveSpeed * perpendicularSpeed.y);
+            if(isJumping)
+            {
+                isOnSlope = false;
+            }
+            else
+            {
+                //Movimentacao SLOP
+                _rigidbody2D.velocity = new Vector2(-_inputReference.Movement.x * moveSpeed * perpendicularSpeed.x,
+                    -_inputReference.Movement.x * moveSpeed * perpendicularSpeed.y);
 
-                player.SetFloat("speedY", speedY);
+            }
         }
         else
         {
@@ -207,7 +222,7 @@ public class PlayerController : MonoBehaviour
 
     public void DetectSlopes()
     {
-        RaycastHit2D hitSlope = Physics2D.Raycast(transform.position, Vector2.down, slopesValidadeDistance, whatIsGround);
+        RaycastHit2D hitSlope = Physics2D.Raycast(groundCheck.transform.position, Vector2.down, slopesValidadeDistance, whatIsGround);
 
         if (hitSlope)
         {
@@ -241,6 +256,9 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded == true)
         {
+           
+
+
             isJumping = true;
             isGrounded = false;
             _rigidbody2D.AddForce(new Vector2(0, jumpForce));
@@ -261,5 +279,10 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawRay(transform.position, Vector2.down * slopesValidadeDistance);
 
     }
+
+   public void OnDelayJump()
+   {
+        _rigidbody2D.velocity = new Vector2 (_rigidbody2D.velocity.x, 0);
+   }
 
 }

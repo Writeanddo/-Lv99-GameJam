@@ -49,7 +49,7 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
     public void OnJump(InputAction.CallbackContext context)
     {
         JumpButton.IsPressed = context.ReadValueAsButton();
-        StartCoroutine(ResetButton(JumpButton));
+        StartCoroutine(ResetButton(JumpButton)); 
     }
 
     public void OnPause(InputAction.CallbackContext context)
