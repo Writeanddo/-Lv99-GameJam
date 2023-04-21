@@ -9,7 +9,7 @@ public class MonsterGasWalk : MonoBehaviour
     public float ocilacaoSpeed = 1f;
     public float ocilacaoDistance = 0.5f;
 
-    private float positionX;
+    [SerializeField]
     private float positionY;
     private float floatOffset;
 
@@ -20,11 +20,12 @@ public class MonsterGasWalk : MonoBehaviour
     private IAVisionCircle m_IaVisionCircle;
     public Collider2D[] hitInfo;
     public bool isFollow;
+    private Vector2 initialPosition;
 
     void Start()
     {
+        initialPosition = transform.position;
         m_IaVisionCircle = GetComponent<IAVisionCircle>();
-        positionX = transform.position.x;
         positionY = transform.position.y;
         floatOffset = Random.Range(0, 2 * Mathf.PI);
     }
@@ -32,6 +33,8 @@ public class MonsterGasWalk : MonoBehaviour
 
     void Update()
     {
+
+       
         if (m_IaVisionCircle != null)
         {
 
@@ -55,21 +58,12 @@ public class MonsterGasWalk : MonoBehaviour
             Flip();
         }
 
-        if (isFollow && hitInfo !=null)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, hitInfo[0].transform.position, moveSpeed * Time.deltaTime);
-            if (hitInfo[0].transform.position.x > transform.position.x && isLookLeft)
-            {
-                Flip();
-            }
-            else if (hitInfo[0].transform.position.x < transform.position.x && !isLookLeft)
-            {
-                Flip();
-            }
-        }
+
 
         if (!isFollow)
         {
+            print("Chamando sem seguir seguindo");
+
             transform.Translate(new Vector2(moveSpeed * Time.deltaTime, 0));
             float y = positionY + ocilacaoDistance * Mathf.Sin((Time.time + floatOffset) * ocilacaoSpeed);
             transform.position = new Vector2(transform.position.x, y);
@@ -79,6 +73,21 @@ public class MonsterGasWalk : MonoBehaviour
             {
                 moveSpeed *= -1;
                 timer = 0f;
+                initialPosition = transform.position;
+
+            }
+        }
+        else if (isFollow)
+        {
+            print("Chamando aqui seguindo");
+            transform.position = Vector3.MoveTowards(transform.position, hitInfo[0].transform.position, moveSpeed * Time.deltaTime);
+            if (hitInfo[0].transform.position.x > transform.position.x && isLookLeft)
+            {
+                Flip();
+            }
+            else if (hitInfo[0].transform.position.x < transform.position.x && !isLookLeft)
+            {
+                Flip();
             }
         }
 
@@ -97,6 +106,7 @@ public class MonsterGasWalk : MonoBehaviour
         isLookLeft = !isLookLeft;
         float x = transform.localScale.x * -1; //Inverte o sinal do scale X
         transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
+        initialPosition = transform.position;
 
 
     }
