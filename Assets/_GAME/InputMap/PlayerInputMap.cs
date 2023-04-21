@@ -55,6 +55,15 @@ public partial class @PlayerInputMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Interacao"",
+                    ""type"": ""Button"",
+                    ""id"": ""04162a95-8f11-4719-a49f-045129b9b0e6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""MousePosition"",
                     ""type"": ""PassThrough"",
                     ""id"": ""f88558e8-7eb5-4541-861d-0d4a4b5e4182"",
@@ -240,6 +249,28 @@ public partial class @PlayerInputMap: IInputActionCollection2, IDisposable
                     ""action"": ""MousePosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ef62d57-c223-46ea-a4a1-d54a4a6ad1eb"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keyboard + mouse"",
+                    ""action"": ""Interacao"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dd82eb5b-2f89-4cbb-9514-14e2935102ef"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""gamepad"",
+                    ""action"": ""Interacao"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -279,6 +310,7 @@ public partial class @PlayerInputMap: IInputActionCollection2, IDisposable
         m_Gameplay_Movement = m_Gameplay.FindAction("Movement", throwIfNotFound: true);
         m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
         m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
+        m_Gameplay_Interacao = m_Gameplay.FindAction("Interacao", throwIfNotFound: true);
         m_Gameplay_MousePosition = m_Gameplay.FindAction("MousePosition", throwIfNotFound: true);
     }
 
@@ -344,6 +376,7 @@ public partial class @PlayerInputMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Movement;
     private readonly InputAction m_Gameplay_Pause;
     private readonly InputAction m_Gameplay_Jump;
+    private readonly InputAction m_Gameplay_Interacao;
     private readonly InputAction m_Gameplay_MousePosition;
     public struct GameplayActions
     {
@@ -352,6 +385,7 @@ public partial class @PlayerInputMap: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Gameplay_Movement;
         public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
+        public InputAction @Interacao => m_Wrapper.m_Gameplay_Interacao;
         public InputAction @MousePosition => m_Wrapper.m_Gameplay_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
@@ -371,6 +405,9 @@ public partial class @PlayerInputMap: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Interacao.started += instance.OnInteracao;
+            @Interacao.performed += instance.OnInteracao;
+            @Interacao.canceled += instance.OnInteracao;
             @MousePosition.started += instance.OnMousePosition;
             @MousePosition.performed += instance.OnMousePosition;
             @MousePosition.canceled += instance.OnMousePosition;
@@ -387,6 +424,9 @@ public partial class @PlayerInputMap: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Interacao.started -= instance.OnInteracao;
+            @Interacao.performed -= instance.OnInteracao;
+            @Interacao.canceled -= instance.OnInteracao;
             @MousePosition.started -= instance.OnMousePosition;
             @MousePosition.performed -= instance.OnMousePosition;
             @MousePosition.canceled -= instance.OnMousePosition;
@@ -430,6 +470,7 @@ public partial class @PlayerInputMap: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnInteracao(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
     }
 }

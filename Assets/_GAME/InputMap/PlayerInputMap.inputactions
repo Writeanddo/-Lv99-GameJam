@@ -33,6 +33,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Interacao",
+                    "type": "Button",
+                    "id": "04162a95-8f11-4719-a49f-045129b9b0e6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "MousePosition",
                     "type": "PassThrough",
                     "id": "f88558e8-7eb5-4541-861d-0d4a4b5e4182",
@@ -216,6 +225,28 @@
                     "processors": "",
                     "groups": "keyboard + mouse",
                     "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ef62d57-c223-46ea-a4a1-d54a4a6ad1eb",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard + mouse",
+                    "action": "Interacao",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd82eb5b-2f89-4cbb-9514-14e2935102ef",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "gamepad",
+                    "action": "Interacao",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
