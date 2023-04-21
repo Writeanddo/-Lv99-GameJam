@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5171544517256086402}
   - component: {fileID: 8976921306284032429}
   - component: {fileID: 1810155244421441484}
+  - component: {fileID: 3043751063340028451}
   m_Layer: 0
   m_Name: painelniveis
   m_TagString: Untagged
@@ -106,3 +107,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3043751063340028451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434819943637387021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -231392503
+      Data2: 1096599849
+      Data3: -516072018
+      Data4: 680065743
+    Path: event:/SFX/Foley/Objects/Glitch Loop 1
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6926067492512882154}
   - component: {fileID: 7708210821120476589}
   - component: {fileID: 6182613397080610434}
+  - component: {fileID: 289388786618135429}
   m_Layer: 0
   m_Name: "po\xE7\xE3oamarela"
   m_TagString: Untagged
@@ -106,3 +107,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &289388786618135429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013568391934699548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -276395976
+      Data2: 1109563567
+      Data3: 1497594260
+      Data4: 760698638
+    Path: event:/SFX/Foley/Objects/Bubbles Loop 2
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.5
+  OverrideMaxDistance: 2.5

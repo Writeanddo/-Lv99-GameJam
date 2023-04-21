@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 72419165196933881}
   - component: {fileID: 7233081179596640659}
   - component: {fileID: 12892527221804353}
+  - component: {fileID: 1698738160773693636}
   m_Layer: 0
   m_Name: computador
   m_TagString: Untagged
@@ -106,3 +107,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1698738160773693636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5079861952175916938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1475043164
+      Data2: 1203672146
+      Data3: -1403226484
+      Data4: -1634984938
+    Path: event:/SFX/Foley/Objects/Glitch Loop 2
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.5
+  OverrideMaxDistance: 2.5

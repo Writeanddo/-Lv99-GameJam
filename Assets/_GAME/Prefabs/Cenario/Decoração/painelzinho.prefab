@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 503600999442819700}
   - component: {fileID: 6457358998752464451}
   - component: {fileID: 7113708912103685673}
+  - component: {fileID: 3672502219962339232}
   m_Layer: 0
   m_Name: painelzinho
   m_TagString: Untagged
@@ -106,3 +107,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3672502219962339232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5213236453577092980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1475043164
+      Data2: 1203672146
+      Data3: -1403226484
+      Data4: -1634984938
+    Path: event:/SFX/Foley/Objects/Glitch Loop 2
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.5
+  OverrideMaxDistance: 2.5

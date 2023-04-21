@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 44397355116462205}
   - component: {fileID: 3083226539625278196}
   - component: {fileID: 1706660517231129587}
+  - component: {fileID: 8177628322966853294}
   m_Layer: 0
   m_Name: painelvalvula
   m_TagString: Untagged
@@ -106,3 +107,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8177628322966853294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782652828532813291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -893456766
+      Data2: 1097711436
+      Data3: -1188316023
+      Data4: 1118239694
+    Path: event:/SFX/Foley/Objects/Glitch Loop 3
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.5
+  OverrideMaxDistance: 2.5
