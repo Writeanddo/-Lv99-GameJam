@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class DragDropable : MonoBehaviour
 {
+    public int idPuzzle;
+    public SpriteRenderer icon;
+    public Image slotBGPivot;
+    public Image slotIcon;
     public RectTransform posInit;
+
+
     private DragAndDropManager dadManager;
     private bool isBeingUsed; // está sendo usado
     private int idTarget = -1;
