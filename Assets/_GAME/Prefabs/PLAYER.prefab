@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46400db715a736446a358662bbc14a25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactAction: {fileID: 0}
 --- !u!114 &2776558831280371864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +191,8 @@ MonoBehaviour:
   isLookingLeft: 0
   player: {fileID: 0}
   speedY: 0
+  isOxygenStart: 0
+  interactAction: {fileID: 3595749236075633938, guid: ef5f74a08d7ea82479d4abe203e39966, type: 3}
   isStunned: 0
   isLookLeft: 0
   stunnedTime: 1

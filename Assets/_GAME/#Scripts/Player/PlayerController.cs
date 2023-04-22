@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
-
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(InputReference))]
 public class PlayerController : MonoBehaviour
@@ -54,7 +54,13 @@ public class PlayerController : MonoBehaviour
     public Animator player;
     public float speedY;
 
+
+    public InputActionReference interactAction;
+
+    [Header("OxigenAction")]
     public bool isOxygenStart;
+    public int oxigenCilinderValue;
+
 
     [SerializeField] private bool isStunned;
     [SerializeField] private bool isLookLeft = false;
@@ -74,7 +80,30 @@ public class PlayerController : MonoBehaviour
         main = Camera.main;
 
         health.OnTakeDamage += Stun;
+        interactAction.action.Enable();
+        interactAction.action.started += interactStarted;
+        interactAction.action.performed += interactPerformed;
+        interactAction.action.canceled += InteractCanceled;
     }
+
+    private void interactPerformed(InputAction.CallbackContext obj) //start
+    {
+        //throw new NotImplementedException();
+        print("Apertou botao");
+    }
+
+    private void interactStarted(InputAction.CallbackContext obj) // durante
+    {
+        //throw new NotImplementedException();
+        print("botao segurado");
+    }
+
+    private void InteractCanceled(InputAction.CallbackContext obj) //programar o input cancel (buttonUP)
+    {
+        print("soltou Botao");
+    }
+
+
 
     private void OnDestroy()
     {
@@ -288,4 +317,15 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D.velocity = new Vector2 (_rigidbody2D.velocity.x, 0);
    }
 
+
+    IEnumerator OxygenBar()
+    {
+       
+        for (int i = 0; i < 50; i++)
+        {
+            yield return new WaitForSeconds(0.1f);
+            oxigenCilinderValue += 1;
+        }
+
+    }
 }

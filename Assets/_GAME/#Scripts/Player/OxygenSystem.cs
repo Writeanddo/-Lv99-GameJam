@@ -21,10 +21,8 @@ public class OxygenSystem : MonoBehaviour
         if(_PlayerController.isOxygenStart == true)
         {
              oxigenAn.SetTrigger("start");
-             fdsafdsf
+       
              
-          
-
 
         }
     }

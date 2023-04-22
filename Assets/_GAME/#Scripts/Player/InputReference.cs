@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using System;
 
 /// <summary>
 /// Simula um botao, para evitar que seja trigado mais de uma vez no update
@@ -25,13 +26,20 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
 
     private PlayerInputMap playerInputs;
 
+   
+
+
     private void Start()
     {
         playerInputs = new PlayerInputMap();
 
         playerInputs.Gameplay.SetCallbacks(this);
         playerInputs.Enable();
+
+        
     }
+
+   
 
     public void OnMousePosition(InputAction.CallbackContext context)
     {
