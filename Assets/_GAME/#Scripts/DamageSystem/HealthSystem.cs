@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class HealthSystem : MonoBehaviour, IDamageable
@@ -21,6 +22,9 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public Collider2D collider2d;
 
     private Animator anim;
+    public SpriteRenderer spriteTemp;
+    public Color coloralpha;
+
 
     private void Start()
     {
@@ -48,6 +52,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         if (damage <= 0)
             return;
 
+        StartCoroutine(IEInvencibleHeart());
         CurrentHealth -= damage;
 
         if (CurrentHealth < 0)
@@ -59,6 +64,25 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
         OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
         OnTakeDamage?.Invoke(direction);
+    }
+
+    private IEnumerator IEInvencibleHeart()
+    {
+        gameObject.layer = LayerMask.NameToLayer("invencivelPlayer");
+
+        for (var i = 0; i < 21; i++) // alterado de "5" para "20" (Alyson)
+        {
+            spriteTemp.color = Color.clear;
+            yield return new WaitForSeconds(0.05f);
+
+            spriteTemp.color = coloralpha;
+            yield return new WaitForSeconds(0.05f);
+
+        }
+        spriteTemp.color = new Color(spriteTemp.color.r, spriteTemp.color.g, spriteTemp.color.b, 1f);
+
+        this.gameObject.layer = LayerMask.NameToLayer("Player");
+
     }
 
 

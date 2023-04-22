@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        health.OnTakeDamage += Stun;
+        //health.OnTakeDamage += Stun;
 
         interactAction.action.Enable();
         interactAction.action.started += InteractStarted;
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDestroy()
     {
-        health.OnTakeDamage -= Stun;
+      //  health.OnTakeDamage -= Stun;
     }
 
     private void Update()

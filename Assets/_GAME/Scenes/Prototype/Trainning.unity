@@ -1786,53 +1786,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1700325554, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1700325554, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 285593794499159954, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: collider2d
-      value: 
-      objectReference: {fileID: 1700325556}
-    - target: {fileID: 2776558831280371864, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: slopesCheckDistance
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2817897727124944846, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6616464568432106851, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
       propertyPath: m_Name
       value: PLAYER
-      objectReference: {fileID: 0}
-    - target: {fileID: 6616464568432106851, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6616464568432106851, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6616464568432106853, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: m_Size.x
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 6616464568432106853, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: m_Size.y
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 6616464568432106853, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1141812337, guid: bf03a44ba705c0d48a76f66c35b84418, type: 3}
-    - target: {fileID: 6616464568432106853, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6616464568432106854, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
       propertyPath: m_RootOrder
@@ -1997,11 +1953,6 @@ Transform:
 --- !u!4 &1700325552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6616464568432106854, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-  m_PrefabInstance: {fileID: 1310220177}
-  m_PrefabAsset: {fileID: 0}
---- !u!70 &1700325556 stripped
-CapsuleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 5994579168102822680, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
   m_PrefabInstance: {fileID: 1310220177}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1707692193

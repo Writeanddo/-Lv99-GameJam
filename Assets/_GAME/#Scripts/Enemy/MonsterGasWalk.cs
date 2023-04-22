@@ -77,7 +77,7 @@ public class MonsterGasWalk : MonoBehaviour
 
             }
         }
-        else if (isFollow && hitInfo[0]!=null)
+        else if (isFollow && hitInfo.Length>0)
         {
        
              transform.position = Vector3.MoveTowards(transform.position, hitInfo[0].transform.position, moveSpeed * Time.deltaTime);
@@ -115,7 +115,7 @@ public class MonsterGasWalk : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (collision.gameObject.TryGetComponent(out IDamageable damageable))
+            if (collision.gameObject.TryGetComponent(out IDamageable damageable) && collision.gameObject.layer != LayerMask.NameToLayer("invencivelPlayer"))
             {
                 
                 damageable.TakeDamage(transform.position, damage);

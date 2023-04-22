@@ -199,15 +199,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2038566034, guid: ea661359b42c34f4288a5447efd83df2, type: 3}
+  m_Sprite: {fileID: -1141812337, guid: bf03a44ba705c0d48a76f66c35b84418, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6616464568432106852
@@ -255,12 +255,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d6eb14aa9912040a02c817a5a5183b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   moveSpeed: 2.2
   jumpForce: 210
   isInteraction: 0
   isPressedPuzzle: 0
   isPuzzleStart: 0
   puzzleCurrent: {fileID: 0}
+  isLookingLeft: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
@@ -272,14 +274,9 @@ MonoBehaviour:
   isOnSlope: 0
   noFrictionMaterial: {fileID: 6200000, guid: 1cfd231c30b171746831f9068a1ceaf0, type: 2}
   frictionMaterial: {fileID: 6200000, guid: 03a2b0fb7a57000448869a25b0fc7665, type: 2}
-  isLookingLeft: 0
-  player: {fileID: 0}
-  speedY: 0
   interactAction: {fileID: 3595749236075633938, guid: ef5f74a08d7ea82479d4abe203e39966, type: 3}
-  isOxygenStart: 0
-  oxigenCilinderValue: 0
-  oxigenPlayer: 0
-  barOxigenSr: {fileID: 6158802193784167747}
+  maxPlayerOxygen: 1
+  currentPlayerOxygen: 0
   isStunned: 0
   isLookLeft: 0
   stunnedTime: 1
@@ -316,7 +313,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 1cfd231c30b171746831f9068a1ceaf0, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -338,6 +335,8 @@ MonoBehaviour:
   destroyOnDie: 0
   enemyXp: 0
   collider2d: {fileID: 5994579168102822680}
+  spriteTemp: {fileID: 6616464568432106853}
+  coloralpha: {r: 1, g: 1, b: 1, a: 0.5882353}
 --- !u!114 &856890664150359679
 MonoBehaviour:
   m_ObjectHideFlags: 0
