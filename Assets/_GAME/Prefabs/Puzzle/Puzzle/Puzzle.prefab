@@ -793,7 +793,6 @@ MonoBehaviour:
   moveSpeed: 2
   stunPrefab: {fileID: 3440942841265308531}
   isLookingLeft: 0
-  player: {fileID: 0}
   isStunned: 0
   isLookLeft: 0
   stunnedTime: 1
@@ -3141,11 +3140,19 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 198229346258120031, guid: 1d519bd71e029f94e89cad6c187490a9, type: 3}
+      propertyPath: useUnscaledTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198229346258120031, guid: 1d519bd71e029f94e89cad6c187490a9, type: 3}
       propertyPath: moveWithTransform
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198555706732494584, guid: 1d519bd71e029f94e89cad6c187490a9, type: 3}
       propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198555706732494584, guid: 1d519bd71e029f94e89cad6c187490a9, type: 3}
+      propertyPath: useUnscaledTime
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198555706732494584, guid: 1d519bd71e029f94e89cad6c187490a9, type: 3}

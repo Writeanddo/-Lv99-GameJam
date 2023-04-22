@@ -751,7 +751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroy: 0
   puzzleList:
-  - {fileID: 8083055750759493505, guid: 928dc270fdff8ef499b919b2084e2b3d, type: 3}
+  - {fileID: 8790783426690156817, guid: b48038f81ecfdb24087e48f52949313d, type: 3}
   pcPuzzle:
   - {fileID: 2077628337}
 --- !u!4 &245333102
