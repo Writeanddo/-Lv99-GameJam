@@ -28,7 +28,7 @@ public class UIGameplay : MonoBehaviour
 
     private void Start()
     {
-        //playerController.OnUpdateManaQuantity += UpdateManaBar;
+        playerController.OnUpdateOxygenQuantity += UpdateOxygen;
         
         healthSystem.OnChangeHealth += UpdateLifeBar;
 
@@ -39,7 +39,7 @@ public class UIGameplay : MonoBehaviour
 
     private void OnDestroy()
     {
-        //playerController.OnUpdateManaQuantity -= UpdateManaBar;
+        playerController.OnUpdateOxygenQuantity -= UpdateOxygen;
         
         healthSystem.OnChangeHealth -= UpdateLifeBar;
 
@@ -53,10 +53,10 @@ public class UIGameplay : MonoBehaviour
         playerHealthBar.fillAmount = current / max;
     }
 
-    //private void UpdateManaBar(float current, float max)
-    //{
-    //    playerManaBar.fillAmount = current / max;
-    //}
+    private void UpdateOxygen(float current, float max)
+    {
+        playerManaBar.fillAmount = current / max;
+    }
 
     private void UpdatePauseMenu(bool value)
     {

@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.InputSystem;
@@ -8,16 +7,17 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(InputReference))]
 public class PlayerController : MonoBehaviour
 {
-    public event Action<float, float> OnUpdateManaQuantity;
+    public event Action<float, float> OnUpdateOxygenQuantity;
 
     [Header("Player Status")]
+    public Animator player;
     public float moveSpeed = 5f;
     public float jumpForce = 124f;
     public bool isInteraction = false;
     public bool isPressedPuzzle;
     public bool isPuzzleStart;
     public GameObject puzzleCurrent;
-
+    [SerializeField] private bool isLookingLeft;
 
     [Header("Ground")]
     public LayerMask whatIsGround;
@@ -31,46 +31,33 @@ public class PlayerController : MonoBehaviour
 
     [Header("Slopes")]
     [SerializeField] private float slopesValidadeDistance = 0.4f;
-    private Vector2 perpendicularSpeed;
-    private float slopeAngle;
     [SerializeField] private bool isOnSlope;
-
 
     [Header("PhysicsMaterial2D")]
     [SerializeField] private PhysicsMaterial2D noFrictionMaterial;
     [SerializeField] private PhysicsMaterial2D frictionMaterial;
 
     [HorizontalLine(1, EColor.Green)]
-
-    private Camera main;
-
-    private Vector3 mouseWorldPosition;
-    [SerializeField] private bool isLookingLeft;
-
-    private InputReference _inputReference;
-    private Rigidbody2D _rigidbody2D;
-
-    private IDamageable health;
-
-    public Animator player;
-    public float speedY;
-
-
     public InputActionReference interactAction;
 
-    [Header("OxigenAction")]
-    public bool isOxygenStart;
-    public float oxigenCilinderValue;
-    public float oxigenPlayer;
-    public SpriteRenderer barOxigenSr;
+    [Header("Oxygen Player")]
+    public float maxPlayerOxygen = 1f;
+    public float currentPlayerOxygen;
 
-    [Header("OxigenHUD")]
-
-
+    [Header("Stunned")]
     [SerializeField] private bool isStunned;
     [SerializeField] private bool isLookLeft = false;
     [SerializeField] private float stunnedTime = 1;
     [SerializeField] private float stunForce = 15;
+
+    private InputReference _inputReference;
+
+    private Rigidbody2D _rigidbody2D;
+    private IDamageable health;
+
+    private Vector2 perpendicularSpeed;
+    private float slopeAngle;
+    internal OxygenSystem oxygenCilinder;
 
     private void Awake()
     {
@@ -82,75 +69,22 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        main = Camera.main;
-
         health.OnTakeDamage += Stun;
+
         interactAction.action.Enable();
-        interactAction.action.started += interactStarted;
-        interactAction.action.performed += interactPerformed;
+        interactAction.action.started += InteractStarted;
+        interactAction.action.performed += InteractPerformed;
         interactAction.action.canceled += InteractCanceled;
     }
-
-    private void interactPerformed(InputAction.CallbackContext obj) //start
-    {
-        //throw new NotImplementedException();
-        print("Apertou botao");
-        if (isOxygenStart == false)
-        {
-            isOxygenStart = true;
-            StartCoroutine("OxygenBar");
-        }
-
-    }
-
-    private void interactStarted(InputAction.CallbackContext obj) // durante
-    {
-        //throw new NotImplementedException();
-        print("botao segurado");
-  
-
-    }
-
-    private void InteractCanceled(InputAction.CallbackContext obj) //programar o input cancel (buttonUP)
-    {
-     
-        oxigenCilinderValue = 0;
-        StopCoroutine("OxigenBar");
-        isOxygenStart = false;
-         oxigenCilinderValue = 0;
-        barOxigenSr.size = new Vector2(0.56f, oxigenCilinderValue);
-        print("oxigenio zerado");
-        print("soltou Botao");
-    }
-
-
 
     private void OnDestroy()
     {
         health.OnTakeDamage -= Stun;
     }
 
-    private void Stun(Vector3 direction)
-    {
-        isStunned = true;
-
-        var dir = transform.position - direction;
-
-        _rigidbody2D.AddForce(dir.normalized * stunForce);
-
-        StartCoroutine(IE_Stun());
-    }
-
-    private IEnumerator IE_Stun()
-    {
-        yield return new WaitForSeconds(stunnedTime);
-
-    }
-
     private void Update()
     {
-      
-         player.SetFloat("speedY", _rigidbody2D.velocity.y);
+        player.SetFloat("speedY", _rigidbody2D.velocity.y);
          
         DetectSlopes();
 
@@ -170,13 +104,8 @@ public class PlayerController : MonoBehaviour
         if (isStunned)
             return;
 
-        mouseWorldPosition = main.ScreenToWorldPoint(_inputReference.MousePosition);
-
-        //t� estranho
-
         if (isGrounded && isJumping)
         {
-            
             CANCELJUMP();
         }
 
@@ -187,8 +116,7 @@ public class PlayerController : MonoBehaviour
 
         if(_inputReference.JumpButton.IsPressed == false && isGrounded == false )
         {
-            //print("soltando jump");
-            //OnDelayJump();
+
         }
 
         if (_inputReference.interacaoButton.IsPressed && isInteraction && !isPressedPuzzle)
@@ -236,16 +164,50 @@ public class PlayerController : MonoBehaviour
         player.SetBool("isGrounded", isGrounded);
     }
 
+    private void InteractStarted(InputAction.CallbackContext obj)
+    {
+
+    }
+
+    private void InteractPerformed(InputAction.CallbackContext obj) 
+    {
+    }
+
+    private void InteractCanceled(InputAction.CallbackContext obj) //programar o input cancel (buttonUP)
+    {
+        
+    }
+
+
+    private void Stun(Vector3 direction)
+    {
+        isStunned = true;
+
+        var dir = transform.position - direction;
+
+        _rigidbody2D.AddForce(dir.normalized * stunForce);
+
+        StartCoroutine(IE_Stun());
+    }
+
+    private IEnumerator IE_Stun()
+    {
+        yield return new WaitForSeconds(stunnedTime);
+
+        isStunned = false;
+    }
 
     private void SetPuzzleStart()
     {
         isPuzzleStart = true;
         var ui = FindAnyObjectByType<UIGameplay>();
         RectTransform canvasRect = ui.canvas;
+
         GameObject newObject = Instantiate(puzzleCurrent);
         newObject.transform.SetParent(canvasRect, false);
         newObject.transform.localPosition = Vector3.zero;
-        print("Pausou");
+
+        GameManager.Instance.TemporaryPause();
     }
 
     private void OnMovimentPlayer()
@@ -272,7 +234,6 @@ public class PlayerController : MonoBehaviour
 
         }
     }
-
     public void DetectSlopes()
     {
         RaycastHit2D hitSlope = Physics2D.Raycast(groundCheck.transform.position, Vector2.down, slopesValidadeDistance, whatIsGround);
@@ -306,31 +267,17 @@ public class PlayerController : MonoBehaviour
     }
     public void JUMP()
     {
-
         if (isGrounded == true)
         {
-           
-
-
             isJumping = true;
             isGrounded = false;
             _rigidbody2D.AddForce(new Vector2(0, jumpForce));
         }
     }
 
-
     public void CANCELJUMP()
     {
         isJumping = false;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireCube(groundCheck.transform.position, new Vector2(groundXSize, groundYSize));
-
-        Gizmos.DrawRay(transform.position, Vector2.down * slopesValidadeDistance);
-
     }
 
    public void OnDelayJump()
@@ -338,50 +285,12 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D.velocity = new Vector2 (_rigidbody2D.velocity.x, 0);
    }
 
-
-    IEnumerator OxygenBar()
+    private void OnDrawGizmos()
     {
-        
-       
-        for (int i = 0; i < 100; i++)
-        {
-            if (isOxygenStart == true)
-            {
-     
-                oxigenCilinderValue += 0.01f;
-                print(oxigenCilinderValue);
-                barOxigenSr.size = new Vector2(0.56f, oxigenCilinderValue);
-                yield return new WaitForSeconds(0.01f);
-            }
-        }
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(groundCheck.transform.position, new Vector2(groundXSize, groundYSize));
 
-
-
-        for (int i = 0; i < 100; i++)
-        {
-            if (isOxygenStart == true)
-            {
-         
-                oxigenCilinderValue -= 0.01f;
-                print(oxigenCilinderValue);
-                barOxigenSr.size = new Vector2(0.56f, oxigenCilinderValue);
-                yield return new WaitForSeconds(0.01f);
-            }
-
-        }
-
-        if (isOxygenStart == true)
-        {
-            StartCoroutine("OxygenBar");
-        }
-
-        else
-        {
-            print("end Cilinder");
-            isOxygenStart = false;
-        }
-
-
+        Gizmos.DrawRay(transform.position, Vector2.down * slopesValidadeDistance);
 
     }
 }

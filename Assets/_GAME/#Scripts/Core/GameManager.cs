@@ -1,6 +1,5 @@
 using UnityEngine;
 using System;
-using UnityEngine.Playables;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -55,5 +54,17 @@ public class GameManager : Singleton<GameManager>
     public void GameWin()
     {
         OnGameWin?.Invoke();
+    }
+
+    public void TemporaryPause()
+    {
+        Paused = true;
+        Time.timeScale = 0;
+    }
+
+    public void ResumeTemporaryPause()
+    {
+        Paused = false;
+        Time.timeScale = 1;
     }
 }
