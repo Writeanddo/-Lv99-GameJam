@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
     public Animator player;
     public float speedY;
 
+    public bool isOxygenStart;
+
     [SerializeField] private bool isStunned;
     [SerializeField] private bool isLookLeft = false;
     [SerializeField] private float stunnedTime = 1;
