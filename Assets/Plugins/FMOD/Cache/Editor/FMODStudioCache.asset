@@ -313,11 +313,38 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638177094577286398
+  lastModified: 638177287888013459
   FileSizes:
   - Name: Desktop
-    Value: 2268
+    Value: 2348
   Exists: 1
+--- !u!114 &-4559759680328292283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Foley/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Foley/Jump
+  Guid:
+    Data1: 923624773
+    Data2: 1099353076
+    Data3: 1249011346
+    Data4: 1711416122
+  Banks:
+  - {fileID: 5790900385381275266}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-3951006427433738410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,12 +522,14 @@ MonoBehaviour:
   - {fileID: -2409775910816804181}
   - {fileID: -5817610759432782300}
   - {fileID: 5490905333138250445}
+  - {fileID: -4559759680328292283}
+  - {fileID: 3248345728809044036}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5790900385381275266}
   StringsBanks:
   - {fileID: -4589343448546314315}
-  cacheTime: 638177094577286398
+  cacheTime: 638177287888013459
   cacheVersion: 131603
 --- !u!114 &61324236560892961
 MonoBehaviour:
@@ -557,6 +586,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 23151
+--- !u!114 &3248345728809044036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Foley/Fall
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Foley/Fall
+  Guid:
+    Data1: 1991713220
+    Data2: 1129646443
+    Data3: 1764444052
+    Data4: 1789687664
+  Banks:
+  - {fileID: 5790900385381275266}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &3614466970575730911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,10 +839,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638177094577256379
+  lastModified: 638177287887970314
   FileSizes:
   - Name: Desktop
-    Value: 7945664
+    Value: 8052704
   Exists: 1
 --- !u!114 &5846808334422581865
 MonoBehaviour:

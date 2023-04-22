@@ -48,6 +48,8 @@ GameObject:
   - component: {fileID: 1700325554}
   - component: {fileID: 285593794499159954}
   - component: {fileID: 856890664150359679}
+  - component: {fileID: 2628239273274833293}
+  - component: {fileID: 4227450177332266481}
   m_Layer: 6
   m_Name: PLAYER
   m_TagString: Player
@@ -181,12 +183,13 @@ MonoBehaviour:
   groundCheck: {fileID: 2817897727124944846}
   groundXSize: 0.2
   groundYSize: 0.02
-  slopesCheckDistance: 1
+  slopesValidadeDistance: 0.4
   isOnSlope: 0
   noFrictionMaterial: {fileID: 6200000, guid: 1cfd231c30b171746831f9068a1ceaf0, type: 2}
   frictionMaterial: {fileID: 6200000, guid: 03a2b0fb7a57000448869a25b0fc7665, type: 2}
   isLookingLeft: 0
   player: {fileID: 0}
+  speedY: 0
   isStunned: 0
   isLookLeft: 0
   stunnedTime: 1
@@ -257,3 +260,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05f205f5080873409c518b86b962346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
+--- !u!114 &2628239273274833293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6616464568432106851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45767eb6c8a60f84e90f1204271b07b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4227450177332266481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6616464568432106851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
