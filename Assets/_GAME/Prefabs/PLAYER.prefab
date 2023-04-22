@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4048809229002070921}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23, y: 0.65, z: 0}
+  m_LocalPosition: {x: 0.23, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d6eb14aa9912040a02c817a5a5183b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.8
+  moveSpeed: 2.2
   jumpForce: 210
   isInteraction: 0
   isPressedPuzzle: 0
@@ -278,6 +278,7 @@ MonoBehaviour:
   interactAction: {fileID: 3595749236075633938, guid: ef5f74a08d7ea82479d4abe203e39966, type: 3}
   isOxygenStart: 0
   oxigenCilinderValue: 0
+  oxigenPlayer: 0
   barOxigenSr: {fileID: 6158802193784167747}
   isStunned: 0
   isLookLeft: 0
