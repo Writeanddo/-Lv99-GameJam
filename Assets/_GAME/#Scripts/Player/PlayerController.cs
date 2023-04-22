@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(InputReference))]
 public class PlayerController : MonoBehaviour
 {
+    public event Action<float, float> OnUpdateManaQuantity;
 
     [Header("Player Status")]
     public float moveSpeed = 5f;
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
     [Header("OxigenAction")]
     public bool isOxygenStart;
     public float oxigenCilinderValue;
+    public float oxigenPlayer;
     public SpriteRenderer barOxigenSr;
 
     [Header("OxigenHUD")]
@@ -147,6 +149,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+      
          player.SetFloat("speedY", _rigidbody2D.velocity.y);
          
         DetectSlopes();
