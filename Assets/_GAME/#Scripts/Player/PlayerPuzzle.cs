@@ -20,9 +20,6 @@ public class PlayerPuzzle : MonoBehaviour
     private InputReference _inputReference;
     private Rigidbody2D _rigidbody2D;
 
-    private IDamageable health;
-
-    public Animator player;
 
     [SerializeField] private bool isStunned;
     [SerializeField] private bool isLookLeft = false;
@@ -33,8 +30,6 @@ public class PlayerPuzzle : MonoBehaviour
     {
         _inputReference = GetComponent<InputReference>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        player = GetComponent<Animator>();
-        health = GetComponent<IDamageable>();
     }
 
 
@@ -87,14 +82,7 @@ public class PlayerPuzzle : MonoBehaviour
 
         OnMovimentPlayer();
 
-        if (_rigidbody2D.velocity != new Vector2(0, 0))
-        {
-            player.SetBool("isWalk", true);
-        }
-        else
-        {
-            player.SetBool("isWalk", false);
-        }
+       
 
         //virar o player
         if (_inputReference.Movement.x < 0 && isLookLeft == false)

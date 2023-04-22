@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 8790783426690156817, guid: b48038f81ecfdb24087e48f52949313d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b48038f81ecfdb24087e48f52949313d, type: 3}
 --- !u!1 &250948102
@@ -396,7 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88f1386dd63147198d003daff00d37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenResolution: {x: 482, y: 271}
+  screenResolution: {x: 459, y: 258}
   internalResolution: {x: 480, y: 270}
   upscaledResolution: {x: 0, y: 0}
   smooth: 0
@@ -494,7 +498,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 480.22144, y: 270}
+  m_ReferenceResolution: {x: 480.34885, y: 270}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1618,7 +1622,71 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1081269458}
+    m_ColliderPaths:
+    - - X: 19199998
+        Y: 3200000
+      - X: 9600000
+        Y: 3200000
+      - X: 9600000
+        Y: -9599999
+      - X: 19199998
+        Y: -9599999
+    - - X: 9599999
+        Y: 3100000
+      - X: 8099999
+        Y: 1600000
+      - X: 6400000
+        Y: 0
+      - X: 0
+        Y: -6400000
+      - X: -1799999
+        Y: -8099999
+      - X: -3200000
+        Y: -9599999
+      - X: 9599999
+        Y: -9599999
+    - - X: -16000000
+        Y: -9600000
+      - X: -25600000
+        Y: -9600000
+      - X: -25600000
+        Y: -15999999
+      - X: -16000000
+        Y: -15999999
+    - - X: -9600000
+        Y: -9600000
+      - X: -15999999
+        Y: -9600000
+      - X: -15999999
+        Y: -15999999
+      - X: -9600000
+        Y: -15999999
+    - - X: 9599999
+        Y: -9600000
+      - X: -9599999
+        Y: -9600000
+      - X: -9599999
+        Y: -15999999
+      - X: 9599999
+        Y: -15999999
+    - - X: 25600002
+        Y: -9600000
+      - X: 19200000
+        Y: -9600000
+      - X: 19200000
+        Y: -15999999
+      - X: 25600002
+        Y: -15999999
+    - - X: 19199998
+        Y: -9600000
+      - X: 9600000
+        Y: -9600000
+      - X: 9600000
+        Y: -15999999
+      - X: 19199998
+        Y: -15999999
   m_CompositePaths:
     m_Paths:
     - - {x: 2.5599709, y: -1.5999999}
@@ -2046,7 +2114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1743623986
 Transform:
   m_ObjectHideFlags: 0
@@ -2174,7 +2242,7 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _DestinationResolution: {r: 482, g: 271, b: 0, a: 0}
+    - _DestinationResolution: {r: 459, g: 258, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!1 &1998708969
 GameObject:
@@ -4116,33 +4184,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1538016864745431858, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
-      propertyPath: m_Radius
-      value: 0.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 1538016864745431858, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1538016864745431858, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1580801658833175198, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
-      propertyPath: visionRange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1580801658833175198, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
-      propertyPath: hitMask.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 3806201294615337461, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3806201294615337461, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.46
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3806201294615337461, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4183,14 +4231,6 @@ PrefabInstance:
     - target: {fileID: 3806201294615337463, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
       propertyPath: m_Name
       value: MonsterGas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3806201294615337463, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650755106310872125, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.317
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45338611b0d90cb489a0b7b3514ee1cf, type: 3}

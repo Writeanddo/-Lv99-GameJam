@@ -8,6 +8,7 @@ public class MonsterGasWalk : MonoBehaviour
     public float moveSpeed = 2f;
     public float ocilacaoSpeed = 1f;
     public float ocilacaoDistance = 0.5f;
+    public float damage;
 
     [SerializeField]
     private float positionY;
@@ -62,8 +63,7 @@ public class MonsterGasWalk : MonoBehaviour
 
         if (!isFollow)
         {
-            print("Chamando sem seguir seguindo");
-
+            positionY = transform.position.y;
             transform.Translate(new Vector2(moveSpeed * Time.deltaTime, 0));
             float y = positionY + ocilacaoDistance * Mathf.Sin((Time.time + floatOffset) * ocilacaoSpeed);
             transform.position = new Vector2(transform.position.x, y);
@@ -77,10 +77,10 @@ public class MonsterGasWalk : MonoBehaviour
 
             }
         }
-        else if (isFollow)
+        else if (isFollow && hitInfo[0]!=null)
         {
-            print("Chamando aqui seguindo");
-            transform.position = Vector3.MoveTowards(transform.position, hitInfo[0].transform.position, moveSpeed * Time.deltaTime);
+       
+             transform.position = Vector3.MoveTowards(transform.position, hitInfo[0].transform.position, moveSpeed * Time.deltaTime);
             if (hitInfo[0].transform.position.x > transform.position.x && isLookLeft)
             {
                 Flip();
@@ -110,4 +110,19 @@ public class MonsterGasWalk : MonoBehaviour
 
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if (collision.gameObject.TryGetComponent(out IDamageable damageable))
+            {
+                
+                damageable.TakeDamage(transform.position, damage);
+            
+
+            }
+        }
+    }
+
 }

@@ -43,6 +43,8 @@ public class HealthSystem : MonoBehaviour, IDamageable
     /// <param name="damage">dano</param>
     public void TakeDamage(Vector3 direction, float damage)
     {
+        print("Tomou Dano");
+
         if (damage <= 0)
             return;
 
