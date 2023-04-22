@@ -26,7 +26,7 @@ public class Puzzle3 : Singleton<Puzzle3>
     {
 
 
-        yield return new WaitForSeconds(spawnInterval);
+        yield return new WaitForSecondsRealtime(spawnInterval);
         SpawnItem();
 
     }
@@ -59,6 +59,11 @@ public class Puzzle3 : Singleton<Puzzle3>
         var player = FindAnyObjectByType<PlayerController>();
         player.isPressedPuzzle = false;
         player.isPuzzleStart = false;
+        GameManager.Instance.Puzzle3 = true;
+        CheckPuzzle.Instance.Puzzle3[0].SetActive(false);
+        CheckPuzzle.Instance.Puzzle3[1].SetActive(true);
+
+
         Destroy(gameObject);
     }
 

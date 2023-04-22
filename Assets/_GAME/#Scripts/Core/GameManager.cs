@@ -8,6 +8,11 @@ public class GameManager : Singleton<GameManager>
     public event Action OnDead;
     public event Action OnGameWin;
 
+    [Header("Bool Puzzle?")]
+    public bool Puzzle1; //da caixa
+    public bool Puzzle2;// Miranha
+    public bool Puzzle3;// Click
+
     public bool Paused { get; private set; }
 
     private void Start()

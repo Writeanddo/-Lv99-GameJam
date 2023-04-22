@@ -63,6 +63,10 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
         if (VerifyPuzzleSolution())
         {
             Debug.Log("Deu Bom!!!");
+            GameManager.Instance.Puzzle2 = true;
+            CheckPuzzle.Instance.Puzzle2[0].SetActive(false);
+            CheckPuzzle.Instance.Puzzle2[1].SetActive(true);
+
         }
         else
         {

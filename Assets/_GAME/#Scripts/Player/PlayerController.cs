@@ -125,6 +125,8 @@ public class PlayerController : MonoBehaviour
             SetPuzzleStart();
         }
 
+       
+
     }
     private void FixedUpdate()
     {

@@ -34,7 +34,7 @@ public class MouseController : MonoBehaviour
 
     private IEnumerator TimeDuration()
     {
-        yield return new WaitForSeconds(timeDuration);
+        yield return new WaitForSecondsRealtime(timeDuration);
         StartCoroutine(FadeOut());
 
     }
@@ -48,7 +48,7 @@ public class MouseController : MonoBehaviour
         float t = 0.0f;
         while (t < fadeInTime)
         {
-            t += Time.deltaTime;
+            t += Time.unscaledDeltaTime;
             float normalizedTime = t / fadeInTime;
             image.color = new Color(image.color.r, image.color.g, image.color.b, normalizedTime);
             yield return null;
@@ -67,13 +67,13 @@ public class MouseController : MonoBehaviour
         float t = 0.0f;
         while (t < fadeInTime)
         {
-            t += Time.deltaTime;
+            t += Time.unscaledDeltaTime;
             float normalizedTime = t / fadeInTime;
             image.color = new Color(image.color.r, image.color.g, image.color.b, normalizedTime);
             yield return null;
         }
         image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSecondsRealtime(0.5f);
         Destroy(gameObject);
     }
 }
