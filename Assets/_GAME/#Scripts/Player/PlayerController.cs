@@ -59,7 +59,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("OxigenAction")]
     public bool isOxygenStart;
-    public int oxigenCilinderValue;
+    public float oxigenCilinderValue;
+    public SpriteRenderer barOxigenSr;
+
+    [Header("OxigenHUD")]
 
 
     [SerializeField] private bool isStunned;
@@ -90,16 +93,31 @@ public class PlayerController : MonoBehaviour
     {
         //throw new NotImplementedException();
         print("Apertou botao");
+        if (isOxygenStart == false)
+        {
+            isOxygenStart = true;
+            StartCoroutine("OxygenBar");
+        }
+
     }
 
     private void interactStarted(InputAction.CallbackContext obj) // durante
     {
         //throw new NotImplementedException();
         print("botao segurado");
+  
+
     }
 
     private void InteractCanceled(InputAction.CallbackContext obj) //programar o input cancel (buttonUP)
     {
+     
+        oxigenCilinderValue = 0;
+        StopCoroutine("OxigenBar");
+        isOxygenStart = false;
+         oxigenCilinderValue = 0;
+        barOxigenSr.size = new Vector2(0.56f, oxigenCilinderValue);
+        print("oxigenio zerado");
         print("soltou Botao");
     }
 
@@ -320,12 +338,47 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator OxygenBar()
     {
+        
        
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 100; i++)
         {
-            yield return new WaitForSeconds(0.1f);
-            oxigenCilinderValue += 1;
+            if (isOxygenStart == true)
+            {
+     
+                oxigenCilinderValue += 0.01f;
+                print(oxigenCilinderValue);
+                barOxigenSr.size = new Vector2(0.56f, oxigenCilinderValue);
+                yield return new WaitForSeconds(0.01f);
+            }
         }
+
+
+
+        for (int i = 0; i < 100; i++)
+        {
+            if (isOxygenStart == true)
+            {
+         
+                oxigenCilinderValue -= 0.01f;
+                print(oxigenCilinderValue);
+                barOxigenSr.size = new Vector2(0.56f, oxigenCilinderValue);
+                yield return new WaitForSeconds(0.01f);
+            }
+
+        }
+
+        if (isOxygenStart == true)
+        {
+            StartCoroutine("OxygenBar");
+        }
+
+        else
+        {
+            print("end Cilinder");
+            isOxygenStart = false;
+        }
+
+
 
     }
 }
