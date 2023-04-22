@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DragAndDropManager : Singleton<DragAndDropManager>
 {
     [SerializeField] private int minVal = 0;
     [SerializeField] private int maxVal = 9;
+    [SerializeField] private List<Sprite> listHint; //  Lista onde armazena os sprites de dica do puzzle
+    [SerializeField] private List<Image> hintImagesUI;
     [Header("lista de ids que corresponde as celulas que o jogador colocou para resolver o puzzle")]
     public List<IdsCellsFinal> idsCellsFinal = new(); //lista de ids que corresponde as celulas que o jogador colocou para resolver o puzzle
     [Header("Ids que foram sorteados para resolver o puzzle")]
@@ -47,7 +50,12 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
         }
 
         // Adicione os números inteiros selecionados à lista existente de IDs de quebra-cabeça
-        idsPuzzle.AddRange(selectedIds);
+        for (int i = 0; i < selectedIds.Count; i++)
+        {
+            targetSlots[i].idCorrect = selectedIds[i];
+            hintImagesUI[i].sprite = listHint[selectedIds[i]];
+        }
+
     }
 
     public void CheckCompletePuzzle()
@@ -65,15 +73,15 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
     public bool VerifyPuzzleSolution()
     {
         // Verifica se as listas têm o mesmo tamanho
-        if (idsPuzzle.Count != idsCellsFinal.Count)
-        {
-            return false;
-        }
+        //if (idsPuzzle.Count != idsCellsFinal.Count)
+        //{
+        //    return false;
+        //}
 
         // Percorre cada elemento das duas listas ao mesmo tempo
-        for (int i = 0; i < idsPuzzle.Count; i++)
+        for (int i = 0; i < targetSlots.Count; i++)
         {
-            int puzzleNumber = idsPuzzle[i];
+            int puzzleNumber = targetSlots[i].idCorrect;
             IdsCellsFinal cellFinal = idsCellsFinal[i];
 
             // Verifica se o número do puzzle é igual à célula final correspondente
@@ -108,6 +116,11 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
         if(isContain == false)
         {
             idsCellsFinal.Add(new IdsCellsFinal(idCell, idTarget));
+        }
+
+        if(idsCellsFinal.Count >= 3)
+        {
+            CheckCompletePuzzle();
         }
     }
 
