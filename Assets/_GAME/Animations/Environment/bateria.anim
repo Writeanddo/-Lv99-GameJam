@@ -23,21 +23,21 @@ AnimationClip:
       value: {fileID: 1934021282, guid: e6b69774b301add42878c93a47505979, type: 3}
     - time: 1
       value: {fileID: -1756390323, guid: e6b69774b301add42878c93a47505979, type: 3}
-    - time: 2
+    - time: 2.5
       value: {fileID: -1708813636, guid: e6b69774b301add42878c93a47505979, type: 3}
-    - time: 3
-      value: {fileID: 830745936, guid: e6b69774b301add42878c93a47505979, type: 3}
     - time: 4
-      value: {fileID: 1440231355, guid: e6b69774b301add42878c93a47505979, type: 3}
-    - time: 7
-      value: {fileID: 1440231355, guid: e6b69774b301add42878c93a47505979, type: 3}
-    - time: 7.5
       value: {fileID: 830745936, guid: e6b69774b301add42878c93a47505979, type: 3}
+    - time: 5.5
+      value: {fileID: 1440231355, guid: e6b69774b301add42878c93a47505979, type: 3}
     - time: 8
-      value: {fileID: -1708813636, guid: e6b69774b301add42878c93a47505979, type: 3}
+      value: {fileID: 1440231355, guid: e6b69774b301add42878c93a47505979, type: 3}
     - time: 8.5
-      value: {fileID: -1756390323, guid: e6b69774b301add42878c93a47505979, type: 3}
+      value: {fileID: 830745936, guid: e6b69774b301add42878c93a47505979, type: 3}
     - time: 9
+      value: {fileID: -1708813636, guid: e6b69774b301add42878c93a47505979, type: 3}
+    - time: 9.5
+      value: {fileID: -1756390323, guid: e6b69774b301add42878c93a47505979, type: 3}
+    - time: 10
       value: {fileID: 1934021282, guid: e6b69774b301add42878c93a47505979, type: 3}
     - time: 10.5
       value: {fileID: 1934021282, guid: e6b69774b301add42878c93a47505979, type: 3}
@@ -95,4 +95,46 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 1
+    functionName: PlayEvent
+    data: event:/SFX/Foley/Objects/Alarm Light
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.5
+    functionName: PlayEvent
+    data: event:/SFX/Foley/Objects/Alarm Light
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 4
+    functionName: PlayEvent
+    data: event:/SFX/Foley/Objects/Alarm Light
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 5.5
+    functionName: PlayEvent
+    data: event:/SFX/Foley/Objects/Alarm Light
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 5.5
+    functionName: PlayEvent
+    data: event:/SFX/Foley/Objects/Alarm Light 4
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 8.5
+    functionName: PlayEvent
+    data: event:/SFX/Foley/Objects/Alarm Light 2
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
