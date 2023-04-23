@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
         if (health.IsDie)
             return;
 
-        if(currentCilinder && isJumping == false)
+        if (currentCilinder && isJumping == false)
         {
             if (_inputReference.interacaoButton.IsPressed && currentCilinder.CanInteract() && !isStartedCilinder)
             {
@@ -217,6 +217,8 @@ public class PlayerController : MonoBehaviour
 
         GameObject newObject = Instantiate(puzzleCurrent);
         newObject.transform.SetParent(canvasRect, false);
+         newObject.transform.SetSiblingIndex(1);
+
         newObject.transform.localPosition = Vector3.zero;
 
         DisablePlayer();

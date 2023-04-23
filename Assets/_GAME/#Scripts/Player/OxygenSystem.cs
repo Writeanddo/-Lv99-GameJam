@@ -24,7 +24,8 @@ public class OxygenSystem : MonoBehaviour
     [SerializeField] private float divisor = 2;
 
     [SerializeField] private SpriteRenderer barOxigenSr;
-    [SerializeField] private SpriteRenderer barOxigenSrBG;
+    //[SerializeField] private GameObject barOxigenSrBG;
+    [SerializeField] private GameObject HUDbarOxigen;
     [SerializeField] private Transform animationPoint;
     [SerializeField] private AnimatorDetectGamepad gamepadUI;
 
@@ -48,9 +49,9 @@ public class OxygenSystem : MonoBehaviour
         oxigenAn = GetComponent<Animator>();
 
         barOxigenSr.gameObject.SetActive(false);
-        barOxigenSrBG.gameObject.SetActive(false);
-        timer.gameObject.SetActive(false);
 
+        timer.gameObject.SetActive(false);
+        HUDbarOxigen.SetActive(false);
         state = CilinderState.Waiting;
     }
 
@@ -106,6 +107,7 @@ public class OxygenSystem : MonoBehaviour
 
             state = CilinderState.Stopped;
             gamepadUI.Active();
+            HUDbarOxigen.SetActive(true);
 
             validHolding = true;
         }
@@ -116,10 +118,10 @@ public class OxygenSystem : MonoBehaviour
         gamepadUI.Disable();
 
         barOxigenSr.gameObject.SetActive(true);
-        barOxigenSrBG.gameObject.SetActive(true);
+
 
         barOxigenSr.size = new(barOxigenSr.size.x, 0);
-        barOxigenSrBG.size = new(barOxigenSrBG.size.x, 1);
+  
 
         while (state == CilinderState.Holding)
         {
@@ -166,10 +168,10 @@ public class OxygenSystem : MonoBehaviour
             StartCoroutine(WaitForAnimation());
 
             barOxigenSr.gameObject.SetActive(false);
-            barOxigenSrBG.gameObject.SetActive(false);
+            HUDbarOxigen.SetActive(false);
 
             barOxigenSr.size = new(barOxigenSr.size.x, 0);
-            barOxigenSrBG.size = new(barOxigenSrBG.size.x, 0);
+   
 
             validCancel = false;
             validHolding = false;

@@ -561,8 +561,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimationTime: 1.1
-  breathAnimation: 1
+  breathAnimation: 1.9
   upAnimationTime: 1.8
+  divisor: 4
   barOxigenSr: {fileID: 3216055098446538454}
   barOxigenSrBG: {fileID: 3661710764635864869}
   animationPoint: {fileID: 1505380313336474577}
