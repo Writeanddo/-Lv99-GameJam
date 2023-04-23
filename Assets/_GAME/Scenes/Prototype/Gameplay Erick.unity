@@ -16612,10 +16612,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3533502754062695206, guid: 43abc42f04fad41409208d7835c9a359, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3533502754137048752, guid: 43abc42f04fad41409208d7835c9a359, type: 3}
       propertyPath: m_Name
       value: ObjtoPuzzle (1)
@@ -16662,10 +16658,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3533502754137048753, guid: 43abc42f04fad41409208d7835c9a359, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3533502754544383661, guid: 43abc42f04fad41409208d7835c9a359, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17070,6 +17062,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 499300310176484777, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499300310176484777, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499300310176484777, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499300310176484777, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747824356593021816, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747824356593021816, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747824356593021816, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747824356593021816, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2325620503255838922, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -17117,6 +17141,26 @@ PrefabInstance:
     - target: {fileID: 2325620503255838923, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
       propertyPath: m_Name
       value: UIGameplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793974338407146964, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2042487798}
+    - target: {fileID: 5808659391760106941, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808659391760106941, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808659391760106941, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808659391760106941, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5f163a0a5b5eb542a1440feaeaa93b7, type: 3}
@@ -17223,8 +17267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88f1386dd63147198d003daff00d37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenResolution: {x: 431, y: 514}
-  internalResolution: {x: 480, y: 572}
+  screenResolution: {x: 658, y: 514}
+  internalResolution: {x: 480, y: 375}
   upscaledResolution: {x: 0, y: 0}
   smooth: 0
   forceSquarePixels: 0
