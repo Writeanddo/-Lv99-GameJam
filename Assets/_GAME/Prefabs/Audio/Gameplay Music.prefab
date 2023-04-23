@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7672715091604160058}
   - component: {fileID: -7989090921182670123}
-  - component: {fileID: -809922015059687670}
   - component: {fileID: 7145217311971586615}
   m_Layer: 0
   m_Name: Gameplay Music
@@ -54,37 +53,6 @@ MonoBehaviour:
       Data3: 1187054217
       Data4: 2030330294
     Path: event:/Music/Gameplay Music
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &-809922015059687670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 71314865006630945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 404304811
-      Data2: 1269711565
-      Data3: 1864499600
-      Data4: 1882250690
-    Path: event:/Music/Ambience
   Event: 
   PlayEvent: 1
   StopEvent: 2

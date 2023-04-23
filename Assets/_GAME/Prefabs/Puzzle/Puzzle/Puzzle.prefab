@@ -482,8 +482,8 @@ GameObject:
   - component: {fileID: 1404758254274800926}
   - component: {fileID: 2489261316547219735}
   - component: {fileID: 7769531440422767575}
-  - component: {fileID: 9160039436158725394}
   - component: {fileID: 6899527929363538286}
+  - component: {fileID: 7114095578418830804}
   m_Layer: 7
   m_Name: PLAYER (2)
   m_TagString: puzzle
@@ -613,22 +613,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &9160039436158725394
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2417371193125166226}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.000000038146972}
-  m_Size: {x: 0.24970621, y: 0.27311817}
-  m_Direction: 0
 --- !u!114 &6899527929363538286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,6 +632,22 @@ MonoBehaviour:
   isLookLeft: 0
   stunnedTime: 1
   stunForce: 15
+--- !u!58 &7114095578418830804
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2417371193125166226}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.13
 --- !u!1 &2498586042370841270
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 8122645187728968657}
   m_Layer: 7
   m_Name: PhysicCollider (2)
-  m_TagString: Untagged
+  m_TagString: puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1231,7 +1231,7 @@ GameObject:
   - component: {fileID: 8247075800204115828}
   m_Layer: 7
   m_Name: PhysicCollider
-  m_TagString: Untagged
+  m_TagString: puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1304,7 +1304,7 @@ GameObject:
   - component: {fileID: 5788021565929021109}
   m_Layer: 7
   m_Name: PhysicCollider (1)
-  m_TagString: Untagged
+  m_TagString: puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2743,10 +2743,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Puzzle2Controller, Assembly-CSharp
-        m_MethodName: ExitPuzzle
-        m_Mode: 1
+      - m_Target: {fileID: 5577774666363029983}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3070,7 +3070,7 @@ GameObject:
   - component: {fileID: 1343648725326287146}
   m_Layer: 7
   m_Name: PhysicCollider (3)
-  m_TagString: Untagged
+  m_TagString: puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
