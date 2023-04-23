@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,9 @@ public class UIGameplay : MonoBehaviour
     [SerializeField] private Button firstButtonPause;
     [SerializeField] private Button firstButtonGameOver;
     [SerializeField] private Button firstButtonGameWin;
+
+    [SerializeField] private TextMeshProUGUI dieByTimeMessageText;
+    [SerializeField] private TextMeshProUGUI dieByDamageMessageText;
 
     private HealthSystem healthSystem;
     private PlayerController playerController;
@@ -66,11 +70,15 @@ public class UIGameplay : MonoBehaviour
         pausePanel.SetActive(value);
     }
 
-    private void OpenGameoverMenu()
+    private void OpenGameoverMenu(bool dieByTime)
     {
         DisableAllMenus();
 
         firstButtonGameOver.Select();
+     
+        dieByTimeMessageText.gameObject.SetActive(dieByTime);
+        dieByDamageMessageText.gameObject.SetActive(!dieByTime);
+        
         gameoverPanel.SetActive(true);
     }
 

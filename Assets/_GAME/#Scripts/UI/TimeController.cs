@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
@@ -10,6 +8,8 @@ public class TimeController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timeDestroy;
     [SerializeField] private float timeToLive = 60.0f;
     [SerializeField] private float timeRemaining;
+
+    private bool destroy;
 
     private void Start()
     {
@@ -28,14 +28,15 @@ public class TimeController : MonoBehaviour
 
             timeDestroy.text = timeString;
         }
-        else
+        else if(!destroy)
         {
+            destroy = true;
             DestroyBase();
         }
     }
 
     private void DestroyBase()
     {
-        print("You Loze!TREEEEERINMNNNG");
+        GameManager.Instance.GameOver(true);
     }
 }

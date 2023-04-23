@@ -50,7 +50,7 @@ public class PlayerOxygen : MonoBehaviour
             }
         }
 
-        StartCoroutine(RemovingOxygen());
+        //StartCoroutine(RemovingOxygen());
     }
 
     public void RemoveOxygen(float oxygen)

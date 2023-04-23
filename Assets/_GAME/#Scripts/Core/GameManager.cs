@@ -4,8 +4,7 @@ using System;
 public class GameManager : Singleton<GameManager>
 {
     public event Action<bool> OnPauseStatusChange;
-    public event Action OnGameOver;
-    public event Action OnDead;
+    public event Action<bool> OnGameOver; //se for morte pelo tempo == true
     public event Action OnGameWin;
 
     [Header("Bool Puzzle?")]
@@ -37,12 +36,12 @@ public class GameManager : Singleton<GameManager>
         OnPauseStatusChange?.Invoke(Paused);
     }
 
-    public void GameOver()
+    public void GameOver(bool byTime)
     {
         Paused = true;
         Time.timeScale = 0;
         OnPauseStatusChange?.Invoke(Paused);
-        OnGameOver?.Invoke();
+        OnGameOver?.Invoke(byTime);
     }
 
     public void PauseResume()

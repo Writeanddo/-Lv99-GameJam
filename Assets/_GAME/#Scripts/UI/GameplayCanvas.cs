@@ -30,14 +30,14 @@ public class GameplayCanvas : MonoBehaviour
         quitToMenuButton.onClick.AddListener(QuitToMenu);
 
         GameManager.Instance.OnPauseStatusChange += HandlePauseUI;
-        GameManager.Instance.OnDead += OpenDeathScreen;
+        //GameManager.Instance.OnDead += OpenDeathScreen;
         GameManager.Instance.OnGameWin += OpenGameWin;
     }
 
     private void OnDestroy()
     {
         GameManager.Instance.OnPauseStatusChange -= HandlePauseUI;
-        GameManager.Instance.OnDead -= OpenDeathScreen;
+        //GameManager.Instance.OnDead -= OpenDeathScreen;
         GameManager.Instance.OnGameWin -= OpenGameWin;
     }
 

@@ -72,6 +72,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         if (damage <= 0)
             return;
 
+        StopCoroutine(IEInvencibleHeartOxygen());
         StartCoroutine(IEInvencibleHeartOxygen());
 
         CurrentHealth -= damage;
@@ -109,7 +110,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     private IEnumerator IEInvencibleHeartOxygen()
     {
 
-        for (var i = 0; i < 21; i++) // alterado de "5" para "20" (Alyson)
+        for (var i = 0; i < 2; i++)
         {
             spriteTemp.color = Color.blue;
             yield return new WaitForSeconds(0.05f);
@@ -123,14 +124,14 @@ public class HealthSystem : MonoBehaviour, IDamageable
         spriteTemp.color = new(spriteTemp.color.r, spriteTemp.color.g, spriteTemp.color.b, 1f);
     }
 
-
-
     public void Die()
     {
         if (IsDie)
             return;
         IsDie = true;
-        collider2d.enabled = false;
+
+        gameObject.layer = LayerMask.NameToLayer("invencivelPlayer");
+
         OnDie?.Invoke(this);
 
 

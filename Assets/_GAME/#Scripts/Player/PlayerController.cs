@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
     private bool isStartedCilinder;
 
     public PlayerOxygen PlayerOxygen;
+    private float starterGravityScale;
 
     private void Awake()
     {
@@ -66,6 +67,8 @@ public class PlayerController : MonoBehaviour
         PlayerOxygen = GetComponent<PlayerOxygen>();
 
         health = GetComponent<IDamageable>();
+
+        starterGravityScale = _rigidbody2D.gravityScale;
     }
 
     private void Update()
@@ -281,6 +284,7 @@ public class PlayerController : MonoBehaviour
     {
         _playerCollider.enabled = true;
         _playerSprite.enabled = true;
+        _rigidbody2D.gravityScale = starterGravityScale;
         blockPlayerInputs = false;
         PlayerOxygen.enabled = true;
     }
@@ -288,6 +292,7 @@ public class PlayerController : MonoBehaviour
     public void DesativePlayer()
     {
         _rigidbody2D.velocity = Vector2.zero;
+        _rigidbody2D.gravityScale = 0;
         ResetWalk();
         _playerCollider.enabled = false;
         _playerSprite.enabled = false;
