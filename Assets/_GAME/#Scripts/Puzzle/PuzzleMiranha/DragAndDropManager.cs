@@ -16,6 +16,8 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
     public List<InfosTargetSlot> targetSlots;
     public InputReference inputReference;
 
+    public GameObject play;
+    public GameObject win;
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +68,8 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
             GameManager.Instance.Puzzle2 = true;
             CheckPuzzle.Instance.Puzzle2[0].SetActive(false);
             CheckPuzzle.Instance.Puzzle2[1].SetActive(true);
-
+            play.SetActive(false);
+            win.SetActive(true);
             GameManager.Instance.PuzzleComplete();
         }
         else
