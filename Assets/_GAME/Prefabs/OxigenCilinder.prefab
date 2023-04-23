@@ -217,7 +217,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4d7c00acbae7f184ca9c36ecd6d729f5, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -242,7 +242,7 @@ MonoBehaviour:
   cilinderOxygen: 1
   barOxigenSr: {fileID: 3216055098446538454}
   animationPoint: {fileID: 1505380313336474577}
-  gamepadUI: {fileID: 989835549147853346}
+  gamepadUI: {fileID: 5679130265832349903}
 --- !u!61 &5398162655217831627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -326,15 +326,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b79063dd336e234680104e4db4089e4, type: 3}
---- !u!114 &989835549147853346 stripped
+--- !u!114 &5679130265832349903 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4364787978142235126, guid: 5b79063dd336e234680104e4db4089e4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9222843555759368987, guid: 5b79063dd336e234680104e4db4089e4, type: 3}
   m_PrefabInstance: {fileID: 3543855419524041684}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c22b6724a90d9e438347c0c65f2ef07, type: 3}
+  m_Script: {fileID: 11500000, guid: 392b4801bd980414c9e6dc8af6e42c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &7311391772832648330 stripped

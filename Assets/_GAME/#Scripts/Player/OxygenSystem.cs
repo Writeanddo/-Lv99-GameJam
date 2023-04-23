@@ -14,20 +14,24 @@ public class OxygenSystem : MonoBehaviour
     private Animator oxigenAn;
 
     [Header("Oxygen Cilinder")]
-    [SerializeField] private float stopAnimationTime = 2f;
-    [SerializeField] private float cilinderOxygen;
+    [SerializeField] private float playerAnimationTime = 2f;
+
     [SerializeField] private SpriteRenderer barOxigenSr;
     [SerializeField] private Transform animationPoint;
-    [SerializeField] private SpriteDetectGamepad gamepadUI;
+    [SerializeField] private AnimatorDetectGamepad gamepadUI;
 
     private bool canInteractWithCilinder = true;
     private bool isOxygenStart;
     private CilinderState state = CilinderState.Start;
 
+    private float cilinderOxygen = 0;
+
     void Start()
     {
         _playerController = FindObjectOfType<PlayerController>();
         oxigenAn = GetComponent<Animator>();
+
+        barOxigenSr.size = new Vector2(0.56f, 0f);
     }
 
     public void StartCilinder()
@@ -47,7 +51,7 @@ public class OxygenSystem : MonoBehaviour
         canInteractWithCilinder = false;
             isOxygenStart = true;
 
-            oxigenAn.SetTrigger("start");
+            oxigenAn.SetTrigger("Start");
     
             _playerController.DesativePlayer();
 
@@ -55,7 +59,7 @@ public class OxygenSystem : MonoBehaviour
 
             StartCoroutine(ReloadOxygenBar());
 
-            yield return new WaitForSecondsRealtime(stopAnimationTime);
+            yield return new WaitForSecondsRealtime(playerAnimationTime);
 
             state = CilinderState.Holding;
 
@@ -74,18 +78,21 @@ public class OxygenSystem : MonoBehaviour
     {
         if(state == CilinderState.Holding)
         {
+            oxigenAn.SetTrigger("Stop");
+
             state = CilinderState.Stopped;
 
             _playerController.PlayerOxygen.AddOxygen(cilinderOxygen);
 
             cilinderOxygen = 0;
-            cilinderOxygen = 0;
+
             isOxygenStart = false;
             
             barOxigenSr.size = new Vector2(0.56f, cilinderOxygen);
-            oxigenAn.SetTrigger("stop");
+           
 
             StopCoroutine(ReloadOxygenBar());
+            
             StartCoroutine(WaitForAnimation());
 
             barOxigenSr.gameObject.SetActive(false);
@@ -94,7 +101,9 @@ public class OxygenSystem : MonoBehaviour
 
     private IEnumerator WaitForAnimation()
     {
-        yield return new WaitForSecondsRealtime(2f);
+        oxigenAn.SetTrigger("Reverse");
+
+        yield return new WaitForSecondsRealtime(playerAnimationTime);
 
         GameManager.Instance.ResumeTemporaryPause();
 
@@ -109,7 +118,6 @@ public class OxygenSystem : MonoBehaviour
             for (int i = 0; i < 100; i++)
             {
                     cilinderOxygen += 0.01f;
-                    print(cilinderOxygen);
                     barOxigenSr.size = new Vector2(0.56f, cilinderOxygen);
                     yield return new WaitForSecondsRealtime(0.01f);
             }
@@ -117,7 +125,6 @@ public class OxygenSystem : MonoBehaviour
             for (int i = 0; i < 100; i++)
             {
                     cilinderOxygen -= 0.01f;
-                    print(cilinderOxygen);
                     barOxigenSr.size = new Vector2(0.56f, cilinderOxygen);
                     yield return new WaitForSecondsRealtime(0.01f);
             }

@@ -191,8 +191,6 @@ MonoBehaviour:
   noFrictionMaterial: {fileID: 6200000, guid: 1cfd231c30b171746831f9068a1ceaf0, type: 2}
   frictionMaterial: {fileID: 6200000, guid: 03a2b0fb7a57000448869a25b0fc7665, type: 2}
   interactAction: {fileID: 3595749236075633938, guid: ef5f74a08d7ea82479d4abe203e39966, type: 3}
-  maxPlayerOxygen: 1
-  currentPlayerOxygen: 0
   isLookLeft: 0
   currentCilinder: {fileID: 0}
   PlayerOxygen: {fileID: 0}
@@ -303,5 +301,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxOxygen: 1
-  percentToRemove: 0.001
-  damage: 0.001
+  percentToRemove: 0.0005
+  damage: 0.0005
