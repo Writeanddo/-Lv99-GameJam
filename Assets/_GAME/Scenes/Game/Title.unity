@@ -491,11 +491,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
---- !u!223 &1063551302 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 8001300188319021570, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
-  m_PrefabInstance: {fileID: 1063551301}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1182176715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -553,35 +548,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1af967113602c1c41ad2af4251e9f976, type: 3}
---- !u!21 &1551273058
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BilinearSharp
-  m_Shader: {fileID: 4800000, guid: 625a99092834446fdb9bf0c7bc7703f0, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats: []
-    m_Colors:
-    - _DestinationResolution: {r: 1056, g: 594, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1001 &1601942101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -650,7 +616,6 @@ GameObject:
   - component: {fileID: 1621113860}
   - component: {fileID: 1621113859}
   - component: {fileID: 1621113862}
-  - component: {fileID: 1621113863}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -729,31 +694,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
---- !u!114 &1621113863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621113857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f88f1386dd63147198d003daff00d37d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screenResolution: {x: 1056, y: 594}
-  internalResolution: {x: 480, y: 270}
-  upscaledResolution: {x: 0, y: 0}
-  smooth: 1
-  forceSquarePixels: 0
-  pixels: {x: 480, y: 270}
-  pixelsPerUnit: 100
-  requireStencilBuffer: 0
-  useUpscaleShader: 1
-  upscaleMaterial: {fileID: 1551273058}
-  finalBlitStretch: {x: 1, y: 1}
-  mainCamera: {fileID: 1621113859}
-  mainCanvas: {fileID: 1063551302}
 --- !u!1 &2091403535 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9168502527502785336, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}

@@ -6,6 +6,7 @@ public class MonsterGasWalk : MonoBehaviour
 {
 
     public float moveSpeed = 2f;
+    public float moveSpeedFollow = 2f;
     public float ocilacaoSpeed = 1f;
     public float ocilacaoDistance = 0.5f;
     public float damage;
@@ -16,12 +17,19 @@ public class MonsterGasWalk : MonoBehaviour
 
     private float timer = 0f;
     public float patrolTime = 3f;
+
+    [SerializeField]
     private bool isLookLeft = false;
 
     private IAVisionCircle m_IaVisionCircle;
     public Collider2D[] hitInfo;
     public bool isFollow;
     private Vector2 initialPosition;
+
+    //TESTE
+    private Transform lastPlayerPosition;
+    public bool isTouchPlayer;
+
 
     void Start()
     {
@@ -32,28 +40,65 @@ public class MonsterGasWalk : MonoBehaviour
     }
 
 
-    void Update()
+    private void FixedUpdate()
     {
-
-       
-        if (m_IaVisionCircle != null)
+        if (m_IaVisionCircle != null ) 
         {
-
             hitInfo = Physics2D.OverlapCircleAll(m_IaVisionCircle.hitBox.position, m_IaVisionCircle.visionRange, m_IaVisionCircle.hitMask);
-            foreach (var hit in hitInfo)
-            {
-                isFollow = Check(hit);
 
+            if (hitInfo.Length != 0 && !isTouchPlayer)
+            {
+                Transform curentTarget = this.transform;
+                float distanceToTarget = Mathf.Infinity;
+                for (int i = 0; i < hitInfo.Length; i++)
+                {
+                    float newDistance = (hitInfo[i].transform.position - transform.position).magnitude;
+                    if (newDistance < distanceToTarget)
+                    {
+                        curentTarget = hitInfo[i].transform;
+                        distanceToTarget = newDistance;
+                    }
+                }
+                lastPlayerPosition = curentTarget;
+                isTouchPlayer = true;
+
+            }
+            else if(hitInfo.Length == 0 && isTouchPlayer)
+            {
+                isTouchPlayer = false;
+                lastPlayerPosition = null;
             }
 
         }
 
-        if (moveSpeed < 0 && isLookLeft == false && !isFollow)
+      
+
+    }
+
+    void Update()
+    {
+
+
+
+       
+        //if (m_IaVisionCircle != null)
+        //{
+
+        //    hitInfo = Physics2D.OverlapCircleAll(m_IaVisionCircle.hitBox.position, m_IaVisionCircle.visionRange, m_IaVisionCircle.hitMask);
+        //    foreach (var hit in hitInfo)
+        //    {
+        //        isFollow = Check(hit);
+
+        //    }
+
+        //}
+
+        if (moveSpeed < 0 && isLookLeft == false && lastPlayerPosition == null)
         {
 
             Flip();
         }
-        else if (moveSpeed > 0 && isLookLeft == true && !isFollow)
+        else if (moveSpeed > 0 && isLookLeft == true && lastPlayerPosition == null)
         {
 
             Flip();
@@ -61,7 +106,7 @@ public class MonsterGasWalk : MonoBehaviour
 
 
 
-        if (!isFollow)
+        if (lastPlayerPosition == null)
         {
             positionY = transform.position.y;
             transform.Translate(new Vector2(moveSpeed * Time.deltaTime, 0));
@@ -77,21 +122,48 @@ public class MonsterGasWalk : MonoBehaviour
 
             }
         }
-        else if (isFollow && hitInfo.Length>0)
+
+        //se movimenta até o player localizado
+        if (lastPlayerPosition != null )
         {
-       
-             transform.position = Vector3.MoveTowards(transform.position, hitInfo[0].transform.position, moveSpeed * Time.deltaTime);
-            if (hitInfo[0].transform.position.x > transform.position.x && isLookLeft)
+
+            transform.position = Vector2.MoveTowards(transform.position, lastPlayerPosition.transform.position, moveSpeedFollow * Time.deltaTime);
+        }
+
+        //if (isFollow && hitInfo.Length>0)
+        //{
+
+        //     transform.position = Vector3.MoveTowards(transform.position, hitInfo[0].transform.position, moveSpeed * Time.deltaTime);
+
+        //}
+
+        if (lastPlayerPosition != null)
+        {
+            if (isTouchPlayer)
             {
-                Flip();
-            }
-            else if (hitInfo[0].transform.position.x < transform.position.x && !isLookLeft)
-            {
-                Flip();
+                if (lastPlayerPosition.transform.position.x < transform.position.x && isLookLeft == false)
+                {
+                    Flip();
+                }
+                else if (lastPlayerPosition.transform.position.x > transform.position.x && isLookLeft == true)
+                {
+                   Flip();
+
+                }
             }
         }
 
+        //if (hitInfo.Length > 0 && hitInfo[0].transform.position.x > transform.position.x && isLookLeft)
+        //{
+        //    Flip();
+        //}
+        //else if (hitInfo.Length > 0 &&  hitInfo[0].transform.position.x < transform.position.x && !isLookLeft)
+        //{
+        //    Flip();
+        //}
     }
+
+   
 
     private bool Check(Collider2D colPlayer)
     {

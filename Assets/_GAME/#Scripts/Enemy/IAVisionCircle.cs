@@ -25,8 +25,9 @@ public class IAVisionCircle : MonoBehaviour
 
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, visionRange);
 
         var visionDirection = Vector3.right; // GetVisionDirection()
