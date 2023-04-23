@@ -15,6 +15,7 @@ public interface IDamageable
     public event Action OnHeal; //usado para VFX
     public event Action<IDamageable> OnDie; //usado para parar o player
     public void TakeDamage(Vector3 direction, float damage); //pra tomar dano
+    public void TakeDamageOxygen(float damage); //pra tomar dano
     public void Heal(float amount); //pra curar
     public void Die();
 }

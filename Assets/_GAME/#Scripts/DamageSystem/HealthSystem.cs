@@ -5,9 +5,9 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour, IDamageable
 {
     //[field:] serve pra deixar variaveis que tem esse { get; set; } no final, visiveis no editor;
-    [field:SerializeField] public float CurrentHealth { get; set; }
+    [field: SerializeField] public float CurrentHealth { get; set; }
     [field: SerializeField] public float MaxHealth { get; set; }
-    public bool IsDie { get ; set ; }
+    public bool IsDie { get; set; }
 
     //diz que esse carinha alterou a vida (dano ou cura), e passa a vida atual
     public event Action<float, float> OnChangeHealth;
@@ -67,6 +67,26 @@ public class HealthSystem : MonoBehaviour, IDamageable
         OnTakeDamage?.Invoke(direction);
     }
 
+    public void TakeDamageOxygen(float damage)
+    {
+        if (damage <= 0)
+            return;
+
+        StartCoroutine(IEInvencibleHeartOxygen());
+
+        CurrentHealth -= damage;
+
+        if (CurrentHealth < 0)
+        {
+            Die();
+            anim.SetBool("isDie", true);
+            return;
+        }
+
+        OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
+        OnTakeDamage?.Invoke(Vector3.zero);
+    }
+
     private IEnumerator IEInvencibleHeart()
     {
         gameObject.layer = LayerMask.NameToLayer("invencivelPlayer");
@@ -86,6 +106,23 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
     }
 
+    private IEnumerator IEInvencibleHeartOxygen()
+    {
+
+        for (var i = 0; i < 21; i++) // alterado de "5" para "20" (Alyson)
+        {
+            spriteTemp.color = Color.blue;
+            yield return new WaitForSeconds(0.05f);
+
+            spriteTemp.color = coloralpha;
+            yield return new WaitForSeconds(0.05f);
+
+        }
+
+        spriteTemp.color = Color.white;
+        spriteTemp.color = new(spriteTemp.color.r, spriteTemp.color.g, spriteTemp.color.b, 1f);
+    }
+
 
 
     public void Die()
@@ -93,7 +130,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         if (IsDie)
             return;
         IsDie = true;
-        collider2d.enabled = false;   
+        collider2d.enabled = false;
         OnDie?.Invoke(this);
 
 
@@ -102,7 +139,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         }//evita que o player seja destruido
          //gameObject.SetActive(false);
 
-        
+
     }
 
     public void SetDieAnimation()

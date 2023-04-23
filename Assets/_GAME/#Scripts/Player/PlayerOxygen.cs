@@ -43,7 +43,7 @@ public class PlayerOxygen : MonoBehaviour
         {
             if(_currentOxygen <= 0)
             {
-                damageable.TakeDamage(Vector3.zero, damage);
+                damageable.TakeDamageOxygen(damage);
                 yield return new WaitForSeconds(0.01f);
 
                 OnUpdateOxygen?.Invoke(_currentOxygen, maxOxygen);
