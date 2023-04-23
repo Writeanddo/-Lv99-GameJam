@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator player;
 
     private SpriteRenderer _playerSprite;
-    private Collider _playerCollider;
+    private Collider2D _playerCollider;
 
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 124f;
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         player = GetComponent<Animator>();
         _playerSprite = GetComponent<SpriteRenderer>();
-        _playerCollider = GetComponent<Collider>();
+        _playerCollider = GetComponent<Collider2D>();
         PlayerOxygen = GetComponent<PlayerOxygen>();
 
         health = GetComponent<IDamageable>();
