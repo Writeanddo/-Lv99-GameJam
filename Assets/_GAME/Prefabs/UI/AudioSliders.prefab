@@ -45,6 +45,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 226690215087206368}
     m_Modifications:
+    - target: {fileID: 263101753678847691, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
+      propertyPath: VCAName
+      value: SFX
+      objectReference: {fileID: 0}
     - target: {fileID: 1861878106917980739, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
       propertyPath: m_SizeDelta.x
       value: 160
@@ -56,6 +60,10 @@ PrefabInstance:
     - target: {fileID: 4158597865613813797, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466785731714486858, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
+      propertyPath: m_Value
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6205248785092295557, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
       propertyPath: m_Pivot.x
@@ -172,24 +180,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6205248785092295557, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
   m_PrefabInstance: {fileID: 1835581270843980712}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7993434681771343910 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8617401548668353422, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
-  m_PrefabInstance: {fileID: 1835581270843980712}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4204714441007199188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7993434681771343910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d36cad8dd84e794ebf576ea7aaa67d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VCAName: SFX
 --- !u!1001 &3562603544282681235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -197,6 +187,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 226690215087206368}
     m_Modifications:
+    - target: {fileID: 263101753678847691, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
+      propertyPath: VCAName
+      value: Music
+      objectReference: {fileID: 0}
     - target: {fileID: 1861878106917980739, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
       propertyPath: m_SizeDelta.x
       value: 160
@@ -208,6 +202,10 @@ PrefabInstance:
     - target: {fileID: 4158597865613813797, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466785731714486858, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
+      propertyPath: m_Value
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6205248785092295557, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
       propertyPath: m_Pivot.x
@@ -303,24 +301,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
---- !u!1 &5109263414946133021 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8617401548668353422, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
-  m_PrefabInstance: {fileID: 3562603544282681235}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8228011575521636924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5109263414946133021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d36cad8dd84e794ebf576ea7aaa67d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VCAName: Music
 --- !u!224 &7452773387859784726 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6205248785092295557, guid: c51b1f06ca005e04290db1c18f4195e2, type: 3}
