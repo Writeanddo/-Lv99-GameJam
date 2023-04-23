@@ -42,10 +42,6 @@ public class PlayerController : MonoBehaviour
 
     [HorizontalLine(1, EColor.Green)]
     [SerializeField] private InputActionReference interactAction;
-
-    [Header("Oxygen Player")]
-    [SerializeField] private float maxPlayerOxygen = 1f;
-    [SerializeField] private float currentPlayerOxygen;
     [SerializeField] private bool isLookLeft = false;
 
     private InputReference _inputReference;
@@ -212,7 +208,7 @@ public class PlayerController : MonoBehaviour
         newObject.transform.SetParent(canvasRect, false);
         newObject.transform.localPosition = Vector3.zero;
 
-        GameManager.Instance.TemporaryPause();
+        //GameManager.Instance.TemporaryPause();
     }
 
     public void SetPuzzleStop()
@@ -311,6 +307,7 @@ public class PlayerController : MonoBehaviour
         _playerCollider.enabled = true;
         _playerSprite.enabled = true;
         blockPlayerInputs = false;
+        PlayerOxygen.enabled = true;
     }
 
     public void DesativePlayer()
@@ -318,5 +315,6 @@ public class PlayerController : MonoBehaviour
         _playerCollider.enabled = false;
         _playerSprite.enabled = false;
         blockPlayerInputs = true;
+        PlayerOxygen.enabled = false;
     }
 }
