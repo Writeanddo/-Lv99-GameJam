@@ -6,23 +6,31 @@ public class Objeto : MonoBehaviour
 {
 
     public int objectId;
-    private SpriteRenderer spriteRenderer;
-
     [SerializeField]
-    private Sprite[] spriteChange;
+    private Animator animator;
+
+    public AnimationClip animationDefault;
+    public AnimationClip animationSelect;
 
     private PointsOrderPuzzle m_PointsOrderPuzzle;
     private bool isCorret;
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        var overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+        overrideController[animationDefault] = animationDefault;
+        animator.runtimeAnimatorController = overrideController;
+
+  
         m_PointsOrderPuzzle = GetComponentInParent<PointsOrderPuzzle>();
     }
 
     public void SpriteDefault()
     {
-        spriteRenderer.sprite = spriteChange[0];
+        var overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+        overrideController[animationDefault] = animationDefault;
+        animator.runtimeAnimatorController = overrideController;
         isCorret = false;
     }
 
@@ -35,7 +43,9 @@ public class Objeto : MonoBehaviour
             if (m_PointsOrderPuzzle.currentObjectIndex == objectId)
             {
                 isCorret = true;
-                spriteRenderer.sprite = spriteChange[1];              
+                var overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+                overrideController[animationDefault] = animationSelect;
+                animator.runtimeAnimatorController = overrideController;
                 m_PointsOrderPuzzle.currentObjectIndex++;
                 if(m_PointsOrderPuzzle.currentObjectIndex == m_PointsOrderPuzzle.listObjeto.Count)
                 {
