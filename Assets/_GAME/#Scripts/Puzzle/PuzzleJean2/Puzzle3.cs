@@ -16,7 +16,6 @@ public class Puzzle3 : Singleton<Puzzle3>
     public GameObject play;
     public GameObject tutorial;
     public GameObject win;
-    public GameObject lose;
     private void Start()
     {
         pointsUI.text = totalPoints.ToString();
@@ -36,7 +35,6 @@ public class Puzzle3 : Singleton<Puzzle3>
         tutorial.SetActive(true);
         play.SetActive(false);
         win.SetActive(false);
-        lose.SetActive(false);
 
     }
 
@@ -48,7 +46,6 @@ public class Puzzle3 : Singleton<Puzzle3>
 
     public void SetRestart()
     {
-        lose.SetActive(false);
         play.SetActive(true);
 
     }
@@ -75,7 +72,7 @@ public class Puzzle3 : Singleton<Puzzle3>
 
     private void SpawnItem()
     {
-        if (totalPoints <= 2)
+        if (totalPoints <= 10)
         {
             int index = Random.Range(0, itemPrefab.Length);
             GameObject itemObj = Instantiate(itemPrefab[index], canvasRect.transform);

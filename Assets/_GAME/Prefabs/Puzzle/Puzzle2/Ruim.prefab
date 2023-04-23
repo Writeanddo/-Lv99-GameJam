@@ -93,6 +93,8 @@ MonoBehaviour:
   point: -1
   image: {fileID: 355393557734307054}
   fadeInTime: 0.3
+  timeDuration: 2
+  effect: {fileID: 0}
 --- !u!114 &7891098561977110386
 MonoBehaviour:
   m_ObjectHideFlags: 0
