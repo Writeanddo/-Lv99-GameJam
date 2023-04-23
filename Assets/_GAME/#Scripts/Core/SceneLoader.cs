@@ -33,7 +33,7 @@ public class SceneLoader : Singleton<SceneLoader>
 
     public void LoadTitle()
     {
-        LoadScene(1);
+        LoadScene(0);
     }
 
     private void LoadScene(int sceneIndex)
