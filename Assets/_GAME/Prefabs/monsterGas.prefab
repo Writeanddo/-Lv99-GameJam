@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 1580801658833175198}
   - component: {fileID: 7509441414640189823}
   - component: {fileID: 463923079}
+  - component: {fileID: 8902156542312708530}
   m_Layer: 0
-  m_Name: MonsterGas
+  m_Name: monsterGas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,6 +111,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8902156542312708530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806201294615337463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1473129848
+      Data2: 1261125905
+      Data3: 964568467
+      Data4: -937679615
+    Path: event:/SFX/Monster/Monster Loop
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 10
 --- !u!1 &8493891568024548440
 GameObject:
   m_ObjectHideFlags: 0
