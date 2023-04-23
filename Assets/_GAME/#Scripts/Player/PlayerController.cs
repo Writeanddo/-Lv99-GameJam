@@ -5,12 +5,13 @@ using NaughtyAttributes;
 public class PlayerController : MonoBehaviour
 {
     [Header("Player Status")]
-    [SerializeField] private Animator player;
+    [SerializeField] private Animator animator;
 
     private SpriteRenderer _playerSprite;
     private Collider2D _playerCollider;
 
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float oxygenSpeed = 2.5f;
     [SerializeField] private float jumpForce = 124f;
     public bool isInteraction = false;
 
@@ -57,11 +58,13 @@ public class PlayerController : MonoBehaviour
     public PlayerOxygen PlayerOxygen;
     private float starterGravityScale;
 
+    private float _currentSpeed;
+
     private void Awake()
     {
         _inputReference = GetComponent<InputReference>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        player = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         _playerSprite = GetComponent<SpriteRenderer>();
         _playerCollider = GetComponent<Collider2D>();
         PlayerOxygen = GetComponent<PlayerOxygen>();
@@ -71,9 +74,30 @@ public class PlayerController : MonoBehaviour
         starterGravityScale = _rigidbody2D.gravityScale;
     }
 
+    private void Start()
+    {
+        PlayerOxygen.OnUpdateOxygen += PlayerOxygen_OnUpdateOxygen;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerOxygen.OnUpdateOxygen -= PlayerOxygen_OnUpdateOxygen;
+    }
+
+    private void PlayerOxygen_OnUpdateOxygen(float current, float max)
+    {
+        var height = current <= 0 ? 1 : 0;
+
+        _currentSpeed = current <= 0 ? oxygenSpeed : moveSpeed;
+
+        animator.SetLayerWeight(1, height);
+
+
+    }
+
     private void Update()
     {
-        player.SetFloat("speedY", _rigidbody2D.velocity.y);
+        animator.SetFloat("speedY", _rigidbody2D.velocity.y);
 
         DetectSlopes();
 
@@ -150,11 +174,11 @@ public class PlayerController : MonoBehaviour
 
         if (_rigidbody2D.velocity != new Vector2(0, 0))
         {
-            player.SetBool("isWalk", true);
+            animator.SetBool("isWalk", true);
         }
         else
         {
-            player.SetBool("isWalk", false);
+            animator.SetBool("isWalk", false);
         }
 
         //virar o player
@@ -168,12 +192,12 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        player.SetBool("isGrounded", isGrounded);
+        animator.SetBool("isGrounded", isGrounded);
     }
 
     public void ResetWalk()
     {
-        player.SetBool("isWalk", false);
+        animator.SetBool("isWalk", false);
     }
 
     private void SetPuzzleStart()
@@ -205,15 +229,15 @@ public class PlayerController : MonoBehaviour
             else
             {
                 //Movimentacao SLOP
-                _rigidbody2D.velocity = new Vector2(-_inputReference.Movement.x * moveSpeed * perpendicularSpeed.x,
-                    -_inputReference.Movement.x * moveSpeed * perpendicularSpeed.y);
+                _rigidbody2D.velocity = new Vector2(-_inputReference.Movement.x * _currentSpeed * perpendicularSpeed.x,
+                    -_inputReference.Movement.x * _currentSpeed * perpendicularSpeed.y);
 
             }
         }
         else
         {
             //Movimentacao Padrao
-            _rigidbody2D.velocity = new Vector2(_inputReference.Movement.x * moveSpeed, _rigidbody2D.velocity.y);
+            _rigidbody2D.velocity = new Vector2(_inputReference.Movement.x * _currentSpeed, _rigidbody2D.velocity.y);
 
         }
     }
