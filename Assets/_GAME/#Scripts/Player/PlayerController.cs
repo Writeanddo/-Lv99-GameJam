@@ -77,11 +77,15 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         PlayerOxygen.OnUpdateOxygen += PlayerOxygen_OnUpdateOxygen;
+
+        GameManager.Instance.OnPuzzleComplete += Instance_OnPuzzleComplete;
     }
 
     private void OnDestroy()
     {
         PlayerOxygen.OnUpdateOxygen -= PlayerOxygen_OnUpdateOxygen;
+
+        GameManager.Instance.OnPuzzleComplete -= Instance_OnPuzzleComplete;
     }
 
     private void PlayerOxygen_OnUpdateOxygen(float current, float max)
@@ -91,8 +95,10 @@ public class PlayerController : MonoBehaviour
         _currentSpeed = current <= 0 ? oxygenSpeed : moveSpeed;
 
         animator.SetLayerWeight(1, height);
-
-
+    }
+    private void Instance_OnPuzzleComplete()
+    {
+        ActivePlayer();
     }
 
     private void Update()
@@ -165,6 +171,9 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector2(groundXSize, groundYSize), 0f, whatIsGround);
+
+        if (blockPlayerInputs)
+            return;
 
         OnMovimentPlayer();
 

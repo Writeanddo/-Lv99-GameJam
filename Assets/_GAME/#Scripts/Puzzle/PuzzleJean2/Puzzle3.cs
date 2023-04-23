@@ -63,6 +63,7 @@ public class Puzzle3 : Singleton<Puzzle3>
         CheckPuzzle.Instance.Puzzle3[0].SetActive(false);
         CheckPuzzle.Instance.Puzzle3[1].SetActive(true);
 
+        GameManager.Instance.PuzzleComplete();
 
         Destroy(gameObject);
     }

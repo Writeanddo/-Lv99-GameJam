@@ -13,6 +13,7 @@ public class GameManager : Singleton<GameManager>
     public bool Puzzle3;// Click
 
     public event Action OnPuzzleComplete;
+    public event Action OnAllPuzzlesCompleted;
 
     public bool Paused { get; private set; }
 
@@ -72,5 +73,13 @@ public class GameManager : Singleton<GameManager>
     {
         Paused = false;
         Time.timeScale = 1;
+    }
+
+    public void PuzzleComplete()
+    {
+        OnPuzzleComplete?.Invoke();
+
+        if (Puzzle1 && Puzzle2 && Puzzle3)
+            OnAllPuzzlesCompleted?.Invoke();
     }
 }

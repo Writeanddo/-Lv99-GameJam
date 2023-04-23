@@ -67,6 +67,7 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
             CheckPuzzle.Instance.Puzzle2[0].SetActive(false);
             CheckPuzzle.Instance.Puzzle2[1].SetActive(true);
 
+            GameManager.Instance.PuzzleComplete();
         }
         else
         {

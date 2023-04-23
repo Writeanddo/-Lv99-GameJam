@@ -17,6 +17,9 @@ public class Puzzle2Controller : Singleton<Puzzle2Controller>
         GameManager.Instance.Puzzle1 = true;
         CheckPuzzle.Instance.Puzzle1[0].SetActive(false);
         CheckPuzzle.Instance.Puzzle1[1].SetActive(true);
+
+        GameManager.Instance.PuzzleComplete();
+
         Destroy(gameObject);
     }
 
