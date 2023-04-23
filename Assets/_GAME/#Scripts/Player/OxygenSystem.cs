@@ -97,7 +97,7 @@ public class OxygenSystem : MonoBehaviour
             oxigenAn.SetTrigger("Start");
 
             _playerController.ResetWalk();
-            _playerController.DesativePlayer();
+            _playerController.DisablePlayer();
             GameManager.Instance.TemporaryPause();
 
             yield return new WaitForSecondsRealtime(playerAnimationTime);
