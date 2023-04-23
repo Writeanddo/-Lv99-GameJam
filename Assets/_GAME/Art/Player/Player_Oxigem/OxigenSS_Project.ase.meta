@@ -1,0 +1,1249 @@
+fileFormatVersion: 2
+guid: 462e12f7507fa3e4c827d9eecaca128d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  multiSpriteImportData:
+  - name: OxigenSS_Project_Frame_0
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 94
+      height: 108
+    spriteID: 6c5ff92e3ed2d9648b8d5dcb72ad62c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -19, y: -8}
+  - name: OxigenSS_Project_Frame_1
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 120
+      width: 94
+      height: 108
+    spriteID: 854507d118cb3d149a5e5f4aacc74397
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -19, y: 108}
+  - name: OxigenSS_Project_Frame_2
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 236
+      width: 94
+      height: 108
+    spriteID: 8d52e403ccb9bd64fb5cd93ef7da26b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -19, y: 224}
+  - name: OxigenSS_Project_Frame_3
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 352
+      width: 94
+      height: 108
+    spriteID: 8509da5e45308374984362d86f194235
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -19, y: 340}
+  - name: OxigenSS_Project_Frame_4
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 468
+      width: 94
+      height: 108
+    spriteID: af435c9ad1462c340b4820bbff529503
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -19, y: 456}
+  - name: OxigenSS_Project_Frame_5
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 584
+      width: 94
+      height: 108
+    spriteID: 30e13a2f6cd4ec14bbf366ef3d39836f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -19, y: 572}
+  - name: OxigenSS_Project_Frame_6
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 700
+      width: 94
+      height: 108
+    spriteID: 2622614dd5855bc40b675125002db4b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -19, y: 688}
+  - name: OxigenSS_Project_Frame_7
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 816
+      width: 94
+      height: 108
+    spriteID: 6b7664c0bbb9ac14fb7a3694ee17f759
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -19, y: 804}
+  - name: OxigenSS_Project_Frame_8
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 4
+      width: 94
+      height: 108
+    spriteID: 7fe0f80dccb0e054ab4bfde59add52c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: -8}
+  - name: OxigenSS_Project_Frame_9
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 120
+      width: 94
+      height: 108
+    spriteID: 68e29cf90c30f1b42a174781a0454d56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 108}
+  - name: OxigenSS_Project_Frame_10
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 236
+      width: 94
+      height: 108
+    spriteID: e39b1f6de1f4ad445a2dc8ea7160c27c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 224}
+  - name: OxigenSS_Project_Frame_11
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 352
+      width: 94
+      height: 108
+    spriteID: 19edab7d6dc46d1478a7d45255b30584
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 340}
+  - name: OxigenSS_Project_Frame_12
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 468
+      width: 94
+      height: 108
+    spriteID: 88ded4915bf6c6b45ad07887be10da38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 456}
+  - name: OxigenSS_Project_Frame_13
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 584
+      width: 94
+      height: 108
+    spriteID: 4ddb4e26fc738264f9a805c52adda87b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 572}
+  - name: OxigenSS_Project_Frame_14
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 700
+      width: 94
+      height: 108
+    spriteID: cd59b63b37a438a48a63ab475cbfcbfa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 106, y: 700}
+  - name: OxigenSS_Project_Frame_15
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 816
+      width: 94
+      height: 108
+    spriteID: 799d31eb2366eb84ead4e0d14cb46288
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 106, y: 816}
+  - name: OxigenSS_Project_Frame_16
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 4
+      width: 94
+      height: 108
+    spriteID: 40c3fe57fb1cb0544876f2be10c715cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 4}
+  - name: OxigenSS_Project_Frame_17
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 120
+      width: 94
+      height: 108
+    spriteID: 32acddf298bbafa4a8130bf6d057ab43
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 120}
+  - name: OxigenSS_Project_Frame_18
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 236
+      width: 94
+      height: 108
+    spriteID: b50af7bcf4841a54d811461c32ff730d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 236}
+  - name: OxigenSS_Project_Frame_19
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 352
+      width: 94
+      height: 108
+    spriteID: 3dcec53e41dc6f141af7db79135191d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 352}
+  - name: OxigenSS_Project_Frame_20
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 468
+      width: 94
+      height: 108
+    spriteID: aceb47413f3fa3c41b772de63da614ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 468}
+  - name: OxigenSS_Project_Frame_21
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 584
+      width: 94
+      height: 108
+    spriteID: 10155427e36ddaf49a95db12c539d1de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 584}
+  - name: OxigenSS_Project_Frame_22
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 700
+      width: 94
+      height: 108
+    spriteID: dcd199842e498a84a822d56bfc1e5ff9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 700}
+  - name: OxigenSS_Project_Frame_23
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 816
+      width: 94
+      height: 108
+    spriteID: 5d1043cbb6ea76f4782e2a29a1482ac6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 816}
+  - name: OxigenSS_Project_Frame_24
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 4
+      width: 94
+      height: 108
+    spriteID: f0a04e9d567105843898e53a30d037f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 4}
+  - name: OxigenSS_Project_Frame_25
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 120
+      width: 94
+      height: 108
+    spriteID: bbdee7b1c6e632040bf6fc3ecece833c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 120}
+  - name: OxigenSS_Project_Frame_26
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 236
+      width: 94
+      height: 108
+    spriteID: 6c5d59c6eaa3f5e4ca18e1dbd6b028d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 236}
+  - name: OxigenSS_Project_Frame_27
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 352
+      width: 94
+      height: 108
+    spriteID: 86606a12579b9af4bb0452838d0e9ec8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 352}
+  - name: OxigenSS_Project_Frame_28
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 468
+      width: 94
+      height: 108
+    spriteID: 9ac695a7db82dba45bd0b2bafea269c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 468}
+  - name: OxigenSS_Project_Frame_29
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 584
+      width: 94
+      height: 108
+    spriteID: c3bf610c909e7a14f95d508592f11203
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 584}
+  - name: OxigenSS_Project_Frame_30
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 700
+      width: 94
+      height: 108
+    spriteID: 6afc55cf38900e44c9b2463089907842
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 700}
+  - name: OxigenSS_Project_Frame_31
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 816
+      width: 94
+      height: 108
+    spriteID: 290f1a8367a63304586ccc5965519e50
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 816}
+  - name: OxigenSS_Project_Frame_32
+    originalName: 
+    pivot: {x: 0.45744678, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 412
+      y: 4
+      width: 94
+      height: 108
+    spriteID: f8c9314f4dbf6ca42bb0de276142db31
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 412, y: 4}
+  - name: OxigenSS_Project_Frame_33
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 932
+      width: 0
+      height: 0
+    spriteID: cbb1a4a367d1e294e9268a375a2c4224
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -128, y: 803}
+  - name: OxigenSS_Project_Frame_34
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 12
+      y: 932
+      width: 0
+      height: 0
+    spriteID: fe2bffa217165414eba759f604679018
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -120, y: 803}
+  - name: OxigenSS_Project_Frame_35
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 932
+      width: 0
+      height: 0
+    spriteID: 9bdfb4a37525beb4bb43d58c7cf30bba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -112, y: 803}
+  - name: OxigenSS_Project_Frame_36
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 932
+      width: 0
+      height: 0
+    spriteID: 9493a5cc7c757394b9c2080568698e67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -104, y: 803}
+  - name: OxigenSS_Project_Frame_37
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 932
+      width: 0
+      height: 0
+    spriteID: a204b2e42bb79e449aead77bdcad04fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -96, y: 803}
+  - name: OxigenSS_Project_Frame_38
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 932
+      width: 0
+      height: 0
+    spriteID: 09b1dd54a35f4e24f8b4a59cc9d04e6a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -88, y: 803}
+  - name: OxigenSS_Project_Frame_39
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 932
+      width: 0
+      height: 0
+    spriteID: 07279ad3055535849bac442d5f5037b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -80, y: 803}
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1888245978
+    name: OxigenSS_Project
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: OxigenSS_Project_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 6c5ff92e3ed2d9648b8d5dcb72ad62c6
+    - name: OxigenSS_Project_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 854507d118cb3d149a5e5f4aacc74397
+    - name: OxigenSS_Project_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 8d52e403ccb9bd64fb5cd93ef7da26b3
+    - name: OxigenSS_Project_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 8509da5e45308374984362d86f194235
+    - name: OxigenSS_Project_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: af435c9ad1462c340b4820bbff529503
+    - name: OxigenSS_Project_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 30e13a2f6cd4ec14bbf366ef3d39836f
+    - name: OxigenSS_Project_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 2622614dd5855bc40b675125002db4b1
+    - name: OxigenSS_Project_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 6b7664c0bbb9ac14fb7a3694ee17f759
+    - name: OxigenSS_Project_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 7fe0f80dccb0e054ab4bfde59add52c8
+    - name: OxigenSS_Project_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 68e29cf90c30f1b42a174781a0454d56
+    - name: OxigenSS_Project_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: e39b1f6de1f4ad445a2dc8ea7160c27c
+    - name: OxigenSS_Project_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 19edab7d6dc46d1478a7d45255b30584
+    - name: OxigenSS_Project_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 88ded4915bf6c6b45ad07887be10da38
+    - name: OxigenSS_Project_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 4ddb4e26fc738264f9a805c52adda87b
+    - name: OxigenSS_Project_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: cd59b63b37a438a48a63ab475cbfcbfa
+    - name: OxigenSS_Project_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: 799d31eb2366eb84ead4e0d14cb46288
+    - name: OxigenSS_Project_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: 40c3fe57fb1cb0544876f2be10c715cd
+    - name: OxigenSS_Project_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: 32acddf298bbafa4a8130bf6d057ab43
+    - name: OxigenSS_Project_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: b50af7bcf4841a54d811461c32ff730d
+    - name: OxigenSS_Project_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: 3dcec53e41dc6f141af7db79135191d4
+    - name: OxigenSS_Project_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: aceb47413f3fa3c41b772de63da614ed
+    - name: OxigenSS_Project_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: 10155427e36ddaf49a95db12c539d1de
+    - name: OxigenSS_Project_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: dcd199842e498a84a822d56bfc1e5ff9
+    - name: OxigenSS_Project_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: 5d1043cbb6ea76f4782e2a29a1482ac6
+    - name: OxigenSS_Project_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: f0a04e9d567105843898e53a30d037f1
+    - name: OxigenSS_Project_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: bbdee7b1c6e632040bf6fc3ecece833c
+    - name: OxigenSS_Project_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: 6c5d59c6eaa3f5e4ca18e1dbd6b028d9
+    - name: OxigenSS_Project_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: 86606a12579b9af4bb0452838d0e9ec8
+    - name: OxigenSS_Project_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: 9ac695a7db82dba45bd0b2bafea269c0
+    - name: OxigenSS_Project_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: c3bf610c909e7a14f95d508592f11203
+    - name: OxigenSS_Project_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: 6afc55cf38900e44c9b2463089907842
+    - name: OxigenSS_Project_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: 290f1a8367a63304586ccc5965519e50
+    - name: OxigenSS_Project_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 23
+        y: 12
+        width: 94
+        height: 108
+      spriteId: f8c9314f4dbf6ca42bb0de276142db31
+    - name: OxigenSS_Project_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: cbb1a4a367d1e294e9268a375a2c4224
+    - name: OxigenSS_Project_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: fe2bffa217165414eba759f604679018
+    - name: OxigenSS_Project_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 9bdfb4a37525beb4bb43d58c7cf30bba
+    - name: OxigenSS_Project_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 9493a5cc7c757394b9c2080568698e67
+    - name: OxigenSS_Project_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: a204b2e42bb79e449aead77bdcad04fe
+    - name: OxigenSS_Project_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 09b1dd54a35f4e24f8b4a59cc9d04e6a
+    - name: OxigenSS_Project_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 0
+        y: 0
+        width: 132
+        height: 129
+      spriteId: 07279ad3055535849bac442d5f5037b3
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 132, y: 129}
