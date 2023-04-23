@@ -134,6 +134,8 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
         OnDie?.Invoke(this);
 
+        GameManager.Instance.GameOver(false);
+
 
         if (destroyOnDie)
         {
