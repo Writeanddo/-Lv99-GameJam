@@ -163,60 +163,6 @@ MonoBehaviour:
   MinDistance: 0.5
   MaxDistance: 2.5
   Length: 833
---- !u!114 &-7142318395239190152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Ambiences/Lab
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Ambiences/Lab
-  Guid:
-    Data1: -1107768674
-    Data2: 1279749194
-    Data3: 730598322
-    Data4: -1059428671
-  Banks:
-  - {fileID: 5790900385381275266}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6155864462998105618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Ambiences/Bunker
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Ambiences/Bunker
-  Guid:
-    Data1: 404304811
-    Data2: 1269711565
-    Data3: 1864499600
-    Data4: 1882250690
-  Banks:
-  - {fileID: 5790900385381275266}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-5817610759432782300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,10 +259,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638177287888013459
+  lastModified: 638178008712622729
   FileSizes:
   - Name: Desktop
-    Value: 2348
+    Value: 2338
   Exists: 1
 --- !u!114 &-4559759680328292283
 MonoBehaviour:
@@ -506,9 +452,7 @@ MonoBehaviour:
   - {fileID: 7934404759318143208}
   - {fileID: 5561096707626923262}
   - {fileID: -3149971240861955605}
-  - {fileID: -7142318395239190152}
   - {fileID: 8348541166828564565}
-  - {fileID: -6155864462998105618}
   - {fileID: 5846808334422581865}
   - {fileID: 5720845367830672679}
   - {fileID: -5012461809649389031}
@@ -524,12 +468,13 @@ MonoBehaviour:
   - {fileID: 5490905333138250445}
   - {fileID: -4559759680328292283}
   - {fileID: 3248345728809044036}
+  - {fileID: 238190832379853897}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5790900385381275266}
   StringsBanks:
   - {fileID: -4589343448546314315}
-  cacheTime: 638177287888013459
+  cacheTime: 638178008712622729
   cacheVersion: 131603
 --- !u!114 &61324236560892961
 MonoBehaviour:
@@ -558,6 +503,34 @@ MonoBehaviour:
   MinDistance: 0.5
   MaxDistance: 2.5
   Length: 21000
+--- !u!114 &238190832379853897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience
+  Guid:
+    Data1: 404304811
+    Data2: 1269711565
+    Data3: 1864499600
+    Data4: 1882250690
+  Banks:
+  - {fileID: 5790900385381275266}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2018652023634171041}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 70000
 --- !u!114 &297667258141684706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,6 +559,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 23151
+--- !u!114 &2018652023634171041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Ambience Fade
+  m_EditorClassIdentifier: 
+  Name: Ambience Fade
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2876752810
+    data2: 2404729247
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3248345728809044036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,10 +836,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638177287887970314
+  lastModified: 638178008712592730
   FileSizes:
   - Name: Desktop
-    Value: 8052704
+    Value: 10336768
   Exists: 1
 --- !u!114 &5846808334422581865
 MonoBehaviour:
