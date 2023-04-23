@@ -8,7 +8,7 @@ public class ParameterSetByName : MonoBehaviour
 
     private void Start()
     {
-        Ambience = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Ambience");
+        Ambience = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Ambience");
         Ambience.start();
     }
 
