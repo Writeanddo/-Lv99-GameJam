@@ -210,7 +210,7 @@ public class PlayerController : MonoBehaviour
         newObject.transform.SetParent(canvasRect, false);
         newObject.transform.localPosition = Vector3.zero;
 
-        //GameManager.Instance.TemporaryPause();
+        DisablePlayer();
     }
 
     public void SetPuzzleStop()
@@ -313,7 +313,7 @@ public class PlayerController : MonoBehaviour
         PlayerOxygen.enabled = true;
     }
 
-    public void DesativePlayer()
+    public void DisablePlayer()
     {
         _rigidbody2D.velocity = Vector2.zero;
         _rigidbody2D.gravityScale = 0;

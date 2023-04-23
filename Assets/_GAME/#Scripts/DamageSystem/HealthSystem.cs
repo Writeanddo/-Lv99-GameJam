@@ -25,6 +25,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public SpriteRenderer spriteTemp;
     public Color coloralpha;
 
+    public Color colorBlue;
 
     private void Start()
     {
@@ -112,7 +113,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
         for (var i = 0; i < 2; i++)
         {
-            spriteTemp.color = Color.blue;
+            spriteTemp.color = colorBlue;
             yield return new WaitForSeconds(0.05f);
 
             spriteTemp.color = coloralpha;
