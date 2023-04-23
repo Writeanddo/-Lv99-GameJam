@@ -13,7 +13,7 @@ public class UiDetectGamepad : MonoBehaviour
 
     private void Start()
     {
-        Desactive();
+        //Desactive();
     }
 
     private void OnEnable()
