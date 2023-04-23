@@ -52,9 +52,6 @@ public class PlayerOxygen : MonoBehaviour
     {
         _currentOxygen -= oxygen;
 
-        if(_currentOxygen < 0 )
-            _currentOxygen = 0;
-
         OnUpdateOxygen?.Invoke(_currentOxygen, maxOxygen);
     }
 
@@ -68,10 +65,5 @@ public class PlayerOxygen : MonoBehaviour
         _currentOxygen -= percentToRemove;
 
         OnUpdateOxygen?.Invoke(_currentOxygen, maxOxygen);
-    }
-
-    public bool IsOnMaxOxygen()
-    {
-        return _currentOxygen >= maxOxygen;
     }
 }
