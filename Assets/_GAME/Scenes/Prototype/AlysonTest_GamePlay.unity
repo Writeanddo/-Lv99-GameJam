@@ -298,13 +298,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 285593794499159954, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
+      propertyPath: collider2d
+      value: 
+      objectReference: {fileID: 5994579168102822680, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
     - target: {fileID: 6616464568432106851, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
       propertyPath: m_Name
       value: PLAYER
-      objectReference: {fileID: 0}
-    - target: {fileID: 6616464568432106853, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6616464568432106854, guid: 5de75996d4f0da9469eb653b4a5c2333, type: 3}
       propertyPath: m_RootOrder

@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 6616464568432106852}
   - component: {fileID: 1698741927264819768}
   - component: {fileID: 2776558831280371864}
-  - component: {fileID: 5994579168102822680}
   - component: {fileID: 1700325554}
   - component: {fileID: 285593794499159954}
   - component: {fileID: 856890664150359679}
@@ -195,22 +194,6 @@ MonoBehaviour:
   isLookLeft: 0
   currentCilinder: {fileID: 0}
   PlayerOxygen: {fileID: 0}
---- !u!70 &5994579168102822680
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6616464568432106851}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0017604828, y: -0.069000006}
-  m_Size: {x: 0.14844227, y: 0.5638536}
-  m_Direction: 0
 --- !u!50 &1700325554
 Rigidbody2D:
   serializedVersion: 4
@@ -248,7 +231,7 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 20
   destroyOnDie: 0
   enemyXp: 0
-  collider2d: {fileID: 5994579168102822680}
+  collider2d: {fileID: 0}
   spriteTemp: {fileID: 6616464568432106853}
   coloralpha: {r: 1, g: 1, b: 1, a: 0.5882353}
   colorBlue: {r: 0, g: 0.6185813, b: 0.80784315, a: 1}
