@@ -23,7 +23,7 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
     void Start()
     {
         inputReference = GetComponent<InputReference>();
-        RandomizeIds();
+      //  RandomizeIds();
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
         
     }
 
-    private void RandomizeIds()
+    public void RandomizeIds()
     {
         // Crie uma lista para conter os números inteiros selecionados aleatoriamente
         List<int> selectedIds = new List<int>();
