@@ -28,7 +28,7 @@ public class UIGameplay : MonoBehaviour
 
     private void Start()
     {
-        playerController.OnUpdateOxygenQuantity += UpdateOxygen;
+        playerController.PlayerOxygen.OnUpdateOxygen += UpdateOxygen;
         
         healthSystem.OnChangeHealth += UpdateLifeBar;
 
@@ -39,7 +39,7 @@ public class UIGameplay : MonoBehaviour
 
     private void OnDestroy()
     {
-        playerController.OnUpdateOxygenQuantity -= UpdateOxygen;
+        playerController.PlayerOxygen.OnUpdateOxygen -= UpdateOxygen;
         
         healthSystem.OnChangeHealth -= UpdateLifeBar;
 

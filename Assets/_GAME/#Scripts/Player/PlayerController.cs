@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.InputSystem;
@@ -7,27 +6,31 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(InputReference))]
 public class PlayerController : MonoBehaviour
 {
-    public event Action<float, float> OnUpdateOxygenQuantity;
-
     [Header("Player Status")]
-    public Animator player;
-    public float moveSpeed = 5f;
-    public float jumpForce = 124f;
+    [SerializeField] private Animator player;
+
+    private SpriteRenderer _playerSprite;
+    private Collider _playerCollider;
+
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float jumpForce = 124f;
     public bool isInteraction = false;
+    
     public bool isPressedPuzzle;
     public bool isPuzzleStart;
+    
     public GameObject puzzleCurrent;
     [SerializeField] private bool isLookingLeft;
 
     [Header("Ground")]
-    public LayerMask whatIsGround;
-    public bool isGrounded;
+    [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private bool isGrounded;
     private bool isJumping;
-    public GameObject groundCheck;
+    [SerializeField] private GameObject groundCheck;
 
     [Header("SizeGizmo")]
-    public float groundXSize;
-    public float groundYSize;
+    [SerializeField] private float groundXSize;
+    [SerializeField] private float groundYSize;
 
     [Header("Slopes")]
     [SerializeField] private float slopesValidadeDistance = 0.4f;
@@ -38,17 +41,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PhysicsMaterial2D frictionMaterial;
 
     [HorizontalLine(1, EColor.Green)]
-    public InputActionReference interactAction;
+    [SerializeField] private InputActionReference interactAction;
 
     [Header("Oxygen Player")]
-    public float maxPlayerOxygen = 1f;
-    public float currentPlayerOxygen;
-
-    [Header("Stunned")]
-    [SerializeField] private bool isStunned;
+    [SerializeField] private float maxPlayerOxygen = 1f;
+    [SerializeField] private float currentPlayerOxygen;
     [SerializeField] private bool isLookLeft = false;
-    [SerializeField] private float stunnedTime = 1;
-    [SerializeField] private float stunForce = 15;
 
     private InputReference _inputReference;
 
@@ -57,29 +55,31 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 perpendicularSpeed;
     private float slopeAngle;
-    internal OxygenSystem oxygenCilinder;
+
+
+    public OxygenSystem currentCilinder;
+    private bool blockPlayerInputs;
+
+    public PlayerOxygen PlayerOxygen;
 
     private void Awake()
     {
         _inputReference = GetComponent<InputReference>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         player = GetComponent<Animator>();
+        _playerSprite = GetComponent<SpriteRenderer>();
+        _playerCollider = GetComponent<Collider>();
+        PlayerOxygen = GetComponent<PlayerOxygen>();
+
         health = GetComponent<IDamageable>();
     }
 
     private void Start()
     {
-        //health.OnTakeDamage += Stun;
-
         interactAction.action.Enable();
         interactAction.action.started += InteractStarted;
         interactAction.action.performed += InteractPerformed;
         interactAction.action.canceled += InteractCanceled;
-    }
-
-    private void OnDestroy()
-    {
-      //  health.OnTakeDamage -= Stun;
     }
 
     private void Update()
@@ -88,20 +88,16 @@ public class PlayerController : MonoBehaviour
          
         DetectSlopes();
 
-        if (health.IsDie)
+        if (BlockInput())
             return;
 
         if (_inputReference.PauseButton.IsPressed)
         {
-
             Debug.Log("Pause");
             GameManager.Instance.PauseResume();
         }
 
         if (GameManager.Instance && GameManager.Instance.Paused)
-            return;
-
-        if (isStunned)
             return;
 
         if (isGrounded && isJumping)
@@ -124,22 +120,29 @@ public class PlayerController : MonoBehaviour
             isPressedPuzzle = true;
             SetPuzzleStart();
         }
-
-       
-
     }
+
+    private bool BlockInput()
+    {
+        if (health.IsDie)
+            return true;
+
+        if (blockPlayerInputs)
+            return true;
+
+        return false;
+    }
+
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector2(groundXSize, groundYSize), 0f, whatIsGround);
 
-        if (isPuzzleStart)
-        {
+        if(BlockInput())
             return;
-        }
 
         OnMovimentPlayer();
 
-        if (isStunned || health.IsDie)
+        if (health.IsDie)
             return;
 
 
@@ -168,35 +171,35 @@ public class PlayerController : MonoBehaviour
 
     private void InteractStarted(InputAction.CallbackContext obj)
     {
+        if (BlockInput())
+            return;
 
+        if (currentCilinder == null)
+            return;
+
+        currentCilinder.StartCilinder();
     }
 
     private void InteractPerformed(InputAction.CallbackContext obj) 
     {
+        if (BlockInput())
+            return;
+
+        if (currentCilinder == null)
+            return;
+
+        currentCilinder.HoldCilinder();
     }
 
     private void InteractCanceled(InputAction.CallbackContext obj) //programar o input cancel (buttonUP)
     {
-        
-    }
+        if (BlockInput())
+            return;
 
+        if (currentCilinder == null)
+            return;
 
-    private void Stun(Vector3 direction)
-    {
-        isStunned = true;
-
-        var dir = transform.position - direction;
-
-        _rigidbody2D.AddForce(dir.normalized * stunForce);
-
-        StartCoroutine(IE_Stun());
-    }
-
-    private IEnumerator IE_Stun()
-    {
-        yield return new WaitForSeconds(stunnedTime);
-
-        isStunned = false;
+        currentCilinder.StopCilinder();
     }
 
     private void SetPuzzleStart()
@@ -212,9 +215,13 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.TemporaryPause();
     }
 
+    public void SetPuzzleStop()
+    {
+        GameManager.Instance.ResumeTemporaryPause();
+    }
+
     private void OnMovimentPlayer()
     {
-
       if (isOnSlope)
         {
             if(isJumping)
@@ -246,7 +253,10 @@ public class PlayerController : MonoBehaviour
             slopeAngle = Vector2.Angle(hitSlope.normal, Vector2.up);
             isOnSlope = slopeAngle != 0;
         }
-
+        else
+        {
+            isOnSlope = false;
+        }
 
         if (isOnSlope && _inputReference.Movement.x == 0)
         {
@@ -294,5 +304,19 @@ public class PlayerController : MonoBehaviour
 
         Gizmos.DrawRay(transform.position, Vector2.down * slopesValidadeDistance);
 
+    }
+
+    public void ActivePlayer()
+    {
+        _playerCollider.enabled = true;
+        _playerSprite.enabled = true;
+        blockPlayerInputs = false;
+    }
+
+    public void DesativePlayer()
+    {
+        _playerCollider.enabled = false;
+        _playerSprite.enabled = false;
+        blockPlayerInputs = true;
     }
 }
