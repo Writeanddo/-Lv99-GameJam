@@ -190,6 +190,34 @@ MonoBehaviour:
   MinDistance: 0.5
   MaxDistance: 2.5
   Length: 833
+--- !u!114 &-5177659650178349341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Ambience
+  Guid:
+    Data1: 404304811
+    Data2: 1269711565
+    Data3: 1864499600
+    Data4: 1882250690
+  Banks:
+  - {fileID: 5790900385381275266}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8179614498542767892}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 70000
 --- !u!114 &-5012461809649389031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,10 +287,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638178039158198543
+  lastModified: 638178521577126481
   FileSizes:
   - Name: Desktop
-    Value: 2384
+    Value: 2606
   Exists: 1
 --- !u!114 &-4559759680328292283
 MonoBehaviour:
@@ -450,6 +478,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &-76294187220025229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Pause/Pause
+  m_EditorClassIdentifier: 
+  Name: Pause
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3713624242
+    data2: 1311740188
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Play
+  - Pause
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,14 +549,18 @@ MonoBehaviour:
   - {fileID: 5490905333138250445}
   - {fileID: -4559759680328292283}
   - {fileID: 3248345728809044036}
-  - {fileID: 238190832379853897}
   - {fileID: -2037148033950190951}
-  EditorParameters: []
+  - {fileID: 6792432727638920432}
+  - {fileID: -5177659650178349341}
+  - {fileID: 7358528275998956914}
+  EditorParameters:
+  - {fileID: 3683940870164494816}
+  - {fileID: 2662928085453635973}
   MasterBanks:
   - {fileID: 5790900385381275266}
   StringsBanks:
   - {fileID: -4589343448546314315}
-  cacheTime: 638178039158198543
+  cacheTime: 638178521577126481
   cacheVersion: 131603
 --- !u!114 &61324236560892961
 MonoBehaviour:
@@ -531,34 +589,6 @@ MonoBehaviour:
   MinDistance: 0.5
   MaxDistance: 2.5
   Length: 21000
---- !u!114 &238190832379853897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Ambience
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Ambience
-  Guid:
-    Data1: 404304811
-    Data2: 1269711565
-    Data3: 1864499600
-    Data4: 1882250690
-  Banks:
-  - {fileID: 5790900385381275266}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 2018652023634171041}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 70000
 --- !u!114 &297667258141684706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,7 +617,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 23151
---- !u!114 &2018652023634171041
+--- !u!114 &2662928085453635973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -597,19 +627,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience/Ambience Fade
+  m_Name: parameter:/Pause
   m_EditorClassIdentifier: 
-  Name: Ambience Fade
-  StudioPath: 
+  Name: Pause
+  StudioPath: parameter:/Pause
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 2876752810
-    data2: 2404729247
-  Type: 0
-  IsGlobal: 0
-  Labels: []
+    data1: 3713624242
+    data2: 1311740188
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Play
+  - Pause
   Exists: 1
 --- !u!114 &3248345728809044036
 MonoBehaviour:
@@ -654,13 +686,39 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 2203984692
     data2: 2464155831
   Type: 0
   IsGlobal: 0
   Labels: []
+  Exists: 1
+--- !u!114 &3683940870164494816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  StudioPath: parameter:/Parameter 1
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3990907441
+    data2: 1121777681
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Paused
+  - Running
   Exists: 1
 --- !u!114 &4928959481770869805
 MonoBehaviour:
@@ -864,10 +922,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Project/Lvl 99 Jam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638178039158147621
+  lastModified: 638178521577116450
   FileSizes:
   - Name: Desktop
-    Value: 10400256
+    Value: 10405088
   Exists: 1
 --- !u!114 &5846808334422581865
 MonoBehaviour:
@@ -893,6 +951,61 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6792432727638920432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Pause
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Pause
+  Guid:
+    Data1: 572928041
+    Data2: 1204444762
+    Data3: -2070747255
+    Data4: 823117180
+  Banks:
+  - {fileID: 5790900385381275266}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7358528275998956914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Pause
+  m_EditorClassIdentifier: 
+  Path: event:/Pause
+  Guid:
+    Data1: -487477761
+    Data2: 1285653946
+    Data3: 1307586741
+    Data4: -893954025
+  Banks:
+  - {fileID: 5790900385381275266}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -76294187220025229}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -950,6 +1063,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &8179614498542767892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Ambience Fade
+  m_EditorClassIdentifier: 
+  Name: Ambience Fade
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2876752810
+    data2: 2404729247
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8253683707463574778
 MonoBehaviour:
   m_ObjectHideFlags: 0

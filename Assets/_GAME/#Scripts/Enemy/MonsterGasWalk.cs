@@ -21,7 +21,12 @@ public class MonsterGasWalk : MonoBehaviour
     private IAVisionCircle m_IaVisionCircle;
     public Collider2D[] hitInfo;
     public bool isFollow;
+    public bool Patrulha;
     private Vector2 initialPosition;
+
+
+    [SerializeField] private float followDelayTime = 2f; // tempo de atraso em segundos
+    [SerializeField] private float followDelayTimer = 0f;
 
     void Start()
     {
@@ -42,20 +47,26 @@ public class MonsterGasWalk : MonoBehaviour
             hitInfo = Physics2D.OverlapCircleAll(m_IaVisionCircle.hitBox.position, m_IaVisionCircle.visionRange, m_IaVisionCircle.hitMask);
             foreach (var hit in hitInfo)
             {
-                isFollow = Check(hit);
+                if (followDelayTimer >= followDelayTime)
+                {
+                    isFollow = Check(hit);
+                    followDelayTimer = 0f;
+                    break;
 
+                }
             }
 
         }
 
         if (moveSpeed < 0 && isLookLeft == false && !isFollow)
         {
-
+            print("Patrulha ESQUERDA");
             Flip();
         }
         else if (moveSpeed > 0 && isLookLeft == true && !isFollow)
         {
 
+            print("Patrulha DIREITA");
             Flip();
         }
 
@@ -63,6 +74,7 @@ public class MonsterGasWalk : MonoBehaviour
 
         if (!isFollow)
         {
+            Patrulha = true;
             positionY = transform.position.y;
             transform.Translate(new Vector2(moveSpeed * Time.deltaTime, 0));
             float y = positionY + ocilacaoDistance * Mathf.Sin((Time.time + floatOffset) * ocilacaoSpeed);
@@ -79,15 +91,43 @@ public class MonsterGasWalk : MonoBehaviour
         }
         else if (isFollow && hitInfo.Length>0)
         {
-       
-             transform.position = Vector3.MoveTowards(transform.position, hitInfo[0].transform.position, moveSpeed * Time.deltaTime);
+            Patrulha = false;
             if (hitInfo[0].transform.position.x > transform.position.x && isLookLeft)
             {
+                Debug.Log("<color=red> ANTES DIREITA: " + moveSpeed + "</color>");
+                if (moveSpeed <= 0)
+                    moveSpeed *= -1;
+
                 Flip();
+                Debug.Log("<color=green> DEPOIS DIREITA: " + moveSpeed + "</color>");
             }
             else if (hitInfo[0].transform.position.x < transform.position.x && !isLookLeft)
             {
+                Debug.Log("<color=blue> ANTES EQUERDA: " + moveSpeed + "</color>");
+                //if (moveSpeed >= 0)
+                //    moveSpeed *= -1;
                 Flip();
+                Debug.Log("<color=magenta> DEPOIS EQUERDA: " + moveSpeed + "</color>");
+            }
+            transform.position = Vector3.MoveTowards(transform.position, hitInfo[0].transform.position, moveSpeed * Time.deltaTime);
+
+            // verificar se o jogador está fora do alcance de visão do inimigo
+            if (!m_IaVisionCircle.IsVisible(hitInfo[0]))
+            {
+                // jogador está fora do alcance, iniciar o temporizador de atraso
+                isFollow = false;
+                followDelayTimer = 0f;
+            }
+        }
+
+        // atualizar o temporizador de atraso
+        if (followDelayTimer < followDelayTime)
+        {
+            followDelayTimer += Time.deltaTime;
+            if (followDelayTimer >= followDelayTime)
+            {
+                // tempo de atraso atingido, redefinir isFollow para false
+                isFollow = false;
             }
         }
 
