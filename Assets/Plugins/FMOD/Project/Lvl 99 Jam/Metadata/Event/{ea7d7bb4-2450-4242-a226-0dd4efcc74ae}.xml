@@ -2,10 +2,10 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{ea7d7bb4-2450-4242-a226-0dd4efcc74ae}">
 		<property name="name">
-			<value>O2 Fill Up</value>
+			<value>O2 Fill</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{8169c3da-9be8-4429-ba26-8bb07780bc3f}</destination>
@@ -59,12 +59,22 @@
 	<object class="EventAutomatableProperties" id="{29daaf3f-1e85-49e2-a752-ec0c3937fc2b}" />
 	<object class="MarkerTrack" id="{fa36adbd-b230-404e-80a6-c1cdaff0bc45}" />
 	<object class="GroupTrack" id="{1779870a-c71f-4aaf-90fc-2fc344f21bef}">
+		<relationship name="modules">
+			<destination>{551dd6f9-7c0d-43f8-8307-f25e87465b88}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{475d26d2-a496-469f-aa73-4796af326926}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{b21cb947-54ad-4b2c-a5e2-f66a6880f788}" />
+	<object class="Timeline" id="{b21cb947-54ad-4b2c-a5e2-f66a6880f788}">
+		<relationship name="modules">
+			<destination>{551dd6f9-7c0d-43f8-8307-f25e87465b88}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{da318901-7795-4267-b79e-1cfbadd33943}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{56a25eb0-6211-4667-b3db-dd810af46ebf}</destination>
 		</relationship>
@@ -81,6 +91,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{410b0453-d642-44ea-8f28-688a9d48447a}" />
+	<object class="SingleSound" id="{551dd6f9-7c0d-43f8-8307-f25e87465b88}">
+		<property name="length">
+			<value>4.2999999999999998</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{64cd4174-e67d-45bf-b0cb-d56ca0d542f1}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{475d26d2-a496-469f-aa73-4796af326926}">
 		<property name="name">
 			<value>Audio 1</value>
