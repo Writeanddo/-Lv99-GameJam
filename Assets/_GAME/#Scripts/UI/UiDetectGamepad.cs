@@ -18,39 +18,46 @@ public class UiDetectGamepad : MonoBehaviour
 
     private void OnEnable()
     {
-        InputSystem.onActionChange += (obj, change) =>
+        InputSystem.onActionChange += InputSystem_onActionChange;
+    }
+
+    private void OnDisable()
+    {
+        InputSystem.onActionChange -= InputSystem_onActionChange;
+    }
+
+    private void InputSystem_onActionChange(object obj, InputActionChange change)
+    {
+        if (change == InputActionChange.ActionPerformed)
         {
-            if (change == InputActionChange.ActionPerformed)
+            var inputAction = (InputAction)obj;
+            var lastControl = inputAction.activeControl;
+            var lastDevice = lastControl.device;
+
+            if (lastDevice == _lastDevice)
+                return;
+
+            DisableAll();
+
+            var alo = lastDevice.displayName.ToLower();
+
+            if (alo.Contains("keyboard") || alo.Contains("mouse"))
             {
-                var inputAction = (InputAction)obj;
-                var lastControl = inputAction.activeControl;
-                var lastDevice = lastControl.device;
-
-                if (lastDevice == _lastDevice)
-                    return;
-
-                DisableAll();
-
-                var alo = lastDevice.displayName.ToLower();
-
-                if(alo.Contains("keyboard") || alo.Contains("mouse"))
-                {
-                    keyboard.SetActive(true);
-                }
-
-                if(alo.Contains("xbox"))
-                {
-                    xbox.SetActive(true);
-                }
-
-                if(alo.Contains("playstation") || alo.Contains("ps"))
-                {
-                    ps.SetActive(true);
-                }
-
-                _lastDevice = lastDevice;
+                keyboard.SetActive(true);
             }
-        };
+
+            if (alo.Contains("xbox"))
+            {
+                xbox.SetActive(true);
+            }
+
+            if (alo.Contains("playstation") || alo.Contains("ps"))
+            {
+                ps.SetActive(true);
+            }
+
+            _lastDevice = lastDevice;
+        }
     }
 
     private void DisableAll()
