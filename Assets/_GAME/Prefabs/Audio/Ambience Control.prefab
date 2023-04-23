@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4954774771420262907}
   - component: {fileID: 4262217746187907175}
-  - component: {fileID: -8091256287691216075}
+  - component: {fileID: 4606342925475367275}
   m_Layer: 0
   m_Name: Ambience Control
   m_TagString: Untagged
@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682f6edb169af154db8a0c615c54daef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &-8091256287691216075
-BoxCollider2D:
+--- !u!60 &4606342925475367275
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -68,6 +68,10 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: -0.95105654, y: 0.30901697}
+      - {x: -0.5877852, y: -0.80901706}
+      - {x: 0.58778536, y: -0.80901694}
+      - {x: 0.9510565, y: 0.30901712}
