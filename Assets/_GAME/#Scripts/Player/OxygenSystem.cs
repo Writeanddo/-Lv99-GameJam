@@ -1,11 +1,14 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum CilinderState
 {
     Start,
     Holding,
-    Stopped
+    Stopped,
+    Reverse,
+    Waiting
 }
 
 public class OxygenSystem : MonoBehaviour
@@ -14,9 +17,11 @@ public class OxygenSystem : MonoBehaviour
     private Animator oxigenAn;
 
     [Header("Oxygen Cilinder")]
-    [SerializeField] private float playerAnimationTime = 2f;
+    [SerializeField] private float playerAnimationTime = 1.1f;
+    [SerializeField] private float upAnimationTime = 1.1f;
 
     [SerializeField] private SpriteRenderer barOxigenSr;
+    [SerializeField] private SpriteRenderer barOxigenSrBG;
     [SerializeField] private Transform animationPoint;
     [SerializeField] private AnimatorDetectGamepad gamepadUI;
 
@@ -26,76 +31,122 @@ public class OxygenSystem : MonoBehaviour
 
     private float cilinderOxygen = 0;
 
+    private bool validCancel;
+    private bool validHolding;
+
     void Start()
     {
         _playerController = FindObjectOfType<PlayerController>();
         oxigenAn = GetComponent<Animator>();
 
-        barOxigenSr.size = new Vector2(0.56f, 0f);
+        barOxigenSr.gameObject.SetActive(false);
+        barOxigenSrBG.gameObject.SetActive(false);
+
+        state = CilinderState.Waiting;
     }
 
     public void StartCilinder()
     {
         if (canInteractWithCilinder && isOxygenStart == false)
         {
+            canInteractWithCilinder = false;
+            isOxygenStart = true;
+
             StartCoroutine(Start_IEnumerator());
         }
     }
 
     private IEnumerator Start_IEnumerator()
     {
-        state = CilinderState.Start;
-
-        barOxigenSr.gameObject.SetActive(true);
-
-        canInteractWithCilinder = false;
-            isOxygenStart = true;
+        if (state == CilinderState.Waiting)
+        {
+            state = CilinderState.Start;
 
             oxigenAn.SetTrigger("Start");
-    
+
+            _playerController.ResetWalk();
             _playerController.DesativePlayer();
-
             GameManager.Instance.TemporaryPause();
-
-            StartCoroutine(ReloadOxygenBar());
 
             yield return new WaitForSecondsRealtime(playerAnimationTime);
 
-            state = CilinderState.Holding;
+            oxigenAn.SetTrigger("Stop");
 
+            state = CilinderState.Stopped;
             gamepadUI.Active();
+
+            validHolding = true;
+        }
+    }
+
+    private IEnumerator ReloadOxygenBar()
+    {
+        gamepadUI.Disable();
+
+        barOxigenSr.gameObject.SetActive(true);
+        barOxigenSrBG.gameObject.SetActive(true);
+
+        barOxigenSrBG.size = new(barOxigenSrBG.size.x, 1);
+
+        while (state == CilinderState.Holding)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                cilinderOxygen += 0.01f;
+                barOxigenSr.size = new Vector2(0.56f, cilinderOxygen);
+                yield return new WaitForSecondsRealtime(0.01f);
+
+            }
+
+            for (int i = 0; i < 100; i++)
+            {
+                cilinderOxygen -= 0.01f;
+                barOxigenSr.size = new Vector2(0.56f, cilinderOxygen);
+                yield return new WaitForSecondsRealtime(0.01f);
+            }
+        }
     }
 
     public void HoldCilinder()
     {
-        if(state  == CilinderState.Holding)
+        if (!validHolding)
+            return;
+
+        if (state == CilinderState.Stopped)
         {
-            gamepadUI.Disable();
-        }   
+            state = CilinderState.Holding;
+
+            validCancel = true;
+
+            StartCoroutine(ReloadOxygenBar());
+        }
     }
 
     public void StopCilinder()
     {
-        if(state == CilinderState.Holding)
+        if (state == CilinderState.Holding)
         {
-            oxigenAn.SetTrigger("Stop");
-
-            state = CilinderState.Stopped;
+            state = CilinderState.Reverse;
 
             _playerController.PlayerOxygen.AddOxygen(cilinderOxygen);
 
             cilinderOxygen = 0;
 
             isOxygenStart = false;
-            
+
             barOxigenSr.size = new Vector2(0.56f, cilinderOxygen);
-           
 
             StopCoroutine(ReloadOxygenBar());
-            
+
             StartCoroutine(WaitForAnimation());
 
             barOxigenSr.gameObject.SetActive(false);
+            barOxigenSrBG.gameObject.SetActive(false);
+
+            barOxigenSrBG.size = new(barOxigenSrBG.size.x, 0);
+
+            validCancel = false;
+            validHolding = false;
         }
     }
 
@@ -103,39 +154,22 @@ public class OxygenSystem : MonoBehaviour
     {
         oxigenAn.SetTrigger("Reverse");
 
-        yield return new WaitForSecondsRealtime(playerAnimationTime);
-
-        GameManager.Instance.ResumeTemporaryPause();
+        yield return new WaitForSecondsRealtime(upAnimationTime);
 
         _playerController.transform.position = animationPoint.position;
         _playerController.ActivePlayer();
-    }
 
-    private IEnumerator ReloadOxygenBar()
-    {
-        if (isOxygenStart == true)
-        {
-            for (int i = 0; i < 100; i++)
-            {
-                    cilinderOxygen += 0.01f;
-                    barOxigenSr.size = new Vector2(0.56f, cilinderOxygen);
-                    yield return new WaitForSecondsRealtime(0.01f);
-            }
+        GameManager.Instance.ResumeTemporaryPause();
 
-            for (int i = 0; i < 100; i++)
-            {
-                    cilinderOxygen -= 0.01f;
-                    barOxigenSr.size = new Vector2(0.56f, cilinderOxygen);
-                    yield return new WaitForSecondsRealtime(0.01f);
-            }
-
-            StartCoroutine(ReloadOxygenBar());
-        }
+        state = CilinderState.Waiting;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.TryGetComponent(out PlayerController player))
+        if (state != CilinderState.Waiting)
+            return;
+
+        if (collision.gameObject.TryGetComponent(out PlayerController player))
         {
             player.currentCilinder = this;
             _playerController = player;
@@ -144,10 +178,23 @@ public class OxygenSystem : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (state != CilinderState.Waiting)
+            return;
+
         if (collision.gameObject.TryGetComponent(out PlayerController player))
         {
             player.currentCilinder = null;
             _playerController = null;
         }
+    }
+
+    public bool CanInteract()
+    {
+        return canInteractWithCilinder;
+    }
+
+    public bool ValidCancel()
+    {
+        return validCancel;
     }
 }

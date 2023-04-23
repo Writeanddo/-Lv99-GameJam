@@ -26,20 +26,13 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
 
     private PlayerInputMap playerInputs;
 
-   
-
-
     private void Start()
     {
         playerInputs = new PlayerInputMap();
 
         playerInputs.Gameplay.SetCallbacks(this);
         playerInputs.Enable();
-
-        
     }
-
-   
 
     public void OnMousePosition(InputAction.CallbackContext context)
     {
@@ -66,18 +59,16 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
         StartCoroutine(ResetButton(PauseButton));
     }
 
+    public void OnInteracao(InputAction.CallbackContext context)
+    {
+        interacaoButton.IsPressed = context.ReadValueAsButton();
+    }
+
     private IEnumerator ResetButton(InputButton button)
     {
         yield return new WaitForEndOfFrame();
 
         if (button.IsPressed)
             button.IsPressed = false;
-    }
-
-
-
-    public void OnInteracao(InputAction.CallbackContext context)
-    {
-        interacaoButton.IsPressed = context.ReadValueAsButton();
     }
 }

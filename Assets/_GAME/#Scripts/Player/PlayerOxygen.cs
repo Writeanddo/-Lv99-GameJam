@@ -14,6 +14,8 @@ public class PlayerOxygen : MonoBehaviour
     private IDamageable damageable;
     private float _currentOxygen;
 
+    private bool waiting;
+
     private void Awake()
     {
         damageable = GetComponent<IDamageable>();
@@ -32,7 +34,7 @@ public class PlayerOxygen : MonoBehaviour
         {
             _currentOxygen -= percentToRemove;
 
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(0.01f);
            
             OnUpdateOxygen?.Invoke(_currentOxygen, maxOxygen);
         }
@@ -42,7 +44,7 @@ public class PlayerOxygen : MonoBehaviour
             if(_currentOxygen <= 0)
             {
                 damageable.TakeDamage(Vector3.zero, damage);
-                yield return new WaitForEndOfFrame();
+                yield return new WaitForSeconds(0.01f);
 
                 OnUpdateOxygen?.Invoke(_currentOxygen, maxOxygen);
             }
@@ -66,5 +68,15 @@ public class PlayerOxygen : MonoBehaviour
             _currentOxygen = maxOxygen;
 
         _currentOxygen -= percentToRemove;
+    }
+
+    public void Block()
+    {
+        waiting = true;
+    }
+
+    public void RemoveBlock()
+    {
+        waiting = false;
     }
 }

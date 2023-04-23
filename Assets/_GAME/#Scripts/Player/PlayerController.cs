@@ -1,7 +1,5 @@
-using System;
 using UnityEngine;
 using NaughtyAttributes;
-using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(InputReference))]
 public class PlayerController : MonoBehaviour
@@ -15,10 +13,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 124f;
     public bool isInteraction = false;
-    
+
     public bool isPressedPuzzle;
     public bool isPuzzleStart;
-    
+
     public GameObject puzzleCurrent;
     [SerializeField] private bool isLookingLeft;
 
@@ -41,7 +39,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PhysicsMaterial2D frictionMaterial;
 
     [HorizontalLine(1, EColor.Green)]
-    [SerializeField] private InputActionReference interactAction;
     [SerializeField] private bool isLookLeft = false;
 
     private InputReference _inputReference;
@@ -55,6 +52,7 @@ public class PlayerController : MonoBehaviour
 
     public OxygenSystem currentCilinder;
     private bool blockPlayerInputs;
+    private bool isStartedCilinder;
 
     public PlayerOxygen PlayerOxygen;
 
@@ -70,21 +68,36 @@ public class PlayerController : MonoBehaviour
         health = GetComponent<IDamageable>();
     }
 
-    private void Start()
-    {
-        interactAction.action.Enable();
-        interactAction.action.started += InteractStarted;
-        interactAction.action.performed += InteractPerformed;
-        interactAction.action.canceled += InteractCanceled;
-    }
-
     private void Update()
     {
         player.SetFloat("speedY", _rigidbody2D.velocity.y);
-         
+
         DetectSlopes();
 
-        if (BlockInput())
+        if (health.IsDie)
+            return;
+
+        if(currentCilinder && isJumping == false)
+        {
+            if (_inputReference.interacaoButton.IsPressed && currentCilinder.CanInteract() && !isStartedCilinder)
+            {
+                isStartedCilinder = true;
+                currentCilinder.StartCilinder();
+            }
+
+            if (_inputReference.interacaoButton.IsPressed && isStartedCilinder)
+            {
+                currentCilinder.HoldCilinder();
+            }
+
+            if (!_inputReference.interacaoButton.IsPressed && isStartedCilinder && currentCilinder.ValidCancel())
+            {
+                isStartedCilinder = false;
+                currentCilinder.StopCilinder();
+            }
+        }
+
+        if (blockPlayerInputs)
             return;
 
         if (_inputReference.PauseButton.IsPressed)
@@ -92,6 +105,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Pause");
             GameManager.Instance.PauseResume();
         }
+
 
         if (GameManager.Instance && GameManager.Instance.Paused)
             return;
@@ -106,10 +120,13 @@ public class PlayerController : MonoBehaviour
             JUMP();
         }
 
-        if(_inputReference.JumpButton.IsPressed == false && isGrounded == false )
+        if (_inputReference.JumpButton.IsPressed == false && isGrounded == false)
         {
 
         }
+
+        if (isJumping)
+            return;
 
         if (_inputReference.interacaoButton.IsPressed && isInteraction && !isPressedPuzzle)
         {
@@ -118,23 +135,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private bool BlockInput()
-    {
-        if (health.IsDie)
-            return true;
-
-        if (blockPlayerInputs)
-            return true;
-
-        return false;
-    }
-
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector2(groundXSize, groundYSize), 0f, whatIsGround);
-
-        if(BlockInput())
-            return;
 
         OnMovimentPlayer();
 
@@ -165,37 +168,9 @@ public class PlayerController : MonoBehaviour
         player.SetBool("isGrounded", isGrounded);
     }
 
-    private void InteractStarted(InputAction.CallbackContext obj)
+    public void ResetWalk()
     {
-        if (BlockInput())
-            return;
-
-        if (currentCilinder == null)
-            return;
-
-        currentCilinder.StartCilinder();
-    }
-
-    private void InteractPerformed(InputAction.CallbackContext obj) 
-    {
-        if (BlockInput())
-            return;
-
-        if (currentCilinder == null)
-            return;
-
-        currentCilinder.HoldCilinder();
-    }
-
-    private void InteractCanceled(InputAction.CallbackContext obj) //programar o input cancel (buttonUP)
-    {
-        if (BlockInput())
-            return;
-
-        if (currentCilinder == null)
-            return;
-
-        currentCilinder.StopCilinder();
+        player.SetBool("isWalk", false);
     }
 
     private void SetPuzzleStart()
@@ -218,9 +193,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnMovimentPlayer()
     {
-      if (isOnSlope)
+        if (isOnSlope)
         {
-            if(isJumping)
+            if (isJumping)
             {
                 isOnSlope = false;
             }
@@ -288,10 +263,10 @@ public class PlayerController : MonoBehaviour
         isJumping = false;
     }
 
-   public void OnDelayJump()
-   {
-        _rigidbody2D.velocity = new Vector2 (_rigidbody2D.velocity.x, 0);
-   }
+    public void OnDelayJump()
+    {
+        _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
+    }
 
     private void OnDrawGizmos()
     {
@@ -312,6 +287,8 @@ public class PlayerController : MonoBehaviour
 
     public void DesativePlayer()
     {
+        _rigidbody2D.velocity = Vector2.zero;
+        ResetWalk();
         _playerCollider.enabled = false;
         _playerSprite.enabled = false;
         blockPlayerInputs = true;
