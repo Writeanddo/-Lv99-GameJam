@@ -50,13 +50,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.5
+  moveSpeedFollow: 0.5
   ocilacaoSpeed: 1
-  ocilacaoDistance: 0.01
+  ocilacaoDistance: 0.04
   damage: 1
   positionY: 0
   patrolTime: 8
+  isLookLeft: 0
   hitInfo: []
   isFollow: 0
+  isTouchPlayer: 0
 --- !u!114 &1580801658833175198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3d929c418b80a4aa73b0d9a0e01a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRange: 2
+  visionRange: 0.94
   hitMask:
     serializedVersion: 2
     m_Bits: 64
@@ -141,7 +144,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 10
+  OverrideMaxDistance: 5
 --- !u!1 &8493891568024548440
 GameObject:
   m_ObjectHideFlags: 0
