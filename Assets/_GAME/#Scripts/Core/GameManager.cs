@@ -12,6 +12,8 @@ public class GameManager : Singleton<GameManager>
     public bool Puzzle2;// Miranha
     public bool Puzzle3;// Click
 
+    public event Action OnPuzzleComplete;
+
     public bool Paused { get; private set; }
 
     private void Start()

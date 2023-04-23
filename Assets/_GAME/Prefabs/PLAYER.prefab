@@ -250,6 +250,7 @@ MonoBehaviour:
   collider2d: {fileID: 5994579168102822680}
   spriteTemp: {fileID: 6616464568432106853}
   coloralpha: {r: 1, g: 1, b: 1, a: 0.5882353}
+  colorBlue: {r: 0, g: 0.6185813, b: 1, a: 0.5254902}
 --- !u!114 &856890664150359679
 MonoBehaviour:
   m_ObjectHideFlags: 0
