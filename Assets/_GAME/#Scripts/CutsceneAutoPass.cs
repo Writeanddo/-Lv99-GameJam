@@ -5,18 +5,19 @@ public class CutsceneAutoPass : MonoBehaviour
 {
     private PlayableDirector director;
 
+    private bool next;
+
     private void Awake()
     {
         director = GetComponent<PlayableDirector>();
     }
 
-    private void Start()
+    private void Update()
     {
-        director.stopped += Director_stopped;
-    }
-
-    private void Director_stopped(PlayableDirector obj)
-    {
-        SceneLoader.Instance.NextScene();
+        if (director.state == PlayState.Paused && next == false)
+        {
+            next = true;
+            SceneLoader.Instance.NextScene();
+        }
     }
 }
