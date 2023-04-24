@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape:
       - - {x: -7, y: -10}
         - {x: -16, y: -10}
-        - {x: -16, y: -11}
-        - {x: 16, y: -11}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
         - {x: 16, y: -10}
       tessellationDetail: 0
       bones: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape:
       - - {x: -7, y: -10}
         - {x: -16, y: -10}
-        - {x: -16, y: -11}
-        - {x: 16, y: -11}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
         - {x: 16, y: -10}
       tessellationDetail: 0
       bones: []
