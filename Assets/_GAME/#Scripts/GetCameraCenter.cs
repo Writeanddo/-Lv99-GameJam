@@ -4,6 +4,6 @@ public class GetCameraCenter : MonoBehaviour
 {
     private void OnEnable()
     {
-        transform.position = new Vector2(Screen.width / 2, Screen.height / 2);
+        transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 0);
     }
 }
