@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.5
-  moveSpeedFollow: 0.5
+  moveSpeedFollow: 1
   ocilacaoSpeed: 1
   ocilacaoDistance: 0.04
   damage: 1
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3d929c418b80a4aa73b0d9a0e01a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRange: 2
+  visionRange: 3.5
   hitMask:
     serializedVersion: 2
     m_Bits: 64
