@@ -256,7 +256,7 @@ public class PlayerController : MonoBehaviour
         RectTransform canvasRect = ui.canvas;
 
         GameObject newObject = Instantiate(puzzleCurrent);
-        if(puzzleCurrent.name != "PuzzleMiranha")
+        if(puzzleCurrent.name != "PuzzleMiranhaNEW")
         {
             newObject.transform.SetParent(canvasRect, false);
             newObject.transform.SetSiblingIndex(1);
