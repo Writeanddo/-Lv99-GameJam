@@ -85,6 +85,8 @@ public class OxygenSystem : MonoBehaviour
             canInteractWithCilinder = false;
             isOxygenStart = true;
 
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/O2 Attach", GetComponent<Transform>().position);
+
             StartCoroutine(Start_IEnumerator());
         }
     }
@@ -140,6 +142,7 @@ public class OxygenSystem : MonoBehaviour
                 yield return new WaitForSecondsRealtime(0.01f);
             }
         }
+        
     }
 
     public void HoldCilinder()
@@ -182,6 +185,8 @@ public class OxygenSystem : MonoBehaviour
 
     private IEnumerator WaitForAnimation()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/O2 Breath", GetComponent<Transform>().position);
+
         barOxigenSr.size = new Vector2(0.56f, cilinderOxygen);
 
         _playerController.PlayerOxygen.AddOxygen(cilinderOxygen / divisor);
