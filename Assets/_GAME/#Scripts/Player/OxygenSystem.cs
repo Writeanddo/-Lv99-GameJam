@@ -82,11 +82,13 @@ public class OxygenSystem : MonoBehaviour
     {
         if (canInteractWithCilinder && isOxygenStart == false)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/O2 Attach", GetComponent<Transform>().position);
             canInteractWithCilinder = false;
             isOxygenStart = true;
 
             StartCoroutine(Start_IEnumerator());
         }
+
     }
 
     private IEnumerator Start_IEnumerator()
@@ -182,6 +184,7 @@ public class OxygenSystem : MonoBehaviour
 
     private IEnumerator WaitForAnimation()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/O2 Breath", GetComponent<Transform>().position);
 
         barOxigenSr.size = new Vector2(0.56f, cilinderOxygen);
 
