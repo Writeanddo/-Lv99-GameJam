@@ -16,6 +16,7 @@ public class DragDropable : MonoBehaviour
     private DragAndDropManager dadManager;
     private bool isBeingUsed; // está sendo usado
     private int idTarget = -1;
+
     private void Start()
     {
         dadManager = DragAndDropManager.Instance;

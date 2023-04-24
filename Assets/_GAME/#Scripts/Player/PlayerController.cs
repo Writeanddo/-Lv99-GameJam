@@ -256,10 +256,13 @@ public class PlayerController : MonoBehaviour
         RectTransform canvasRect = ui.canvas;
 
         GameObject newObject = Instantiate(puzzleCurrent);
-        newObject.transform.SetParent(canvasRect, false);
-        newObject.transform.SetSiblingIndex(1);
+        if(puzzleCurrent.name != "PuzzleMiranha")
+        {
+            newObject.transform.SetParent(canvasRect, false);
+            newObject.transform.SetSiblingIndex(1);
 
-        newObject.transform.localPosition = Vector3.zero;
+            newObject.transform.localPosition = Vector3.zero;
+        }
 
         DisablePlayer();
     }
