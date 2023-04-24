@@ -269,46 +269,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1745632927300086374, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1745632927300086374, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1745632927300086374, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3472303464107073117, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3472303464107073117, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3472303464107073117, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311839020367054778, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311839020367054778, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7043298926762275713, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7043298926762275713, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8001300187806293396, guid: c3d87497bef07124a8f4fc4db0854264, type: 3}
       propertyPath: m_RootOrder
       value: 4
