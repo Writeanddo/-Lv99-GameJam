@@ -9,6 +9,13 @@ public class CanoFinalController : MonoBehaviour
     public GameObject notComplete; // Painel dentro do próprio prefab
     public GameObject FinalizouoJogo; // Puxar da HUD UIGameplay se caso gerar erro na cena final
 
+    public UiDetectGamepad gamepad;
+
+    private void Start()
+    {
+        gamepad.gameObject.SetActive(false);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -18,7 +25,7 @@ public class CanoFinalController : MonoBehaviour
             player.isInteraction = true;
             player.isfinalParte = true;
 
-            
+            gamepad.gameObject.SetActive(true);
         }
     }
 
@@ -31,7 +38,7 @@ public class CanoFinalController : MonoBehaviour
             player.isfinalParte = false;
             notComplete.SetActive(false);
 
-           
+            gamepad.gameObject.SetActive(false);
         }
 
     }
