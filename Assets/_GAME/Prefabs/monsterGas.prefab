@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3d929c418b80a4aa73b0d9a0e01a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRange: 0.94
+  visionRange: 2
   hitMask:
     serializedVersion: 2
     m_Bits: 64
