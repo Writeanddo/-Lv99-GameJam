@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94ece6936e49394abcd675649f6077f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicVolume: 0.5
-  SFXVolume: 0.5
+  MusicVolume: 1
+  SFXVolume: 1
