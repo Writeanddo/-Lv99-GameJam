@@ -1240,7 +1240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5341435497351146798, guid: 63ce082730763c64b9d9a3db66c2339f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.607164
+      value: -23.606628
       objectReference: {fileID: 0}
     - target: {fileID: 5341435497351146798, guid: 63ce082730763c64b9d9a3db66c2339f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1672,7 +1672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDestroy: {fileID: 823446605}
-  timeToLive: 300
+  timeToLive: 420
   timeRemaining: 0
 --- !u!1001 &1657287477
 PrefabInstance:
