@@ -1447,6 +1447,7 @@ GameObject:
   - component: {fileID: 6477401366813044352}
   - component: {fileID: 6826093520827619468}
   - component: {fileID: 7154034218100768688}
+  - component: {fileID: 4283487263743894962}
   m_Layer: 0
   m_Name: BoxCollider (1)
   m_TagString: Untagged
@@ -1541,6 +1542,37 @@ MonoBehaviour:
   speed: 2
   duration: 1
   timeDelay: 2
+--- !u!114 &4283487263743894962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4678623890719924192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -223758287
+      Data2: 1191826710
+      Data3: 1216819863
+      Data4: -457415776
+    Path: event:/SFX/Puzzles/Ameba/Ameba Loop
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &4931681340231243242
 GameObject:
   m_ObjectHideFlags: 0
