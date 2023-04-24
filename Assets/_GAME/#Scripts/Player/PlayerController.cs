@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
     public bool isWalkWarning;
 
     private bool FmodParameter = false;
+    private bool FmodFalling = false;
 
     private void Awake()
     {
@@ -231,6 +232,15 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool("isGrounded", isGrounded);
+        if(isGrounded == false)
+        {
+            FmodFalling = true;
+        }
+        if (FmodFalling == true && isGrounded == true)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Foley/Fall", GetComponent<Transform>().position);
+            FmodFalling = false;
+        }
     }
 
     public void ResetWalk()
