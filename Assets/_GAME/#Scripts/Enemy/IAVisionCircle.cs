@@ -14,7 +14,7 @@ public class IAVisionCircle : MonoBehaviour
     public bool IsVisible(Collider2D target)
     {
 
-
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Combat", 1f);
         if (target == null)
         {
             return false;
@@ -22,6 +22,7 @@ public class IAVisionCircle : MonoBehaviour
         }
 
         return !(Vector2.Distance(transform.position, target.gameObject.transform.position) > visionRange);
+        
 
     }
 

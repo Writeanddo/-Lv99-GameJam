@@ -67,6 +67,8 @@ public class PlayerController : MonoBehaviour
     [Header("Footstep")]
     public bool isWalkWarning;
 
+    private bool FmodParameter = false;
+
     private void Awake()
     {
         _inputReference = GetComponent<InputReference>();
@@ -105,11 +107,16 @@ public class PlayerController : MonoBehaviour
         if (height == 1)
         {
             isWalkWarning = true;
-
+            if (FmodParameter == false)
+            {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Combat", 1f);
+                FmodParameter = true;
+            }
         }
         else
         {
             isWalkWarning = false;
+            FmodParameter = false;
         }
     }
         private void Instance_OnPuzzleComplete()
@@ -233,6 +240,7 @@ public class PlayerController : MonoBehaviour
 
     private void SetPuzzleStart()
     {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Combat", 0f);
         isPuzzleStart = true;
         var ui = FindAnyObjectByType<UIGameplay>();
         RectTransform canvasRect = ui.canvas;
