@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
 
     private float _currentSpeed;
 
+    public bool isfinalParte;
+
     private void Awake()
     {
         _inputReference = GetComponent<InputReference>();
@@ -161,10 +163,16 @@ public class PlayerController : MonoBehaviour
         if (isJumping)
             return;
 
-        if (_inputReference.interacaoButton.IsPressed && isInteraction && !isPressedPuzzle)
+        if (_inputReference.interacaoButton.IsPressed && isInteraction && !isPressedPuzzle && !isfinalParte)
         {
             isPressedPuzzle = true;
             SetPuzzleStart();
+        }
+
+        if (_inputReference.interacaoButton.IsPressed && isInteraction && isfinalParte)
+        {
+            isPressedPuzzle = true;
+            SetFinalGame();
         }
     }
 
@@ -217,11 +225,25 @@ public class PlayerController : MonoBehaviour
 
         GameObject newObject = Instantiate(puzzleCurrent);
         newObject.transform.SetParent(canvasRect, false);
-         newObject.transform.SetSiblingIndex(1);
+        newObject.transform.SetSiblingIndex(1);
 
         newObject.transform.localPosition = Vector3.zero;
 
         DisablePlayer();
+    }
+
+    public void SetFinalGame()
+    {
+        var final = FindObjectOfType<CanoFinalController>();
+        if(GameManager.Instance.Puzzle1 && GameManager.Instance.Puzzle2 && GameManager.Instance.Puzzle3)
+        {
+            final.FinalizouoJogo.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            final.notComplete.SetActive(true);
+        }
     }
 
     public void SetPuzzleStop()
