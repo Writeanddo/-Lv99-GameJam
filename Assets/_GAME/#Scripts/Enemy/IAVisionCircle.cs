@@ -14,7 +14,7 @@ public class IAVisionCircle : MonoBehaviour
     public bool IsVisible(Collider2D target)
     {
 
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Combat", 1f);
+        
         if (target == null)
         {
             return false;
