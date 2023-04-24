@@ -23,7 +23,7 @@ public class OxygenSystem : MonoBehaviour
     [SerializeField] private float upAnimationTime = 1.1f;
     [SerializeField] private float divisor = 2;
 
-    [SerializeField] private SpriteRenderer barOxigenSr;
+    [SerializeField] public SpriteRenderer barOxigenSr;
     //[SerializeField] private GameObject barOxigenSrBG;
     [SerializeField] private GameObject HUDbarOxigen;
     [SerializeField] private Transform animationPoint;
@@ -85,8 +85,6 @@ public class OxygenSystem : MonoBehaviour
             canInteractWithCilinder = false;
             isOxygenStart = true;
 
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/O2 Attach", GetComponent<Transform>().position);
-
             StartCoroutine(Start_IEnumerator());
         }
     }
@@ -142,7 +140,6 @@ public class OxygenSystem : MonoBehaviour
                 yield return new WaitForSecondsRealtime(0.01f);
             }
         }
-        
     }
 
     public void HoldCilinder()
@@ -185,7 +182,6 @@ public class OxygenSystem : MonoBehaviour
 
     private IEnumerator WaitForAnimation()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/O2 Breath", GetComponent<Transform>().position);
 
         barOxigenSr.size = new Vector2(0.56f, cilinderOxygen);
 
