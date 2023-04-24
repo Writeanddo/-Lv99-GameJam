@@ -239,6 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697871528}
   - component: {fileID: 697871527}
+  - component: {fileID: 697871529}
   m_Layer: 0
   m_Name: Cut Scene
   m_TagString: Untagged
@@ -257,7 +258,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 8e8a88452d8227f438f406190daa2be8, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -289,6 +290,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &697871529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697871526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ced3429e4ea1d74a8c0321bec35ed24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &857619146
 GameObject:
   m_ObjectHideFlags: 0
