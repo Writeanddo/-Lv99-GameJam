@@ -61,7 +61,7 @@
 			<value>1</value>
 		</property>
 		<property name="triggerCooldown">
-			<value>2000</value>
+			<value>3000</value>
 		</property>
 	</object>
 	<object class="MarkerTrack" id="{aacd5a54-05dd-4ffa-a903-3ae7af5e48c9}" />
@@ -96,11 +96,8 @@
 	</object>
 	<object class="MixerBusPanner" id="{2d2101d7-5b43-4936-8d31-7be3311a128c}" />
 	<object class="SingleSound" id="{9c81fa69-ca68-4e36-ac99-0c8a42d3a947}">
-		<property name="triggerProbabilityEnabled">
-			<value>true</value>
-		</property>
 		<property name="triggerProbability">
-			<value>29.5</value>
+			<value>32</value>
 		</property>
 		<property name="length">
 			<value>0.66666666666666663</value>
@@ -110,9 +107,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{72555b89-d495-4932-83b6-f48585105be7}">
-		<property name="volume">
-			<value>-3</value>
-		</property>
 		<property name="name">
 			<value>Audio 2</value>
 		</property>
