@@ -30,6 +30,7 @@ public class MonsterGasWalk : MonoBehaviour
     private Transform lastPlayerPosition;
     public bool isTouchPlayer;
 
+    private bool FmodParameter = false;
 
     void Start()
     {
@@ -121,6 +122,7 @@ public class MonsterGasWalk : MonoBehaviour
                 initialPosition = transform.position;
 
             }
+            FmodParameter = false;
         }
 
         //se movimenta até o player localizado
@@ -128,6 +130,11 @@ public class MonsterGasWalk : MonoBehaviour
         {
 
             transform.position = Vector2.MoveTowards(transform.position, lastPlayerPosition.transform.position, moveSpeedFollow * Time.deltaTime);
+            if (FmodParameter == false)
+            {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Combat", 1f);
+                FmodParameter = true;
+            }
         }
 
         //if (isFollow && hitInfo.Length>0)
