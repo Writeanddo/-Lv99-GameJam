@@ -49,6 +49,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public void TakeDamage(Vector3 direction, float damage)
     {
         print("Tomou Dano");
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Combat", 1f);
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Player/Hit", GetComponent<Transform>().position);
 
         if (damage <= 0)

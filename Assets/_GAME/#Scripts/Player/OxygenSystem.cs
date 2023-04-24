@@ -82,6 +82,7 @@ public class OxygenSystem : MonoBehaviour
     {
         if (canInteractWithCilinder && isOxygenStart == false)
         {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Combat", 0f);
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/O2 Attach", GetComponent<Transform>().position);
             canInteractWithCilinder = false;
             isOxygenStart = true;

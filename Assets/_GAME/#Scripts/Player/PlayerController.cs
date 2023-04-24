@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PhysicsMaterial2D noFrictionMaterial;
     [SerializeField] private PhysicsMaterial2D frictionMaterial;
 
+
+
     [HorizontalLine(1, EColor.Green)]
     [SerializeField] private bool isLookLeft = false;
 
@@ -61,6 +63,11 @@ public class PlayerController : MonoBehaviour
     private float _currentSpeed;
 
     public bool isfinalParte;
+
+    [Header("Footstep")]
+    public bool isWalkWarning;
+
+    private bool FmodParameter = false;
 
     private void Awake()
     {
@@ -97,8 +104,22 @@ public class PlayerController : MonoBehaviour
         _currentSpeed = current <= 0 ? oxygenSpeed : moveSpeed;
 
         animator.SetLayerWeight(1, height);
+        if (height == 1)
+        {
+            isWalkWarning = true;
+            if (FmodParameter == false)
+            {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Combat", 1f);
+                FmodParameter = true;
+            }
+        }
+        else
+        {
+            isWalkWarning = false;
+            FmodParameter = false;
+        }
     }
-    private void Instance_OnPuzzleComplete()
+        private void Instance_OnPuzzleComplete()
     {
         ActivePlayer();
     }
@@ -219,6 +240,7 @@ public class PlayerController : MonoBehaviour
 
     private void SetPuzzleStart()
     {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Combat", 0f);
         isPuzzleStart = true;
         var ui = FindAnyObjectByType<UIGameplay>();
         RectTransform canvasRect = ui.canvas;

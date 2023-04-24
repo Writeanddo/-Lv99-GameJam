@@ -14,7 +14,7 @@ public class IAVisionCircle : MonoBehaviour
     public bool IsVisible(Collider2D target)
     {
 
-
+        
         if (target == null)
         {
             return false;
@@ -22,6 +22,7 @@ public class IAVisionCircle : MonoBehaviour
         }
 
         return !(Vector2.Distance(transform.position, target.gameObject.transform.position) > visionRange);
+        
 
     }
 
