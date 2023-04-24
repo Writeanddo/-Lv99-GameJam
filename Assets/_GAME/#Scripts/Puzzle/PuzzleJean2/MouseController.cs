@@ -19,17 +19,27 @@ public class MouseController : MonoBehaviour
 
     public void SetDetroy()
     {
-       
+        
         if (effect != null)
         {
             image.enabled = false;
             effect.SetActive(true);
 
         }
+        if (gameObject.name == "Bom(Clone)")
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Puzzles/Bubble/Bubble Hit", GetComponent<Transform>().position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Puzzles/Bubble/Bubble Pop", GetComponent<Transform>().position);
+        }
+        if (gameObject.name == "Ruim(Clone)")
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Puzzles/Bubble/Bubble Error", GetComponent<Transform>().position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Puzzles/Bubble/Bubble Miss", GetComponent<Transform>().position);
+        }
         Puzzle3.Instance.totalPoints += point;
         Puzzle3.Instance.UpdatePoint();
         Destroy(gameObject,2f);
-
+        
     }
 
     private IEnumerator TimeDuration()
