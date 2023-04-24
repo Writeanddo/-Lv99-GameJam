@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8907301458888086686}
   - component: {fileID: -3389031415830977119}
+  - component: {fileID: 579228111}
+  - component: {fileID: 579228112}
   m_Layer: 0
   m_Name: Title Music
   m_TagString: Untagged
@@ -39,7 +41,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949817071876467638}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -47,14 +49,14 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -139541970
-      Data2: 1319877094
-      Data3: -1747715432
-      Data4: 69284411
-    Path: event:/Music/Intro Music
+      Data1: -435578482
+      Data2: 1174617696
+      Data3: -1216613493
+      Data4: -271938481
+    Path: event:/Music/Title Music
   Event: 
   PlayEvent: 1
-  StopEvent: 2
+  StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -63,3 +65,35 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &579228111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949817071876467638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Combat
+  TriggerEvent: 2
+  Value: 0
+--- !u!114 &579228112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949817071876467638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Combat
+  TriggerEvent: 1
+  Value: 1
