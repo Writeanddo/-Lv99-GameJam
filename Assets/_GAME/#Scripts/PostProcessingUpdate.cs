@@ -25,7 +25,7 @@ public class PostProcessingUpdate : MonoBehaviour
 
     private void OnDestroy()
     {
-        player.PlayerOxygen.OnUpdateOxygen += PlayerOxygen_OnUpdateOxygen;
+        player.PlayerOxygen.OnUpdateOxygen -= PlayerOxygen_OnUpdateOxygen;
     }
 
     private void PlayerOxygen_OnUpdateOxygen(float current, float max)
