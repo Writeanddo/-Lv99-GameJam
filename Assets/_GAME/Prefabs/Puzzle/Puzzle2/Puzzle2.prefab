@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108.8, y: -2.2}
+  m_AnchoredPosition: {x: -107.7, y: -2.2}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7002937724473652413
@@ -687,11 +687,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroy: 0
   itemPrefab:
-  - {fileID: 5420364285927020547, guid: 0ac72e0d0c1d1ed429c735bc1e981a5b, type: 3}
+  - {fileID: 5420364285927020547, guid: a656115bb6fcfd84f9bfdaee36bd71d7, type: 3}
   - {fileID: 5420364285927020547, guid: 9fd1936cfc589134dbca9de6f017097b, type: 3}
   canvasRect: {fileID: 8083055750428062733}
   painelRect: {fileID: 7654734332352038765}
-  spawnInterval: 1.1
+  spawnInterval: 0.9
   totalPoints: 0
   pointsUI: {fileID: 8083055750665397433}
   play: {fileID: 8083055752180628569}
@@ -1848,7 +1848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 167.4, y: 48}
+  m_AnchoredPosition: {x: 168.6, y: 49.2}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7381721629545351713
@@ -1922,6 +1922,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.6107, y: 6.4429}
-  m_SizeDelta: {x: 309.3936, y: 213.8242}
+  m_AnchoredPosition: {x: -2.3668, y: -4.5214}
+  m_SizeDelta: {x: 244.3641, y: 191.8957}
   m_Pivot: {x: 0.5, y: 0.5}

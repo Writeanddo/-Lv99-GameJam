@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5410307757254764317}
   - component: {fileID: 355393557734307054}
   - component: {fileID: 6106630126323971877}
-  - component: {fileID: 477842767484438681}
   - component: {fileID: 3070006294577778287}
+  - component: {fileID: 5959952997156225376}
   m_Layer: 5
   m_Name: Bom
   m_TagString: Untagged
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d52b20f865aff242bfcb08c3b6f61a5, type: 3}
+  m_Sprite: {fileID: -189027871, guid: d698c957e14b1264d98ebaef2cebaf75, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -95,34 +95,8 @@ MonoBehaviour:
   point: 1
   image: {fileID: 355393557734307054}
   fadeInTime: 0.3
-  timeDuration: 4
+  timeDuration: 0.5
   effect: {fileID: 6530481298447184855}
---- !u!61 &477842767484438681
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5420364285927020547}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &3070006294577778287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +126,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!58 &5959952997156225376
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5420364285927020547}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 13.88
 --- !u!1001 &6531500442125169364
 PrefabInstance:
   m_ObjectHideFlags: 0
