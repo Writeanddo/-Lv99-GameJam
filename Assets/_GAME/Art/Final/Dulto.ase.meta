@@ -115,14 +115,14 @@ ScriptedImporter:
   multiSpriteImportData:
   - name: Dulto
     originalName: 
-    pivot: {x: 0.7804878, y: -0.65432096}
+    pivot: {x: 0.35897434, y: -0.09876544}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 164
+      width: 117
       height: 81
     spriteID: 3a6feac7fc0e96c4cb9fc3a31bc5e299
     spriteBone: []
@@ -144,9 +144,9 @@ ScriptedImporter:
     - name: Dulto
       frameIndex: 0
       cellRect:
-        x: 112
-        y: 53
-        width: 164
+        x: 63
+        y: 8
+        width: 117
         height: 81
       spriteId: 3a6feac7fc0e96c4cb9fc3a31bc5e299
     linkedCells: []
@@ -154,4 +154,4 @@ ScriptedImporter:
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 480, y: 270}
+  canvasSize: {x: 210, y: 106}
