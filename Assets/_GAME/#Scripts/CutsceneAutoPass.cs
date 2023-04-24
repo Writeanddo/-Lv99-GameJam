@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -5,19 +6,19 @@ public class CutsceneAutoPass : MonoBehaviour
 {
     private PlayableDirector director;
 
-    private bool next;
-
     private void Awake()
     {
         director = GetComponent<PlayableDirector>();
+
+        double time = director.duration;
+
+        StartCoroutine(CutsceneDuration(time));
     }
 
-    private void Update()
+    private IEnumerator CutsceneDuration(double time)
     {
-        if (director.state == PlayState.Paused && next == false)
-        {
-            next = true;
-            SceneLoader.Instance.NextScene();
-        }
+        yield return new WaitForSeconds((float)time);
+
+        SceneLoader.Instance.NextScene();
     }
 }
