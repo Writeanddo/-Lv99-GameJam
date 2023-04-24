@@ -44,6 +44,7 @@ public class PlayerPuzzle : MonoBehaviour
 
     private IEnumerator IE_Stun()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Puzzles/Ameba/Ameba Hit", GetComponent<Transform>().position);
         yield return new WaitForSeconds(stunnedTime);
         stunPrefab.SetActive(false);
         isStunned = false;

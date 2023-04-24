@@ -23,7 +23,7 @@ public class BoxMoviment : MonoBehaviour
     private IEnumerator IE_ScaleObject()
     {
         yield return new WaitForSeconds(timeDelay);
-
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Puzzles/Ameba/Ameba Grow", GetComponent<Transform>().position);
         float elapsedTime = 0f;
         float scale = initialScale;
 
@@ -35,7 +35,9 @@ public class BoxMoviment : MonoBehaviour
             transform.localScale = new Vector3(scale, scale, scale);
             yield return null;
         }
+
         yield return new WaitForSeconds(timeDelay);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Puzzles/Ameba/Ameba Shrink", GetComponent<Transform>().position);
         elapsedTime = 0f;
 
         while (elapsedTime < duration)
