@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PhysicsMaterial2D noFrictionMaterial;
     [SerializeField] private PhysicsMaterial2D frictionMaterial;
 
+
+
     [HorizontalLine(1, EColor.Green)]
     [SerializeField] private bool isLookLeft = false;
 
@@ -61,6 +63,9 @@ public class PlayerController : MonoBehaviour
     private float _currentSpeed;
 
     public bool isfinalParte;
+
+    [Header("Footstep")]
+    public bool isWalkWarning;
 
     private void Awake()
     {
@@ -97,8 +102,17 @@ public class PlayerController : MonoBehaviour
         _currentSpeed = current <= 0 ? oxygenSpeed : moveSpeed;
 
         animator.SetLayerWeight(1, height);
+        if (height == 1)
+        {
+            isWalkWarning = true;
+
+        }
+        else
+        {
+            isWalkWarning = false;
+        }
     }
-    private void Instance_OnPuzzleComplete()
+        private void Instance_OnPuzzleComplete()
     {
         ActivePlayer();
     }

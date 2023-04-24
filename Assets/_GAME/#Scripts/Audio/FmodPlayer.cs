@@ -7,8 +7,15 @@ public class FmodPlayer : MonoBehaviour
 {
     private float distance = 0.4f;
     private float Material;
+    private PlayerController _PlayerController;
 
     [SerializeField] private bool debug;
+
+    private void Awake()
+    {
+        _PlayerController = GetComponent<PlayerController>();
+    }
+
 
     void PlayMeleeEvent(string path)
     {
@@ -46,10 +53,31 @@ public class FmodPlayer : MonoBehaviour
 
     void PlayFootstepsEvent(string path)
     {
-        FMOD.Studio.EventInstance Footsteps = FMODUnity.RuntimeManager.CreateInstance(path);
-        Footsteps.setParameterByName("Material", Material);
-        Footsteps.start();
-        Footsteps.release();
+        if (_PlayerController.isWalkWarning == false)
+        {
+            FMOD.Studio.EventInstance Footsteps = FMODUnity.RuntimeManager.CreateInstance(path);
+            Footsteps.setParameterByName("Material", Material);
+            Footsteps.start();
+            Footsteps.release();
+            print("walkNormal");
+        }
+          
+        //
     }
+
+    void PlayFootstepsEvent2(string path)
+    {
+        if (_PlayerController.isWalkWarning == true)
+        {
+            print("walkWarning");
+            FMOD.Studio.EventInstance Footsteps = FMODUnity.RuntimeManager.CreateInstance(path);
+            Footsteps.setParameterByName("Material", Material);
+            Footsteps.start();
+            Footsteps.release();
+        }
+       
+    }
+
+
 
 }
