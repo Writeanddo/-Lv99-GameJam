@@ -25,7 +25,7 @@ public class GameManager : Singleton<GameManager>
 
     public bool CanPause = true;
 
-    private void PauseGame()
+    public void PauseGame()
     {
         Paused = true;
         Time.timeScale = 0;

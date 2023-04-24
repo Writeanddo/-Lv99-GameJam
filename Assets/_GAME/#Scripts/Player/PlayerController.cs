@@ -272,7 +272,9 @@ public class PlayerController : MonoBehaviour
         var final = FindObjectOfType<CanoFinalController>();
         if(GameManager.Instance.Puzzle1 && GameManager.Instance.Puzzle2 && GameManager.Instance.Puzzle3)
         {
-            final.FinalizouoJogo.SetActive(true);
+            //final.FinalizouoJogo.SetActive(true);
+            GameManager.Instance.PauseGame();
+            GameManager.Instance.GameWin();
             Time.timeScale = 0;
         }
         else

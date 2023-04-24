@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+
 public class CanoFinalController : MonoBehaviour
 {
 
     public GameObject notComplete; // Painel dentro do próprio prefab
-    public GameObject FinalizouoJogo; // Puxar da HUD UIGameplay se caso gerar erro na cena final
+    //public GameObject FinalizouoJogo; // Puxar da HUD UIGameplay se caso gerar erro na cena final
 
     public UiDetectGamepad gamepad;
 
