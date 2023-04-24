@@ -72,7 +72,7 @@ public class Puzzle3 : Singleton<Puzzle3>
 
     private void SpawnItem()
     {
-        if (totalPoints <= 10)
+        if (totalPoints <= 9)
         {
             int index = Random.Range(0, itemPrefab.Length);
             GameObject itemObj = Instantiate(itemPrefab[index], canvasRect.transform);
