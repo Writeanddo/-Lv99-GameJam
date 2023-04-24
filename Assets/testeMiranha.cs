@@ -6,7 +6,7 @@ public class testeMiranha : MonoBehaviour
 {
     private void OnEnable()
     {
-        DragAndDropManager.Instance.RandomizeIds();
+        //DragAndDropManager.Instance.RandomizeIds();
     }
 
 }

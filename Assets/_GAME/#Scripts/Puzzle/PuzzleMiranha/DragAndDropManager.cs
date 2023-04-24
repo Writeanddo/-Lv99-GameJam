@@ -16,20 +16,32 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
     public List<InfosTargetSlot> targetSlots;
     public InputReference inputReference;
 
+    public GameObject puzzle;
     public GameObject play;
     public GameObject win;
+    public GameObject lose;
 
     // Start is called before the first frame update
     void Start()
     {
         inputReference = GetComponent<InputReference>();
-      //  RandomizeIds();
+        RandomizeIds();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnEnable()
     {
-        
+        GameManager.Instance.OnGameOver += GameOver;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnGameOver -= GameOver;
+    }
+
+    private void GameOver(bool obj)
+    {
+        Destroy(puzzle);
     }
 
     public void RandomizeIds()
@@ -52,7 +64,7 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
         }
 
         // Adicione os números inteiros selecionados à lista existente de IDs de quebra-cabeça
-        for (int i = 0; i < selectedIds.Count; i++)
+        for (int i = 0; i < hintImagesUI.Count; i++)
         {
             targetSlots[i].idCorrect = selectedIds[i];
             hintImagesUI[i].sprite = listHint[selectedIds[i]];
@@ -64,7 +76,7 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
     {
         if (VerifyPuzzleSolution())
         {
-            Debug.Log("Deu Bom!!!");
+            //Debug.Log("Deu Bom!!!");
             GameManager.Instance.Puzzle2 = true;
             CheckPuzzle.Instance.Puzzle2[0].SetActive(false);
             CheckPuzzle.Instance.Puzzle2[1].SetActive(true);
@@ -74,7 +86,7 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
         }
         else
         {
-            Debug.Log("RUIIM...");
+            lose.SetActive(true);
         }
     }
 

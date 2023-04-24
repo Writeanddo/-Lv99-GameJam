@@ -194,6 +194,8 @@ MonoBehaviour:
   isLookLeft: 0
   currentCilinder: {fileID: 0}
   PlayerOxygen: {fileID: 0}
+  isfinalParte: 0
+  isWalkWarning: 0
 --- !u!50 &1700325554
 Rigidbody2D:
   serializedVersion: 4
@@ -231,7 +233,7 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 20
   destroyOnDie: 0
   enemyXp: 0
-  collider2d: {fileID: 0}
+  collider2d: {fileID: 1681464586}
   spriteTemp: {fileID: 6616464568432106853}
   coloralpha: {r: 1, g: 1, b: 1, a: 0.5882353}
   colorBlue: {r: 0, g: 0.6185813, b: 0.80784315, a: 1}
