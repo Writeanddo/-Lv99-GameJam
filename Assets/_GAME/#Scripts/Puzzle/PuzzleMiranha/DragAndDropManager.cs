@@ -82,7 +82,6 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
             CheckPuzzle.Instance.Puzzle2[1].SetActive(true);
             play.SetActive(false);
             win.SetActive(true);
-            GameManager.Instance.PuzzleComplete();
         }
         else
         {
@@ -153,6 +152,11 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
                 idsCellsFinal.Remove(idsCellsFinal[i]);
             }
         }
+    }
+
+    public void PuzzleComplete()
+    {
+        GameManager.Instance.PuzzleComplete();
     }
 }
 
