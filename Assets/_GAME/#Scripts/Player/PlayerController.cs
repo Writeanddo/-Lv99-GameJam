@@ -273,7 +273,7 @@ public class PlayerController : MonoBehaviour
         if(GameManager.Instance.Puzzle1 && GameManager.Instance.Puzzle2 && GameManager.Instance.Puzzle3)
         {
             //final.FinalizouoJogo.SetActive(true);
-            GameManager.Instance.PauseGame();
+            DisablePlayerWithoutSprite();
             GameManager.Instance.GameWin();
             Time.timeScale = 0;
         }
@@ -381,6 +381,17 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D.gravityScale = starterGravityScale;
         blockPlayerInputs = false;
         PlayerOxygen.enabled = true;
+    }
+
+    public void DisablePlayerWithoutSprite()
+    {
+        _rigidbody2D.velocity = Vector2.zero;
+        _rigidbody2D.gravityScale = 0;
+        ResetWalk();
+        _playerCollider.enabled = false;
+        //_playerSprite.enabled = false;
+        blockPlayerInputs = true;
+        PlayerOxygen.enabled = false;
     }
 
     public void DisablePlayer()
