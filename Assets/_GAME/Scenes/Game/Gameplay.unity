@@ -1240,11 +1240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5341435497351146798, guid: 63ce082730763c64b9d9a3db66c2339f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.607763
+      value: -23.93414
       objectReference: {fileID: 0}
     - target: {fileID: 5341435497351146798, guid: 63ce082730763c64b9d9a3db66c2339f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6438899
+      value: -1.64393
       objectReference: {fileID: 0}
     - target: {fileID: 5341435497351146798, guid: 63ce082730763c64b9d9a3db66c2339f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1542,55 +1542,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1561279308
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1561279311}
-  - component: {fileID: 1561279310}
-  m_Layer: 0
-  m_Name: GameManeger_ ATIVE PARA TESTAR A CENA
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1561279310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1561279308}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d6aec9db8253044da0911e1a2b2368a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroy: 0
-  Puzzle1: 0
-  Puzzle2: 0
-  Puzzle3: 0
-  CanPause: 1
---- !u!4 &1561279311
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1561279308}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566374614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4959145413134491271, guid: 8eae25129cd6289488d78b0d0cd11858, type: 3}
@@ -1672,7 +1623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDestroy: {fileID: 823446605}
-  timeToLive: 420
+  timeToLive: 480
   timeRemaining: 0
 --- !u!1001 &1657287477
 PrefabInstance:
@@ -1827,7 +1778,7 @@ Transform:
   - {fileID: 365221838}
   - {fileID: 1340337798}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1681464575 stripped
 Transform:
@@ -2084,7 +2035,7 @@ Transform:
   - {fileID: 1016604925}
   - {fileID: 1248006556}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1929275386
 PrefabInstance:
