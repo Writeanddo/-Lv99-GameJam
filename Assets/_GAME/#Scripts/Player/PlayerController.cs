@@ -4,6 +4,7 @@ using NaughtyAttributes;
 [RequireComponent(typeof(InputReference))]
 public class PlayerController : MonoBehaviour
 {
+    public bool isDebug;
     [Header("Player Status")]
     [SerializeField] private Animator animator;
 
@@ -185,6 +186,9 @@ public class PlayerController : MonoBehaviour
         if (isJumping)
             return;
 
+        if (isDebug)
+            Debug.LogFormat($"Interect.IsPressed: {_inputReference.interacaoButton.IsPressed} // IsInteraction: {isInteraction} " +
+                $"// !IsPressedPuzzle: {isPressedPuzzle} // !isfinalParte: {isfinalParte}");
         if (_inputReference.interacaoButton.IsPressed && isInteraction && !isPressedPuzzle && !isfinalParte)
         {
             isPressedPuzzle = true;
