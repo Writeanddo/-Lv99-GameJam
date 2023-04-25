@@ -2297,7 +2297,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AlysonKof \nErick (CanvasDev)\nJean(PierreDev)\nPedrinhoSaks\nZagoIris"
+  m_text: "AlysonKof \nErick (CanvasDev)\nJean(PierreDev)\nPedrinhoSaks\nZagoiris"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: adcd69bfd6aea6442ba9277df2078882, type: 2}
   m_sharedMaterial: {fileID: 2882831266419105660, guid: adcd69bfd6aea6442ba9277df2078882, type: 2}
