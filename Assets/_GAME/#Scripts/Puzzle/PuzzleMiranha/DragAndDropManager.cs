@@ -77,6 +77,9 @@ public class DragAndDropManager : Singleton<DragAndDropManager>
         if (VerifyPuzzleSolution())
         {
             //Debug.Log("Deu Bom!!!");
+            var player = FindAnyObjectByType<PlayerController>();
+            player.isPressedPuzzle = false;
+            player.isPuzzleStart = false;
             GameManager.Instance.Puzzle2 = true;
             CheckPuzzle.Instance.Puzzle2[0].SetActive(false);
             CheckPuzzle.Instance.Puzzle2[1].SetActive(true);
